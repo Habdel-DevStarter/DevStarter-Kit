@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Dev</title>
+    <style>
+      body{font-family:Segoe UI,sans-serif;margin:0;background:#0f172a;color:#e5e7eb}
+      .wrap{max-width:980px;margin:auto;padding:2rem}
+      .card{background:#111b30;border:1px solid #334155;border-radius:14px;padding:1rem;margin-bottom:1rem}
+      .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+      a{color:#7dd3fc}
+      @media(max-width:768px){.grid{grid-template-columns:1fr}}
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <h1>Jane Doe - Développeuse Frontend</h1>
+        <p>Je conçois des interfaces modernes, accessibles et performantes.</p>
+      </section>
+      <section class="grid">
+        <article class="card"><h2>Projet 1</h2><p>Landing SaaS responsive.</p></article>
+        <article class="card"><h2>Projet 2</h2><p>Dashboard analytics.</p></article>
+      </section>
+      <section class="card">
+        <h2>Contact</h2>
+        <p>Email : hello@example.com</p>
+        <p>GitHub : <a href="#">github.com/janedoe</a></p>
+      </section>
+    </main>
+  </body>
+</html>

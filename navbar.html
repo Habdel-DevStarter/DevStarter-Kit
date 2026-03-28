@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Modèles de barres de navigation</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="navbar">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link is-active" href="navbar.html">Barres de nav</a>
+            <a class="navbar__link" href="footer.html">Pieds de page</a>
+            <a class="navbar__link" href="cards.html">Cartes</a>
+            <a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Modèles de barres de navigation</h1>
+          <p>8 modèles de navigation prêts à copier, adapter et intégrer en production.</p>
+        </div>
+        <div class="toolbar">
+          <input class="input" type="search" placeholder="Rechercher des navbars..." data-search-input />
+          <select class="input" data-filter-tech><option value="all">Toutes les technos</option><option value="html">HTML</option><option value="css">CSS</option><option value="js">JS</option></select>
+          <select class="input" data-filter-level><option value="all">Tous les niveaux</option><option value="beginner">Débutant</option><option value="intermediate">Intermédiaire</option><option value="advanced">Avancé</option></select>
+        </div>
+
+        <div class="template-stack" data-search-container>
+          <article class="template-block card" data-search-item data-title="simple navbar" data-desc="left logo right links" data-tech="html css" data-level="beginner">
+            <div class="template-block__head"><h2>Barre de navigation simple</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-1">Copier le code</button></div>
+            <div class="preview-box">Logo | Accueil À propos Contact</div>
+            <pre><code id="code-nav-1">&lt;nav class="nav nav--simple"&gt;
+  &lt;a href="#" class="nav__brand"&gt;DevStarter&lt;/a&gt;
+  &lt;div class="nav__links"&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/div&gt;
+&lt;/nav&gt;
+.nav--simple{display:flex;justify-content:space-between;align-items:center;gap:1rem;}</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="centered navbar" data-desc="centered links layout" data-tech="html css" data-level="beginner">
+            <div class="template-block__head"><h2>Barre de navigation centrée</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-2">Copier le code</button></div>
+            <div class="preview-box preview-box--center">Accueil Fonctionnalités Tarifs Docs</div>
+            <pre><code id="code-nav-2">&lt;nav class="nav nav--centered"&gt;
+  &lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;a href="#"&gt;Fonctionnalités&lt;/a&gt;&lt;a href="#"&gt;Tarifs&lt;/a&gt;&lt;a href="#"&gt;Docs&lt;/a&gt;
+&lt;/nav&gt;
+.nav--centered{display:flex;justify-content:center;gap:2rem;padding:.8rem 1rem;}</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="cta navbar" data-desc="navbar with cta button" data-tech="html css" data-level="intermediate">
+            <div class="template-block__head"><h2>Barre de navigation avec CTA</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-3">Copier le code</button></div>
+            <div class="preview-box">DevStarter | Templates Blog [Commencer]</div>
+            <pre><code id="code-nav-3">&lt;nav class="nav nav--cta"&gt;
+  &lt;a class="nav__brand" href="#"&gt;DevStarter&lt;/a&gt;
+  &lt;div class="nav__links"&gt;&lt;a href="#"&gt;Templates&lt;/a&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/div&gt;
+  &lt;a class="btn btn--primary" href="#"&gt;Commencer&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="dashboard navbar" data-desc="search and user actions" data-tech="html css js" data-level="intermediate">
+            <div class="template-block__head"><h2>Barre de navigation dashboard</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-4">Copier le code</button></div>
+            <div class="preview-box">Dashboard | Recherche ... Notifications Profil</div>
+            <pre><code id="code-nav-4">&lt;header class="dash-nav"&gt;
+  &lt;strong&gt;Dashboard&lt;/strong&gt;
+  &lt;input type="search" placeholder="Rechercher..." /&gt;
+  &lt;button aria-label="Notifications"&gt;??&lt;/button&gt;
+  &lt;button&gt;Profil&lt;/button&gt;
+&lt;/header&gt;</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="mobile navbar" data-desc="hamburger animated menu" data-tech="html css js" data-level="advanced">
+            <div class="template-block__head"><h2>Barre de navigation mobile</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-5">Copier le code</button></div>
+            <div class="preview-box">? Menu (animated)</div>
+            <pre><code id="code-nav-5">&lt;button class="menu-toggle" aria-expanded="false"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;
+.mobile-menu{display:none;}
+.menu-toggle[aria-expanded="true"] + .mobile-menu{display:block;}
+.menu-toggle.is-open span:nth-child(1){transform:rotate(45deg);}
+document.querySelector('.menu-toggle').addEventListener('click',toggleMenu);</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="mega menu navbar" data-desc="dropdown mega menu products resources" data-tech="html css js" data-level="advanced">
+            <div class="template-block__head"><h2>Barre de navigation mega menu</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-6">Copier le code</button></div>
+            <div class="preview-box">Produits ? Ressources ? Entreprise</div>
+            <pre><code id="code-nav-6">&lt;nav class="nav nav--mega"&gt;
+  &lt;a href="#" class="nav__brand"&gt;DevStarter&lt;/a&gt;
+  &lt;button class="nav__trigger" aria-expanded="false"&gt;Produits&lt;/button&gt;
+  &lt;div class="mega-panel"&gt;&lt;a href="#"&gt;UI Kit&lt;/a&gt;&lt;a href="#"&gt;Templates&lt;/a&gt;&lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="transparent hero navbar" data-desc="transparent nav on hero section" data-tech="html css" data-level="intermediate">
+            <div class="template-block__head"><h2>Barre de navigation transparente</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-7">Copier le code</button></div>
+            <div class="preview-box">Navbar transparente sur section hero</div>
+            <pre><code id="code-nav-7">&lt;nav class="nav nav--transparent"&gt;
+  &lt;a href="#" class="nav__brand"&gt;DevStarter&lt;/a&gt;
+  &lt;div class="nav__links"&gt;&lt;a href="#"&gt;Produit&lt;/a&gt;&lt;a href="#"&gt;Tarifs&lt;/a&gt;&lt;/div&gt;
+&lt;/nav&gt;
+.nav--transparent{background:transparent;position:absolute;inset:0 auto auto 0;}</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="split auth navbar" data-desc="left links right auth buttons" data-tech="html css" data-level="beginner">
+            <div class="template-block__head"><h2>Barre de navigation split auth</h2><button class="btn btn--ghost js-copy" data-copy-target="code-nav-8">Copier le code</button></div>
+            <div class="preview-box">Accueil Docs | Connexion Inscription</div>
+            <pre><code id="code-nav-8">&lt;nav class="nav nav--split"&gt;
+  &lt;div class="nav__links"&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;a href="#"&gt;Docs&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="nav__auth"&gt;&lt;a href="#"&gt;Connexion&lt;/a&gt;&lt;button&gt;Inscription&lt;/button&gt;&lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+          </article>
+        </div>
+
+        <section class="section">
+          <div class="section__head">
+            <h2>Conseils pro pour une navbar réussie</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Priorisez les liens clés</h3>
+              <p>Affichez 4 à 6 liens maximum pour éviter la surcharge cognitive.</p>
+            </article>
+            <article class="card">
+              <h3>Ajoutez un état actif</h3>
+              <p>Un lien actif visuel aide l’utilisateur à se repérer dans votre interface.</p>
+            </article>
+            <article class="card">
+              <h3>Pensez accessibilité</h3>
+              <p>Utilisez `aria-label`, un focus visible et un toggle clavier-compatible.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/favorites.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

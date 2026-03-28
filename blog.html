@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Blog Frontend</title>
+    <meta name="description" content="Articles frontend pour débutants : templates HTML, navbar responsive, checklist UX et bonnes pratiques." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog DevStarter Kit" />
+    <meta property="og:description" content="Guides pratiques pour apprendre le frontend avec des templates concrets." />
+    <meta property="og:url" content="https://example.com/blog.html" />
+    <meta property="og:image" content="https://example.com/assets/images/og-blog.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="blog">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="blog.html">Blog</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Blog Frontend</h1>
+          <p>Guides ciblés SEO pour apprendre vite et construire des interfaces modernes sans framework.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card hover-lift">
+            <h2>20 templates HTML pour débutants</h2>
+            <p>Une sélection concrète de sections réutilisables pour lancer vos projets.</p>
+            <a class="btn btn--primary" href="blog-templates-html.html">Lire l'article</a>
+          </article>
+          <article class="card hover-lift">
+            <h2>Navbar responsive sans framework</h2>
+            <p>Méthode pas à pas pour une navigation mobile-first propre et accessible.</p>
+            <a class="btn btn--primary" href="blog-navbar-responsive.html">Lire l'article</a>
+          </article>
+          <article class="card hover-lift">
+            <h2>Checklist UX frontend 2026</h2>
+            <p>Accessibilité, responsive, feedbacks, performance : la checklist à suivre avant mise en ligne.</p>
+            <a class="btn btn--primary" href="blog-checklist-ux.html">Lire l'article</a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+  </body>
+</html>

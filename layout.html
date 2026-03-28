@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Layouts</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="layout">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="navbar.html">Barres de nav</a>
+            <a class="navbar__link" href="footer.html">Pieds de page</a>
+            <a class="navbar__link" href="cards.html">Cartes</a>
+            <a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link is-active" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Layouts prêts à assembler</h1>
+          <p>Sections hero, pricing et contact pour composer rapidement une landing page complète.</p>
+        </div>
+
+        <div class="template-stack">
+          <article class="template-block card">
+            <div class="template-block__head">
+              <h2>Hero Section SaaS</h2>
+              <button class="btn btn--ghost js-copy" data-copy-target="layout-hero-1">Copier le code</button>
+            </div>
+            <div class="preview-box">Titre fort + sous-titre + 2 CTA + preuve sociale</div>
+            <pre><code id="layout-hero-1">&lt;section class="hero hero--saas"&gt;
+  &lt;h1&gt;Créez plus vite avec DevStarter Kit&lt;/h1&gt;
+  &lt;p&gt;Composants frontend prêts à copier pour débutants.&lt;/p&gt;
+  &lt;div class="hero__actions"&gt;
+    &lt;a class="btn btn--primary" href="#"&gt;Commencer&lt;/a&gt;
+    &lt;a class="btn btn--ghost" href="#"&gt;Voir les templates&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;small&gt;+3 000 développeurs déjà inscrits&lt;/small&gt;
+&lt;/section&gt;</code></pre>
+          </article>
+
+          <article class="template-block card">
+            <div class="template-block__head">
+              <h2>Pricing Section 3 plans</h2>
+              <button class="btn btn--ghost js-copy" data-copy-target="layout-pricing-1">Copier le code</button>
+            </div>
+            <div class="preview-box">Starter / Pro / Team avec plan recommandé</div>
+            <pre><code id="layout-pricing-1">&lt;section class="pricing"&gt;
+  &lt;article class="plan"&gt;&lt;h3&gt;Starter&lt;/h3&gt;&lt;p&gt;9€/mois&lt;/p&gt;&lt;/article&gt;
+  &lt;article class="plan plan--featured"&gt;&lt;h3&gt;Pro&lt;/h3&gt;&lt;p&gt;29€/mois&lt;/p&gt;&lt;/article&gt;
+  &lt;article class="plan"&gt;&lt;h3&gt;Team&lt;/h3&gt;&lt;p&gt;79€/mois&lt;/p&gt;&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+          </article>
+
+          <article class="template-block card">
+            <div class="template-block__head">
+              <h2>Contact Section entreprise</h2>
+              <button class="btn btn--ghost js-copy" data-copy-target="layout-contact-1">Copier le code</button>
+            </div>
+            <div class="preview-box">Coordonnées + formulaire + CTA de prise de rendez-vous</div>
+            <pre><code id="layout-contact-1">&lt;section class="contact-layout"&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Parlons de votre projet&lt;/h2&gt;
+    &lt;p&gt;Réponse sous 24h.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;form class="form"&gt;
+    &lt;input type="text" placeholder="Nom" required /&gt;
+    &lt;input type="email" placeholder="Email" required /&gt;
+    &lt;textarea placeholder="Votre besoin" required&gt;&lt;/textarea&gt;
+    &lt;button class="btn btn--primary"&gt;Envoyer&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/section&gt;</code></pre>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/tabs.js"></script>
+  </body>
+</html>
+
+

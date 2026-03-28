@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Thème Lab</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="theme">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="navbar.html">Barres de nav</a>
+            <a class="navbar__link" href="footer.html">Pieds de page</a>
+            <a class="navbar__link" href="cards.html">Cartes</a>
+            <a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link is-active" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Générateur de thème</h1>
+          <p>Personnalisez les couleurs et les rayons, puis copiez directement vos variables CSS.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <section class="card">
+            <h2>Contrôles</h2>
+            <div class="form theme-controls">
+              <label>Couleur primaire<input class="input js-theme-input" type="color" data-var="--color-primary" value="#0e8cff" /></label>
+              <label>Couleur secondaire<input class="input js-theme-input" type="color" data-var="--color-secondary" value="#22c55e" /></label>
+              <label>Couleur accent<input class="input js-theme-input" type="color" data-var="--color-accent" value="#ff7b54" /></label>
+              <label>Arrière-plan<input class="input js-theme-input" type="color" data-var="--color-bg" value="#f4f7fb" /></label>
+              <label>Texte<input class="input js-theme-input" type="color" data-var="--color-text" value="#1f2937" /></label>
+              <label>Radius principal
+                <input class="input js-theme-range" type="range" min="8" max="28" step="1" data-var="--radius-lg" value="16" />
+              </label>
+              <button class="btn btn--primary" id="copyThemeVars" type="button">Copier les variables CSS</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Preview</h2>
+            <div class="theme-preview" id="themePreview">
+              <article class="card hover-lift">
+                <h3>Card de prévisualisation</h3>
+                <p>Ce bloc reflète vos choix en temps réel.</p>
+                <button class="btn btn--primary">Action primaire</button>
+              </article>
+            </div>
+            <pre><code id="themeVarsOutput">:root {
+  --color-primary: #0e8cff;
+  --color-secondary: #22c55e;
+  --color-accent: #ff7b54;
+  --color-bg: #f4f7fb;
+  --color-text: #1f2937;
+  --radius-lg: 16px;
+}</code></pre>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/theme-generator.js"></script>
+  </body>
+</html>
+
+

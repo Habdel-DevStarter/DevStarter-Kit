@@ -1,0 +1,248 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explorez 60+ templates frontend: navbars, cards, formulaires, boutons, modales et layouts." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DevStarter Kit - Bibliothèque de Templates" />
+    <meta property="og:description" content="Trouvez, filtrez et copiez des templates HTML/CSS/JS prêts à intégrer." />
+    <meta property="og:url" content="https://example.com/templates.html" />
+    <meta property="og:image" content="https://example.com/assets/images/og-templates.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DevStarter Kit - Bibliothèque de Templates" />
+    <meta name="twitter:description" content="Templates modernes classés par niveau et technologie." />
+    <title>DevStarter Kit | Bibliothèque</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="templates">
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+      <div class="loading-spinner" aria-label="Chargement"></div>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link is-active" href="templates.html">Templates</a>
+            <a class="navbar__link" href="navbar.html">Barres de nav</a>
+            <a class="navbar__link" href="footer.html">Pieds de page</a>
+            <a class="navbar__link" href="cards.html">Cartes</a>
+            <a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Bibliothèque de templates</h1>
+          <p>Recherchez des composants, filtrez par techno et niveau, puis copiez un code propre instantanément.</p>
+        </div>
+
+        <div class="grid grid--3 templates-intro-grid">
+          <article class="card hover-lift">
+            <h3>Code orienté apprentissage</h3>
+            <p>Chaque bloc est écrit pour rester lisible, commentable et facile à modifier.</p>
+          </article>
+          <article class="card hover-lift">
+            <h3>Approche progressive</h3>
+            <p>Commencez par les modèles débutants puis montez en complexité sans rupture.</p>
+          </article>
+          <article class="card hover-lift">
+            <h3>Copie instantanée</h3>
+            <p>Un clic pour copier, puis testez directement dans votre projet local.</p>
+          </article>
+        </div>
+
+        <div class="toolbar">
+          <label class="visually-hidden" for="templateSearch">Rechercher des templates</label>
+          <input id="templateSearch" class="input" type="search" placeholder="Rechercher des templates..." data-search-input />
+          <select class="input" data-filter-tech aria-label="Filtrer par technologie">
+            <option value="all">Toutes les technos</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JS</option>
+          </select>
+          <select class="input" data-filter-level aria-label="Filtrer par niveau">
+            <option value="all">Tous les niveaux</option>
+            <option value="beginner">Débutant</option>
+            <option value="intermediate">Intermédiaire</option>
+            <option value="advanced">Avancé</option>
+          </select>
+        </div>
+
+        <div class="grid grid--4 skeleton-wrap" id="templateSkeleton">
+          <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+        </div>
+
+        <div class="grid grid--4 hidden" data-search-container id="templateGrid">
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="beginner" data-title="navbar templates" data-desc="responsive navigation components">
+            <h3>Modèles de barres de navigation</h3>
+            <p>8 barres de navigation prêtes pour landing pages et dashboards.</p>
+            <p class="meta">Niveau : Débutant</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="navbar.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<nav class='navbar'><a class='logo' href='#'>Marque</a><div class='links'><a href='#'>Accueil</a></div></nav>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="beginner" data-title="footer templates" data-desc="modern footer patterns">
+            <h3>Modèles de pieds de page</h3>
+            <p>8 footers propres et professionnels avec variantes social et newsletter.</p>
+            <p class="meta">Niveau : Débutant</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="footer.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<footer class='footer'><p>© 2026 DevStarter Kit</p><a href='#'>Confidentialité</a></footer>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="cards templates" data-desc="ui cards collection">
+            <h3>Modèles de cartes</h3>
+            <p>16 cartes réutilisables : produit, blog, dashboard, pricing et plus.</p>
+            <p class="meta">Niveau : Intermédiaire</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="cards.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<article class='card'><h3>Titre de carte</h3><p>Description de carte</p></article>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="advanced" data-title="forms templates" data-desc="validated forms javascript">
+            <h3>Modèles de formulaires</h3>
+            <p>10 formulaires avec validation JavaScript, messages de retour et effets de focus.</p>
+            <p class="meta">Niveau : Avancé</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="forms.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<form class='form'><input type='email' required><button>Envoyer</button></form>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="buttons templates" data-desc="cta and action button variants">
+            <h3>Modèles de boutons</h3>
+            <p>8 boutons UI: CTA, loading, danger, icône, groupe pill et plus.</p>
+            <p class="meta">Niveau : Intermédiaire</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="buttons.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<button class='btn btn--primary'>Commencer</button>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="advanced" data-title="modals templates" data-desc="popup and dialog interface patterns">
+            <h3>Modèles de modales</h3>
+            <p>6 modales prêtes: confirmation, onboarding, formulaire, paiement.</p>
+            <p class="meta">Niveau : Avancé</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="modals.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<dialog open><h3>Confirmer</h3><button>OK</button></dialog>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css" data-level="intermediate" data-title="layout templates" data-desc="hero pricing contact sections">
+            <h3>Layouts de page</h3>
+            <p>Hero, pricing et contact sections pour assembler des landing pages complètes.</p>
+            <p class="meta">Niveau : Intermédiaire</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="layout.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<section class='hero'><h1>Titre</h1><p>Sous-titre</p></section>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="js" data-level="beginner" data-title="beginner challenges" data-desc="10 guided beginner exercises">
+            <h3>Défis débutants</h3>
+            <p>10 mini-exercices guidés avec correction pour progresser rapidement.</p>
+            <p class="meta">Niveau : Débutant</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="defis.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="Défi: créer un menu mobile avec aria-expanded">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="css js" data-level="intermediate" data-title="theme generator" data-desc="custom css variables generator">
+            <h3>Générateur de thème</h3>
+            <p>Personnalisez couleurs/radius et copiez vos variables CSS en 1 clic.</p>
+            <p class="meta">Niveau : Intermédiaire</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="theme.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline=":root { --color-primary: #0e8cff; --radius-lg: 16px; }">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="pricing demo page" data-desc="assembled real-world pricing page">
+            <h3>Page pricing fictive</h3>
+            <p>Exemple réel d’assemblage de templates pour un mini-projet SaaS.</p>
+            <p class="meta">Niveau : Intermédiaire</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="pricing.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<section class='pricing'><article class='plan'>...</article></section>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="landing generator tool" data-desc="assemble a complete landing page automatically">
+            <h3>Générateur de landing</h3>
+            <p>Assemble Hero + Pricing + CTA + Footer et récupérez un HTML complet.</p>
+            <p class="meta">Niveau : Intermédiaire</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="generateur.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<!doctype html><html lang='fr'><body>...</body></html>">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="js" data-level="beginner" data-title="learning time calculator" data-desc="estimate learning timeline with custom hours">
+            <h3>Calculateur d'apprentissage</h3>
+            <p>Estimez vos semaines d’étude selon votre niveau, votre objectif et vos heures.</p>
+            <p class="meta">Niveau : Débutant</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="calculateur.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="Durée estimée = heures nécessaires / heures par semaine">Copier le code</button>
+            </div>
+          </article>
+          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="downloadable complete projects" data-desc="landing saas portfolio dashboard ecommerce packs">
+            <h3>Projets téléchargeables</h3>
+            <p>4 projets complets (landing SaaS, portfolio, dashboard admin, mini e-commerce).</p>
+            <p class="meta">Niveau : Débutant à Intermédiaire</p>
+            <div class="card__actions">
+              <a class="btn btn--primary ripple" href="projets.html">Voir</a>
+              <button class="btn btn--ghost js-copy ripple" data-copy-inline="Téléchargement ZIP + niveau + temps estimé + compétences">Copier le code</button>
+            </div>
+          </article>
+        </div>
+
+        <section class="section">
+          <div class="section__head">
+            <h2>Comment utiliser la bibliothèque</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>1. Choisir un template</h3>
+              <p>Utilisez la recherche et les filtres pour cibler exactement votre besoin.</p>
+            </article>
+            <article class="card">
+              <h3>2. Copier et adapter</h3>
+              <p>Copiez le bloc, renommez les classes et ajustez les couleurs de votre projet.</p>
+            </article>
+            <article class="card">
+              <h3>3. Vérifier en mobile</h3>
+              <p>Testez toujours les breakpoints mobile/tablette avant de valider une intégration.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/favorites.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

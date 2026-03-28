@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Modèles de pieds de page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="footer">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation"><span></span><span></span><span></span></button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a><a class="navbar__link" href="templates.html">Templates</a><a class="navbar__link" href="navbar.html">Barres de nav</a><a class="navbar__link is-active" href="footer.html">Pieds de page</a><a class="navbar__link" href="cards.html">Cartes</a><a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="section__head"><h1>Modèles de pieds de page</h1><p>8 layouts de pied de page avec une hiérarchie moderne et propre.</p></div>
+        <div class="template-stack" data-search-container>
+          <article class="template-block card" data-search-item data-title="simple footer" data-desc="copyright links" data-tech="html css" data-level="beginner">
+            <div class="template-block__head"><h2>Pied de page simple</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-1">Copier le code</button></div>
+            <div class="preview-box">© 2026 DevStarter Kit · Privacy · Terms</div>
+            <pre><code id="code-foot-1">&lt;footer class="footer footer--simple"&gt;
+  &lt;p&gt;© 2026 DevStarter Kit&lt;/p&gt;
+  &lt;nav&gt;&lt;a href="#"&gt;Privacy&lt;/a&gt; &lt;a href="#"&gt;Terms&lt;/a&gt;&lt;/nav&gt;
+&lt;/footer&gt;
+.footer--simple{display:flex;justify-content:space-between;}</code></pre>
+          </article>
+          <article class="template-block card" data-search-item data-title="3 columns footer" data-desc="links grouped sections" data-tech="html css" data-level="beginner">
+            <div class="template-block__head"><h2>Pied de page 3 colonnes</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-2">Copier le code</button></div>
+            <div class="preview-box">Product | Resources | Company</div>
+            <pre><code id="code-foot-2">&lt;footer class="footer footer--cols"&gt;
+  &lt;section&gt;&lt;h4&gt;Produit&lt;/h4&gt;&lt;a href="#"&gt;Templates&lt;/a&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h4&gt;Ressources&lt;/h4&gt;&lt;a href="#"&gt;Guides&lt;/a&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h4&gt;Entreprise&lt;/h4&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/section&gt;
+&lt;/footer&gt;
+.footer--cols{display:grid;grid-template-columns:repeat(3,1fr);}</code></pre>
+          </article>
+          <article class="template-block card" data-search-item data-title="social footer" data-desc="social media icons area" data-tech="html css" data-level="intermediate">
+            <div class="template-block__head"><h2>Pied de page réseaux sociaux</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-3">Copier le code</button></div>
+            <div class="preview-box">Twitter · GitHub · LinkedIn · Discord</div>
+            <pre><code id="code-foot-3">&lt;footer class="footer footer--social"&gt;
+  &lt;p&gt;Suivez-nous&lt;/p&gt;
+  &lt;div&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;a href="#"&gt;GitHub&lt;/a&gt;&lt;a href="#"&gt;LinkedIn&lt;/a&gt;&lt;/div&gt;
+&lt;/footer&gt;
+.footer--social a:hover{transform:translateY(-2px);}</code></pre>
+          </article>
+          <article class="template-block card" data-search-item data-title="newsletter footer" data-desc="email capture footer" data-tech="html css js" data-level="intermediate">
+            <div class="template-block__head"><h2>Pied de page newsletter</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-4">Copier le code</button></div>
+            <div class="preview-box">Subscribe: [email input] [Join]</div>
+            <pre><code id="code-foot-4">&lt;form class="newsletter"&gt;&lt;input type="email"&gt;&lt;button&gt;Join&lt;/button&gt;&lt;/form&gt;
+.newsletter{display:flex;gap:.5rem;}</code></pre>
+          </article>
+          <article class="template-block card" data-search-item data-title="enterprise footer" data-desc="legal columns locations" data-tech="html css" data-level="advanced">
+            <div class="template-block__head"><h2>Pied de page entreprise</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-5">Copier le code</button></div>
+            <div class="preview-box">Solutions · Security · Locations · Legal</div>
+            <pre><code id="code-foot-5">&lt;footer class="footer footer--enterprise"&gt;
+  &lt;section&gt;&lt;h4&gt;Solutions&lt;/h4&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h4&gt;Sécurité&lt;/h4&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h4&gt;Localisations&lt;/h4&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h4&gt;Mentions légales&lt;/h4&gt;&lt;/section&gt;
+&lt;/footer&gt;
+.footer--enterprise{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;}</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="minimal legal footer" data-desc="minimal footer with legal line" data-tech="html css" data-level="beginner">
+            <div class="template-block__head"><h2>Pied de page légal minimal</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-6">Copier le code</button></div>
+            <div class="preview-box">© 2026 · Mentions légales · Cookies</div>
+            <pre><code id="code-foot-6">&lt;footer class="footer footer--legal"&gt;
+  &lt;p&gt;© 2026 DevStarter Kit&lt;/p&gt;
+  &lt;a href="#"&gt;Mentions légales&lt;/a&gt;
+  &lt;a href="#"&gt;Cookies&lt;/a&gt;
+&lt;/footer&gt;</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="app download footer" data-desc="mobile app badges and links" data-tech="html css" data-level="intermediate">
+            <div class="template-block__head"><h2>Pied de page app mobile</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-7">Copier le code</button></div>
+            <div class="preview-box">Téléchargez l’app : App Store | Google Play</div>
+            <pre><code id="code-foot-7">&lt;footer class="footer footer--app"&gt;
+  &lt;p&gt;Téléchargez notre app&lt;/p&gt;
+  &lt;div class="badges"&gt;&lt;a href="#"&gt;App Store&lt;/a&gt;&lt;a href="#"&gt;Google Play&lt;/a&gt;&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+          </article>
+
+          <article class="template-block card" data-search-item data-title="sitemap footer" data-desc="extended links and sitemap style" data-tech="html css" data-level="advanced">
+            <div class="template-block__head"><h2>Pied de page sitemap étendu</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-8">Copier le code</button></div>
+            <div class="preview-box">Produit | Docs | API | Support | Statut</div>
+            <pre><code id="code-foot-8">&lt;footer class="footer footer--sitemap"&gt;
+  &lt;section&gt;&lt;h4&gt;Produit&lt;/h4&gt;&lt;a href="#"&gt;Fonctionnalités&lt;/a&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h4&gt;Développeurs&lt;/h4&gt;&lt;a href="#"&gt;API&lt;/a&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h4&gt;Support&lt;/h4&gt;&lt;a href="#"&gt;Centre d'aide&lt;/a&gt;&lt;/section&gt;
+&lt;/footer&gt;</code></pre>
+          </article>
+        </div>
+
+        <section class="section">
+          <div class="section__head">
+            <h2>Bonnes pratiques footer</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Ajoutez la confiance</h3>
+              <p>Incluez politique de confidentialité, mentions légales et contact.</p>
+            </article>
+            <article class="card">
+              <h3>Structurez par blocs</h3>
+              <p>Produit, Ressources, Entreprise : une colonne = une intention claire.</p>
+            </article>
+            <article class="card">
+              <h3>Pensez conversion</h3>
+              <p>Le footer newsletter peut capter les utilisateurs qui hésitent à acheter.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/favorites.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

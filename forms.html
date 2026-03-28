@@ -1,0 +1,159 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Templates Formulaires</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="forms">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation"><span></span><span></span><span></span></button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a><a class="navbar__link" href="templates.html">Templates</a><a class="navbar__link" href="navbar.html">Barres de nav</a><a class="navbar__link" href="footer.html">Pieds de page</a><a class="navbar__link" href="cards.html">Cartes</a><a class="navbar__link is-active" href="forms.html">Formulaires</a><a class="navbar__link" href="buttons.html">Boutons</a><a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="section__head"><h1>Templates Formulaires</h1><p>10 formulaires avec validation, erreurs et retours de succès.</p></div>
+        <div class="grid grid--2">
+          <article class="card">
+            <h2>Formulaire de connexion</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Email<input class="input" type="email" name="email" required /></label>
+              <label>Mot de passe<input class="input" type="password" name="password" minlength="6" required /></label>
+              <button class="btn btn--primary ripple" type="submit">Connexion</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire d'inscription</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Nom complet<input class="input" type="text" name="name" required /></label>
+              <label>Email<input class="input" type="email" name="email" required /></label>
+              <label>Mot de passe<input class="input" type="password" name="password" minlength="6" required /></label>
+              <button class="btn btn--primary ripple" type="submit">S'inscrire</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire de contact</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Nom<input class="input" type="text" name="name" required /></label>
+              <label>Email<input class="input" type="email" name="email" required /></label>
+              <label>Message<textarea class="input" name="message" rows="4" required></textarea></label>
+              <button class="btn btn--primary ripple" type="submit">Envoyer</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire newsletter</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Email<input class="input" type="email" name="email" required /></label>
+              <button class="btn btn--primary ripple" type="submit">S'abonner</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire de recherche</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Mot-clé<input class="input" type="search" name="query" required /></label>
+              <button class="btn btn--primary ripple" type="submit">Rechercher</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire de paiement</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Titulaire de la carte<input class="input" type="text" name="holder" required /></label>
+              <label>Numéro de carte<input class="input" type="text" name="card" minlength="16" maxlength="19" required /></label>
+              <label>Code postal<input class="input" type="text" name="zip" minlength="4" required /></label>
+              <button class="btn btn--primary ripple" type="submit">Payer</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire mot de passe oublié</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Email<input class="input" type="email" name="email" required /></label>
+              <button class="btn btn--primary ripple" type="submit">Envoyer le lien</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire réinitialisation</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Nouveau mot de passe<input class="input" type="password" name="password" minlength="6" required /></label>
+              <label>Confirmer le mot de passe<input class="input" type="password" name="confirm" minlength="6" required /></label>
+              <button class="btn btn--primary ripple" type="submit">Mettre à jour</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire profil utilisateur</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Nom<input class="input" type="text" name="name" required /></label>
+              <label>Bio<textarea class="input" name="bio" rows="3" required></textarea></label>
+              <label>Site web<input class="input" type="url" name="website" required /></label>
+              <button class="btn btn--primary ripple" type="submit">Sauvegarder</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="card">
+            <h2>Formulaire feedback</h2>
+            <form class="form js-validate-form" novalidate>
+              <label>Email<input class="input" type="email" name="email" required /></label>
+              <label>Note (1-5)<input class="input" type="number" name="rating" min="1" max="5" required /></label>
+              <label>Commentaire<textarea class="input" name="comment" rows="3" required></textarea></label>
+              <button class="btn btn--primary ripple" type="submit">Envoyer le feedback</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+
+        <section class="section__head">
+          <h2>Copier un boilerplate de formulaire</h2>
+          <button class="btn btn--ghost js-copy" data-copy-inline="<form class='form'><label>Email<input type='email' required></label><button type='submit'>Envoyer</button></form>">Copier le code</button>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2>Checklist UX pour formulaires</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Libellés explicites</h3>
+              <p>Chaque champ doit indiquer clairement ce qui est attendu.</p>
+            </article>
+            <article class="card">
+              <h3>Validation immédiate</h3>
+              <p>Signalez rapidement les erreurs pour réduire la frustration utilisateur.</p>
+            </article>
+            <article class="card">
+              <h3>Messages d’action</h3>
+              <p>Affichez un succès lisible après envoi pour confirmer la bonne prise en compte.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script><script src="js/copy.js"></script><script src="js/darkmode.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

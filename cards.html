@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Modèles de cartes</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="cards">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation"><span></span><span></span><span></span></button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a><a class="navbar__link" href="templates.html">Templates</a><a class="navbar__link" href="navbar.html">Barres de nav</a><a class="navbar__link" href="footer.html">Pieds de page</a><a class="navbar__link is-active" href="cards.html">Cartes</a><a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="section__head"><h1>Modèles de cartes</h1><p>16 modèles de cartes réutilisables avec hover animation et ombres douces.</p></div>
+        <div class="toolbar">
+          <input class="input" type="search" placeholder="Rechercher des cards..." data-search-input />
+          <select class="input" data-filter-tech><option value="all">Toutes les technos</option><option value="html">HTML</option><option value="css">CSS</option><option value="js">JS</option></select>
+          <select class="input" data-filter-level><option value="all">Tous les niveaux</option><option value="beginner">Débutant</option><option value="intermediate">Intermédiaire</option><option value="advanced">Avancé</option></select>
+        </div>
+        <div class="grid grid--3" data-search-container>
+          <article class="card template-overview hover-lift" data-search-item data-title="product card" data-desc="product image and price" data-tech="html css" data-level="beginner"><h3>Product Card</h3><p>Image, titre, prix, CTA.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='product-card'><h3>Pack Starter</h3><p>29€</p><button>Acheter</button></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="profile card" data-desc="avatar and bio" data-tech="html css" data-level="beginner"><h3>Profile Card</h3><p>Avatar, rôle, liens sociaux.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='profile-card'><img alt='Avatar'><h3>Jane Doe</h3><p>Développeuse Frontend</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="pricing card" data-desc="plan features" data-tech="html css js" data-level="intermediate"><h3>Pricing Card</h3><p>Nom d'offre, prix, fonctionnalités.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='pricing-card'><h3>Pro</h3><p>49€/mois</p><ul><li>Projets illimités</li></ul></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="blog card" data-desc="article preview layout" data-tech="html css" data-level="beginner"><h3>Blog Card</h3><p>Miniature, date, résumé.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='blog-card'><h3>Comment créer une navbar</h3><p>Lecture 5 min</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="testimonial card" data-desc="user quote card" data-tech="html css" data-level="intermediate"><h3>Testimonial Card</h3><p>Avis, note, avatar.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='testimonial-card'><p>Excellent starter kit.</p><strong>- Alex</strong></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="feature card" data-desc="icon and feature detail" data-tech="html css" data-level="beginner"><h3>Feature Card</h3><p>Icône, description courte.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='feature-card'><h3>Mise en place rapide</h3><p>Démarrez en quelques minutes.</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="stats card" data-desc="metric display card" data-tech="html css js" data-level="intermediate"><h3>Stats Card</h3><p>Métrique et tendance.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='stats-card'><h3>Conversion</h3><p>12.4%</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="service card" data-desc="service details card" data-tech="html css" data-level="beginner"><h3>Service Card</h3><p>Titre du service et CTA.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='service-card'><h3>Audit UI</h3><p>Améliorez votre UX rapidement.</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="team card" data-desc="member profile card" data-tech="html css" data-level="beginner"><h3>Team Card</h3><p>Photo, rôle, contact.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='team-card'><h3>Sarah</h3><p>Designer Produit</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="dashboard card" data-desc="analytics widget card" data-tech="html css js" data-level="advanced"><h3>Dashboard Card</h3><p>Widget data avec statut.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='dashboard-card'><h3>Revenus</h3><p>18 420€</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="event card" data-desc="event date place and call to action" data-tech="html css" data-level="beginner"><h3>Event Card</h3><p>Date, lieu, inscription.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='event-card'><h3>Frontend Meetup</h3><p>12 mai • Paris</p><button>Réserver</button></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="job card" data-desc="job offer card with tags" data-tech="html css" data-level="intermediate"><h3>Job Card</h3><p>Poste, stack, salaire.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='job-card'><h3>Développeur Frontend</h3><p>React • Remote • 45k€</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="course card" data-desc="online course card with progress" data-tech="html css js" data-level="intermediate"><h3>Course Card</h3><p>Module, durée, progression.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='course-card'><h3>CSS Avancé</h3><p>Progression: 70%</p></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="project card" data-desc="portfolio project card with stack tags" data-tech="html css" data-level="beginner"><h3>Project Card</h3><p>Projet, stack, lien démo.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='project-card'><h3>SaaS Landing</h3><p>HTML • CSS • JS</p><a href='#'>Voir la démo</a></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="notification card" data-desc="alert and update message card" data-tech="html css js" data-level="advanced"><h3>Notification Card</h3><p>Message système et action rapide.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='notification-card'><p>Mise à jour disponible.</p><button>Installer</button></article>">Copier le code</button></article>
+          <article class="card template-overview hover-lift" data-search-item data-title="faq card" data-desc="question answer accordion card" data-tech="html css js" data-level="advanced"><h3>FAQ Card</h3><p>Question/réponse compacte.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='faq-card'><h3>Comment déployer ?</h3><p>Utilisez un hébergement statique.</p></article>">Copier le code</button></article>
+        </div>
+
+        <section class="section">
+          <div class="section__head">
+            <h2>Quand utiliser chaque type de card</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Produit / Pricing</h3>
+              <p>Parfait pour landing pages, pages e-commerce et comparatifs d’offres.</p>
+            </article>
+            <article class="card">
+              <h3>Blog / Testimonial</h3>
+              <p>Idéal pour crédibiliser un site et améliorer l’engagement des visiteurs.</p>
+            </article>
+            <article class="card">
+              <h3>Stats / Dashboard</h3>
+              <p>À utiliser dans les back-offices pour suivre les KPI en un coup d’œil.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/favorites.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/index.html</loc></url>
+  <url><loc>https://example.com/templates.html</loc></url>
+  <url><loc>https://example.com/navbar.html</loc></url>
+  <url><loc>https://example.com/footer.html</loc></url>
+  <url><loc>https://example.com/cards.html</loc></url>
+  <url><loc>https://example.com/forms.html</loc></url>
+  <url><loc>https://example.com/buttons.html</loc></url>
+  <url><loc>https://example.com/modals.html</loc></url>
+  <url><loc>https://example.com/layout.html</loc></url>
+  <url><loc>https://example.com/pricing.html</loc></url>
+  <url><loc>https://example.com/defis.html</loc></url>
+  <url><loc>https://example.com/theme.html</loc></url>
+  <url><loc>https://example.com/projets.html</loc></url>
+  <url><loc>https://example.com/generateur.html</loc></url>
+  <url><loc>https://example.com/calculateur.html</loc></url>
+  <url><loc>https://example.com/blog.html</loc></url>
+  <url><loc>https://example.com/blog-templates-html.html</loc></url>
+  <url><loc>https://example.com/blog-navbar-responsive.html</loc></url>
+  <url><loc>https://example.com/blog-checklist-ux.html</loc></url>
+  <url><loc>https://example.com/confidentialite.html</loc></url>
+  <url><loc>https://example.com/conditions.html</loc></url>
+  <url><loc>https://example.com/cookies.html</loc></url>
+</urlset>

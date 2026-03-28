@@ -1,0 +1,24 @@
+{
+  "name": "DevStarter Kit",
+  "short_name": "DevStarter",
+  "lang": "fr",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0e8cff",
+  "description": "Templates frontend HTML/CSS/JS pour développeurs débutants.",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

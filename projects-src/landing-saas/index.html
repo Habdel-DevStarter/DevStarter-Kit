@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing SaaS</title>
+    <style>
+      body{font-family:Segoe UI,sans-serif;margin:0;background:#f5f8ff;color:#1f2937}
+      .wrap{max-width:1000px;margin:auto;padding:2rem}
+      .hero,.pricing,.cta{background:#fff;border-radius:16px;padding:1.2rem;margin-bottom:1rem;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+      .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+      .plan{border:1px solid #dbe2f1;border-radius:12px;padding:.8rem}
+      button{background:#0e8cff;color:#fff;border:0;padding:.7rem 1rem;border-radius:999px}
+      @media(max-width:768px){.plans{grid-template-columns:1fr}}
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>Votre SaaS en ligne plus vite</h1>
+        <p>Landing propre, responsive et prête à personnaliser.</p>
+        <button>Commencer</button>
+      </section>
+      <section class="pricing">
+        <h2>Pricing</h2>
+        <div class="plans">
+          <article class="plan"><h3>Starter</h3><p>9€/mois</p></article>
+          <article class="plan"><h3>Pro</h3><p>29€/mois</p></article>
+          <article class="plan"><h3>Team</h3><p>79€/mois</p></article>
+        </div>
+      </section>
+      <section class="cta">
+        <h2>Prêt à tester ?</h2>
+        <button>Essai gratuit</button>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Projets téléchargeables</title>
+    <meta name="description" content="Téléchargez 4 projets complets : landing SaaS, portfolio dev, dashboard admin et mini e-commerce." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="projets">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="blog.html">Blog</a>
+            <a class="navbar__link is-active" href="projets.html">Projets</a>
+            <a class="navbar__link" href="generateur.html">Générateur</a>
+            <a class="navbar__link" href="calculateur.html">Calculateur</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Projets complets téléchargeables</h1>
+          <p>Téléchargez des mini-projets prêts à lancer pour apprendre en construisant.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card hover-lift">
+            <h2>Landing SaaS</h2>
+            <p><strong>Niveau :</strong> Débutant</p>
+            <p><strong>Temps estimé :</strong> 2 à 4 heures</p>
+            <p><strong>Compétences :</strong> Hero, pricing, CTA, responsive, structure sémantique.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projects-src/landing-saas/index.html" target="_blank" rel="noopener noreferrer">Prévisualiser</a>
+              <a class="btn btn--primary" href="assets/downloads/landing-saas.zip" download>Télécharger ZIP</a>
+            </div>
+          </article>
+
+          <article class="card hover-lift">
+            <h2>Portfolio Dev</h2>
+            <p><strong>Niveau :</strong> Débutant / Intermédiaire</p>
+            <p><strong>Temps estimé :</strong> 3 à 5 heures</p>
+            <p><strong>Compétences :</strong> Présentation projets, timeline, contact form, UI personnelle.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projects-src/portfolio-dev/index.html" target="_blank" rel="noopener noreferrer">Prévisualiser</a>
+              <a class="btn btn--primary" href="assets/downloads/portfolio-dev.zip" download>Télécharger ZIP</a>
+            </div>
+          </article>
+
+          <article class="card hover-lift">
+            <h2>Dashboard Admin</h2>
+            <p><strong>Niveau :</strong> Intermédiaire</p>
+            <p><strong>Temps estimé :</strong> 4 à 6 heures</p>
+            <p><strong>Compétences :</strong> Layout dashboard, widgets stats, tableaux, navigation latérale.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projects-src/dashboard-admin/index.html" target="_blank" rel="noopener noreferrer">Prévisualiser</a>
+              <a class="btn btn--primary" href="assets/downloads/dashboard-admin.zip" download>Télécharger ZIP</a>
+            </div>
+          </article>
+
+          <article class="card hover-lift">
+            <h2>Mini E-commerce</h2>
+            <p><strong>Niveau :</strong> Intermédiaire</p>
+            <p><strong>Temps estimé :</strong> 5 à 8 heures</p>
+            <p><strong>Compétences :</strong> Product cards, panier localStorage, checkout form, états UI.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projects-src/mini-ecommerce/index.html" target="_blank" rel="noopener noreferrer">Prévisualiser</a>
+              <a class="btn btn--primary" href="assets/downloads/mini-ecommerce.zip" download>Télécharger ZIP</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+  </body>
+</html>

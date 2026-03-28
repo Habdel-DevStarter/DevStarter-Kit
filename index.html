@@ -1,0 +1,225 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DevStarter Kit aide les développeurs débutants à copier des templates HTML, CSS et JavaScript propres."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DevStarter Kit - Templates Frontend pour Débutants" />
+    <meta property="og:description" content="Bibliothèque moderne de templates HTML/CSS/JS prêts à copier-coller." />
+    <meta property="og:url" content="https://example.com/index.html" />
+    <meta property="og:image" content="https://example.com/assets/images/og-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DevStarter Kit - Templates Frontend pour Débutants" />
+    <meta name="twitter:description" content="Composants modernes, défis débutants, thème lab et projets complets." />
+    <meta name="twitter:image" content="https://example.com/assets/images/og-home.png" />
+    <title>DevStarter Kit | Accueil</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="home">
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+      <div class="loading-spinner" aria-label="Chargement"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button
+            class="navbar__toggle"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="primaryMenu"
+            aria-label="Ouvrir ou fermer le menu de navigation"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link is-active" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="navbar.html">Barres de nav</a>
+            <a class="navbar__link" href="footer.html">Pieds de page</a>
+            <a class="navbar__link" href="cards.html">Cartes</a>
+            <a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero fade-in">
+        <div class="container hero__layout">
+          <div>
+            <p class="eyebrow">Templates modernes pour débutants</p>
+            <h1>Créez plus vite avec des blocs frontend propres</h1>
+            <p class="hero__text">
+              Copiez-collez des composants prêts pour la production en HTML, CSS et JavaScript natifs.
+              Apprenez avec un code réaliste et professionnel.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary ripple" href="templates.html">Explorer les templates</a>
+              <a class="btn btn--ghost ripple" href="forms.html">Tester les formulaires</a>
+            </div>
+          </div>
+          <aside class="glass-card hover-lift">
+            <h2>Ce que vous obtenez</h2>
+            <ul class="feature-list">
+              <li>Layouts responsives pour mobile, tablette et desktop</li>
+              <li>Mode sombre, recherche, filtres et copie de code</li>
+              <li>Structure de code sémantique et accessible</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <div class="container">
+          <div class="section__head">
+            <h2>Catégories de templates</h2>
+            <p>Chaque catégorie est pensée pour apprendre vite et réutiliser en projet réel.</p>
+          </div>
+          <div class="grid grid--4" id="homeCategories"></div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <div class="container">
+          <div class="grid grid--4">
+            <article class="card hover-lift">
+              <h3>64+</h3>
+              <p>templates concrets à copier-coller</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>100%</h3>
+              <p>HTML, CSS, JavaScript Vanilla</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>3 niveaux</h3>
+              <p>débutant, intermédiaire, avancé</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>0 dépendance</h3>
+              <p>prêt pour intégration immédiate</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft fade-in">
+        <div class="container">
+          <div class="section__head">
+            <h2>Pourquoi DevStarter Kit</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card hover-lift">
+              <h3>Architecture propre</h3>
+              <p>Dossiers organisés et fichiers modulaires comme dans un vrai dépôt professionnel.</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>Apprentissage rapide</h3>
+              <p>Utilisez des sections réutilisables et apprenez les bonnes pratiques avec des exemples concrets.</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>Zéro dépendance</h3>
+              <p>Sans framework ni librairie. Uniquement HTML5, CSS3 et JavaScript Vanilla.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <div class="container">
+          <div class="section__head">
+            <h2>Parcours recommandé pour débuter</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card hover-lift">
+              <h3>1. Commencez par les navbars</h3>
+              <p>Maîtrisez les bases de structure HTML, alignement Flexbox et responsive mobile.</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>2. Enchaînez avec les cartes</h3>
+              <p>Travaillez les ombres, hiérarchie visuelle, hover states et rythme des espacements.</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>3. Terminez par les formulaires</h3>
+              <p>Apprenez la validation, les messages d’erreur/succès et les bonnes pratiques UX.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft fade-in">
+        <div class="container">
+          <div class="section__head">
+            <h2>FAQ rapide</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Puis-je utiliser ces templates en production ?</h3>
+              <p>Oui, ils sont conçus comme une base propre à adapter à votre identité visuelle.</p>
+            </article>
+            <article class="card">
+              <h3>Dois-je installer un framework ?</h3>
+              <p>Non. Tout fonctionne avec HTML5, CSS3 et JavaScript Vanilla uniquement.</p>
+            </article>
+            <article class="card">
+              <h3>Comment progresser vite ?</h3>
+              <p>Copiez un template, personnalisez-le, puis comparez votre version avec l’original.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <div class="container">
+          <div class="section__head">
+            <h2>Roadmap d’apprentissage 30 jours</h2>
+            <p>Un plan simple pour progresser chaque semaine sans vous disperser.</p>
+            <a class="btn btn--primary ripple" href="templates.html?level=beginner">Commencer la roadmap</a>
+          </div>
+          <div class="grid grid--2">
+            <article class="card hover-lift">
+              <h3>Semaine 1 : Fondations HTML/CSS</h3>
+              <p>Objectif : reproduire 2 navbars et 2 footers, puis comprendre chaque classe utilisée.</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>Semaine 2 : Composants UI</h3>
+              <p>Objectif : intégrer 5 types de cards et créer votre propre variante visuelle.</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>Semaine 3 : JavaScript utile</h3>
+              <p>Objectif : maîtriser copy code, dark mode, filtres et recherche côté interface.</p>
+            </article>
+            <article class="card hover-lift">
+              <h3>Semaine 4 : Formulaires et mini-projet</h3>
+              <p>Objectif : construire une landing page complète avec formulaire validé et version mobile propre.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Calculateur d'apprentissage</title>
+    <meta name="description" content="Estimez votre temps d'apprentissage frontend selon votre niveau, objectif et heures par semaine." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="calculateur">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="blog.html">Blog</a>
+            <a class="navbar__link" href="generateur.html">Générateur</a>
+            <a class="navbar__link is-active" href="calculateur.html">Calculateur</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Calculateur de temps d'apprentissage</h1>
+          <p>Obtenez une estimation réaliste en semaines, avec un plan d'étude personnalisé.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <section class="card">
+            <h2>Vos paramètres</h2>
+            <div class="form">
+              <label>Niveau actuel
+                <select id="calcLevel" class="input">
+                  <option value="beginner">Débutant</option>
+                  <option value="intermediate">Intermédiaire</option>
+                </select>
+              </label>
+              <label>Objectif
+                <select id="calcGoal" class="input">
+                  <option value="portfolio">Construire un portfolio solide</option>
+                  <option value="freelance">Prendre ses premiers clients freelance</option>
+                  <option value="job">Être prêt pour candidater junior</option>
+                </select>
+              </label>
+              <label>Heures disponibles / semaine
+                <input id="calcHours" class="input" type="number" min="2" max="40" value="8" />
+              </label>
+              <button id="calcRun" class="btn btn--primary ripple" type="button">Calculer</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Résultat</h2>
+            <p id="calcSummary">Remplissez les paramètres puis cliquez sur “Calculer”.</p>
+            <div id="calcPlan" class="grid"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/learning-calculator.js"></script>
+  </body>
+</html>

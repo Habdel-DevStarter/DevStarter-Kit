@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Générateur de Landing</title>
+    <meta name="description" content="Assemblez une landing page en choisissant Hero, Pricing, CTA et Footer puis copiez le code complet." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="generateur">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="blog.html">Blog</a>
+            <a class="navbar__link is-active" href="generateur.html">Générateur</a>
+            <a class="navbar__link" href="calculateur.html">Calculateur</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Générateur de landing page</h1>
+          <p>Choisissez vos sections et obtenez un fichier HTML complet prêt à déployer.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <section class="card">
+            <h2>Configuration</h2>
+            <div class="form">
+              <label>Hero
+                <select class="input" id="builderHero">
+                  <option value="saas">Hero SaaS</option>
+                  <option value="agency">Hero Agence</option>
+                  <option value="product">Hero Produit</option>
+                </select>
+              </label>
+              <label>Pricing
+                <select class="input" id="builderPricing">
+                  <option value="three">3 plans</option>
+                  <option value="two">2 plans</option>
+                  <option value="none">Sans pricing</option>
+                </select>
+              </label>
+              <label>CTA final
+                <select class="input" id="builderCta">
+                  <option value="contact">Section contact</option>
+                  <option value="newsletter">Section newsletter</option>
+                  <option value="none">Sans CTA final</option>
+                </select>
+              </label>
+              <label>Footer
+                <select class="input" id="builderFooter">
+                  <option value="simple">Footer simple</option>
+                  <option value="columns">Footer 3 colonnes</option>
+                </select>
+              </label>
+              <button class="btn btn--primary ripple" id="builderGenerate" type="button">Générer le code</button>
+              <button class="btn btn--ghost ripple" id="builderCopy" type="button">Copier le code</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Code généré</h2>
+            <pre><code id="builderOutput"></code></pre>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/landing-generator.js"></script>
+  </body>
+</html>

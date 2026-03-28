@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Défis débutants</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="defis">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="navbar.html">Barres de nav</a>
+            <a class="navbar__link" href="footer.html">Pieds de page</a>
+            <a class="navbar__link" href="cards.html">Cartes</a>
+            <a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link is-active" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Défis débutants</h1>
+          <p>10 mini-exercices progressifs pour pratiquer HTML, CSS et JavaScript en conditions réelles.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card challenge-card"><h3>Défi 1 - Navbar sticky</h3><p>Rendez la navbar fixe en haut avec un fond translucide.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>.site-header{position:sticky;top:0;backdrop-filter:blur(8px);}</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 2 - Card hover</h3><p>Ajoutez un effet lift au survol d'une card.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>.card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.12);}</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 3 - Grille responsive</h3><p>Passez une grille 3 colonnes en 1 colonne sur mobile.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>@media (max-width:768px){.grid--3{grid-template-columns:1fr;}}</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 4 - Dark mode</h3><p>Stockez le thème choisi dans localStorage.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>localStorage.setItem('devstarter-theme','dark');</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 5 - Copy code</h3><p>Copiez le contenu d’un bloc code au clic.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>navigator.clipboard.writeText(code.textContent);</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 6 - Validation email</h3><p>Affichez un message d’erreur si email invalide.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>if(!email.checkValidity()){message.textContent='Email invalide';}</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 7 - Menu mobile</h3><p>Ouvrez/fermez le menu hamburger avec aria-expanded.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>menu.classList.toggle('is-open');btn.setAttribute('aria-expanded', String(open));</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 8 - Filtre de recherche</h3><p>Masquez les cards qui ne matchent pas la recherche.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>item.style.display = matches ? '' : 'none';</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 9 - Toast UX</h3><p>Affichez “Copié” 2 secondes après une action.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>toast.classList.add('is-visible');setTimeout(()=>toast.classList.remove('is-visible'),2000);</code></pre></article>
+          <article class="card challenge-card"><h3>Défi 10 - Scroll to top</h3><p>Affichez le bouton seulement après 300px de scroll.</p><button class="btn btn--ghost js-show-answer">Voir correction</button><pre class="challenge-answer hidden"><code>btn.classList.toggle('is-visible', window.scrollY > 300);</code></pre></article>
+        </div>
+
+        <section class="section">
+          <div class="section__head">
+            <h2>Checklist UX manuelle</h2>
+            <p>Cochez cette checklist pendant vos tests d’interface (accessibilité + responsive).</p>
+          </div>
+          <div class="grid grid--2 ux-checklist">
+            <article class="card">
+              <h3>Accessibilité</h3>
+              <label><input type="checkbox" class="js-ux-check" /> Le contraste texte/fond est lisible (AA minimum)</label>
+              <label><input type="checkbox" class="js-ux-check" /> Tous les boutons ont un focus visible clavier</label>
+              <label><input type="checkbox" class="js-ux-check" /> Les inputs ont des labels explicites</label>
+              <label><input type="checkbox" class="js-ux-check" /> Les images décoratives ont `alt=""`</label>
+              <label><input type="checkbox" class="js-ux-check" /> Les actions importantes ont un feedback visuel</label>
+            </article>
+            <article class="card">
+              <h3>Responsive</h3>
+              <label><input type="checkbox" class="js-ux-check" /> Aucun débordement horizontal à 320px</label>
+              <label><input type="checkbox" class="js-ux-check" /> La navbar mobile est utilisable au pouce</label>
+              <label><input type="checkbox" class="js-ux-check" /> Les grilles se replient proprement</label>
+              <label><input type="checkbox" class="js-ux-check" /> Les boutons restent cliquables sur petit écran</label>
+              <label><input type="checkbox" class="js-ux-check" /> Les blocs code restent lisibles sur mobile</label>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/challenges.js"></script>
+  </body>
+</html>
+
+

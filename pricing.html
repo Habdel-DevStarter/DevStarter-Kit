@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevStarter Kit | Pricing Demo</title>
+    <meta name="description" content="Page pricing fictive assemblée avec les templates DevStarter Kit." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pricing Demo - DevStarter Kit" />
+    <meta property="og:description" content="Exemple réaliste de page pricing assemblée avec des templates réutilisables." />
+    <meta property="og:url" content="https://example.com/pricing.html" />
+    <meta property="og:image" content="https://example.com/assets/images/og-pricing.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pricing Demo - DevStarter Kit" />
+    <meta name="twitter:description" content="Découvrez comment combiner plusieurs templates dans un vrai projet." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="pricing">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
+          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="navbar__menu" id="primaryMenu">
+            <a class="navbar__link" href="index.html">Accueil</a>
+            <a class="navbar__link" href="templates.html">Templates</a>
+            <a class="navbar__link" href="navbar.html">Barres de nav</a>
+            <a class="navbar__link" href="footer.html">Pieds de page</a>
+            <a class="navbar__link" href="cards.html">Cartes</a>
+            <a class="navbar__link" href="forms.html">Formulaires</a>
+            <a class="navbar__link" href="buttons.html">Boutons</a>
+            <a class="navbar__link" href="modals.html">Modales</a>
+            <a class="navbar__link" href="layout.html">Layouts</a>
+            <a class="navbar__link is-active" href="pricing.html">Pricing Demo</a>
+            <a class="navbar__link" href="defis.html">Défis</a>
+            <a class="navbar__link" href="theme.html">Thème Lab</a>
+            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section">
+        <div class="container hero__layout">
+          <div>
+            <p class="eyebrow">Projet Fictif Assemblé</p>
+            <h1>Pricing SaaS prêt pour démo client</h1>
+            <p class="hero__text">
+              Cette page montre comment combiner navbar, cards, buttons, forms et layouts pour créer
+              une landing pricing complète en HTML/CSS/JS Vanilla.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary ripple" href="#pricing">Voir les offres</a>
+              <a class="btn btn--ghost ripple" href="#contact">Parler à l’équipe</a>
+            </div>
+          </div>
+          <aside class="glass-card">
+            <h2>Inclus dans cette démo</h2>
+            <ul class="feature-list">
+              <li>Section hero orientée conversion</li>
+              <li>Cartes pricing avec plan recommandé</li>
+              <li>FAQ + formulaire de contact final</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section__head">
+            <h2>Choisissez votre offre</h2>
+            <p>Structure pricing réaliste avec mise en avant du plan le plus populaire.</p>
+          </div>
+          <div class="grid grid--3">
+            <article class="card hover-lift">
+              <h3>Starter</h3>
+              <p class="meta">Pour débuter rapidement</p>
+              <p><strong>9€ / mois</strong></p>
+              <ul class="feature-list">
+                <li>10 templates premium</li>
+                <li>Support email</li>
+                <li>Mises à jour mensuelles</li>
+              </ul>
+              <button class="btn btn--ghost ripple">Choisir Starter</button>
+            </article>
+            <article class="card hover-lift" style="border-color: var(--color-primary); transform: translateY(-4px);">
+              <h3>Pro</h3>
+              <p class="meta">Le plus populaire</p>
+              <p><strong>29€ / mois</strong></p>
+              <ul class="feature-list">
+                <li>Accès complet à la bibliothèque</li>
+                <li>Support prioritaire</li>
+                <li>Nouveaux templates chaque semaine</li>
+              </ul>
+              <button class="btn btn--primary ripple">Choisir Pro</button>
+            </article>
+            <article class="card hover-lift">
+              <h3>Team</h3>
+              <p class="meta">Pour équipes produit</p>
+              <p><strong>79€ / mois</strong></p>
+              <ul class="feature-list">
+                <li>Licence équipe (10 membres)</li>
+                <li>Onboarding dédié</li>
+                <li>Support Slack</li>
+              </ul>
+              <button class="btn btn--ghost ripple">Choisir Team</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <div class="section__head">
+            <h2>Questions fréquentes</h2>
+          </div>
+          <div class="grid grid--2">
+            <article class="card"><h3>Puis-je annuler à tout moment ?</h3><p>Oui, sans engagement. Vous pouvez arrêter l’abonnement en 1 clic.</p></article>
+            <article class="card"><h3>Les templates sont-ils modifiables ?</h3><p>Oui, tout est livré en HTML/CSS/JS natif et totalement personnalisable.</p></article>
+            <article class="card"><h3>Y a-t-il une offre gratuite ?</h3><p>Oui, un set d’exemples reste disponible gratuitement pour tester la plateforme.</p></article>
+            <article class="card"><h3>Le support est-il en français ?</h3><p>Oui, support FR/EN selon votre préférence.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section__head">
+            <h2>Parlez-nous de votre besoin</h2>
+          </div>
+          <article class="card">
+            <form class="form js-validate-form" novalidate>
+              <label>Nom<input class="input" type="text" name="name" required /></label>
+              <label>Email<input class="input" type="email" name="email" required /></label>
+              <label>Message<textarea class="input" name="message" rows="4" required></textarea></label>
+              <button class="btn btn--primary ripple" type="submit">Envoyer</button>
+              <p class="form__message" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+  </body>
+</html>
