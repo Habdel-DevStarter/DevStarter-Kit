@@ -1,25 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/index.html</loc></url>
-  <url><loc>https://example.com/templates.html</loc></url>
-  <url><loc>https://example.com/navbar.html</loc></url>
-  <url><loc>https://example.com/footer.html</loc></url>
-  <url><loc>https://example.com/cards.html</loc></url>
-  <url><loc>https://example.com/forms.html</loc></url>
-  <url><loc>https://example.com/buttons.html</loc></url>
-  <url><loc>https://example.com/modals.html</loc></url>
-  <url><loc>https://example.com/layout.html</loc></url>
-  <url><loc>https://example.com/pricing.html</loc></url>
-  <url><loc>https://example.com/defis.html</loc></url>
-  <url><loc>https://example.com/theme.html</loc></url>
-  <url><loc>https://example.com/projets.html</loc></url>
-  <url><loc>https://example.com/generateur.html</loc></url>
-  <url><loc>https://example.com/calculateur.html</loc></url>
-  <url><loc>https://example.com/blog.html</loc></url>
-  <url><loc>https://example.com/blog-templates-html.html</loc></url>
-  <url><loc>https://example.com/blog-navbar-responsive.html</loc></url>
-  <url><loc>https://example.com/blog-checklist-ux.html</loc></url>
-  <url><loc>https://example.com/confidentialite.html</loc></url>
-  <url><loc>https://example.com/conditions.html</loc></url>
-  <url><loc>https://example.com/cookies.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/index.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/templates.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/navbar.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/footer.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/cards.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/forms.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/buttons.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/modals.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/layout.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/pricing.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/defis.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/theme.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/projets.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/generateur.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/calculateur.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog-templates-html.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog-navbar-responsive.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog-checklist-ux.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/confidentialite.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/conditions.html</loc></url>
+  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/cookies.html</loc></url>
 </urlset>
+

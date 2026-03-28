@@ -1,4 +1,5 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://habdel-devstarter.github.io/DevStarter-Kit/sitemap.xml
+
