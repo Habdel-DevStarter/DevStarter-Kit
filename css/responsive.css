@@ -10,6 +10,14 @@
 
 /* --- Tablet --- */
 @media (max-width: 1024px) {
+  .site-nav {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-3) 0;
+  }
   .site-nav__menu { display: none; }
   .hamburger      { display: flex; }
 
@@ -71,6 +79,12 @@
   .hero p.lead { font-size: var(--text-base); }
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .hero__stats { flex-wrap: wrap; gap: var(--space-5); }
+  .hero__more-btn,
+  .hero__more-btn:hover,
+  .hero__more-btn:active,
+  .hero__more-btn:focus {
+    transform: none;
+  }
 
   .site-footer__grid {
     grid-template-columns: 1fr;
@@ -127,6 +141,15 @@
   .filter-group { gap: var(--space-2); }
 
   .site-nav__logo-icon { width: 30px; height: 30px; }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .hero__more-btn:hover,
+  .hero__more-btn:active,
+  .hero__more-btn:focus {
+    transform: none;
+    box-shadow: var(--shadow-xs);
+  }
 }
 
 /* --- Large desktop --- */
