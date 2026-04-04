@@ -95,7 +95,7 @@ const Copy = (() => {
 
   function initRipple() {
     document.addEventListener('click', (e) => {
-      const btn = e.target.closest('.btn-ripple, .btn--primary, .btn--secondary');
+      const btn = e.target.closest('.btn-ripple');
       if (btn) addRipple(btn, e);
     });
   }
