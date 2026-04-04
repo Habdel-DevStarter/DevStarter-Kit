@@ -1,5 +1,26 @@
-﻿User-agent: *
+# ============================================
+# DevStarter Kit - robots.txt
+# https://habdel-devstarter.github.io/DevStarter-Kit
+# ============================================
+
+User-agent: *
 Allow: /
 
+# Exclure la page 404 de l'indexation
+Disallow: /404.html
+
+# Exclure les assets (optionnel - les moteurs peuvent les crawler)
+# Disallow: /assets/
+
+# Sitemap
 Sitemap: https://habdel-devstarter.github.io/DevStarter-Kit/sitemap.xml
 
+# --- Bots spécifiques ---
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /

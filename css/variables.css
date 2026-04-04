@@ -1,30 +1,112 @@
+﻿/* ============================================
+   DEVSTARTER KIT — Variables & Design Tokens
+   ============================================ */
+
 :root {
-  --color-primary: #0e8cff;
-  --color-secondary: #22c55e;
-  --color-bg: #f4f7fb;
-  --color-text: #1f2937;
-  --color-accent: #ff7b54;
-  --color-card: rgba(255, 255, 255, 0.72);
-  --color-border: rgba(31, 41, 55, 0.12);
-  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-  --radius-lg: 1rem;
-  --radius-md: 0.75rem;
-  --radius-sm: 0.5rem;
-  --space-xs: 0.5rem;
-  --space-sm: 0.75rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2.5rem;
-  --transition: 0.25s ease;
+  /* --- Palette principale --- */
+  --primary:        #6C63FF;
+  --primary-light:  #8B85FF;
+  --primary-dark:   #4B44D6;
+  --secondary:      #0FCCCE;
+  --accent:         #FF6584;
+
+  /* --- Arrière-plans --- */
+  --bg:             #F7F8FC;
+  --bg-card:        #FFFFFF;
+  --bg-glass:       rgba(255, 255, 255, 0.65);
+  --bg-code:        #1E1E2E;
+
+  /* --- Textes --- */
+  --text:           #1A1A2E;
+  --text-muted:     #6B7280;
+  --text-light:     #9CA3AF;
+  --text-inverse:   #FFFFFF;
+
+  /* --- Bordures --- */
+  --border:         rgba(108, 99, 255, 0.15);
+  --border-strong:  rgba(108, 99, 255, 0.35);
+
+  /* --- Ombres --- */
+  --shadow-xs:   0 1px 3px rgba(108,99,255,.08);
+  --shadow-sm:   0 4px 12px rgba(108,99,255,.10);
+  --shadow-md:   0 8px 24px rgba(108,99,255,.15);
+  --shadow-lg:   0 16px 48px rgba(108,99,255,.20);
+  --shadow-xl:   0 24px 64px rgba(108,99,255,.25);
+
+  /* --- Border radius --- */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-full: 9999px;
+
+  /* --- Typographie --- */
+  --font-sans:  'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+
+  /* --- Espacements --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- Transitions --- */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* --- Z-index --- */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-sticky:  100;
+  --z-overlay: 500;
+  --z-modal:   1000;
+  --z-toast:   2000;
+
+  /* --- Dégradés --- */
+  --gradient-primary:  linear-gradient(135deg, var(--primary), var(--secondary));
+  --gradient-accent:   linear-gradient(135deg, var(--accent), var(--primary));
+  --gradient-hero:     linear-gradient(160deg, #6C63FF 0%, #0FCCCE 50%, #FF6584 100%);
+  --gradient-card:     linear-gradient(145deg, rgba(108,99,255,.06), rgba(15,204,206,.04));
 }
 
+/* --- Dark mode --- */
 [data-theme="dark"] {
-  --color-primary: #5ea8ff;
-  --color-secondary: #3ddf7b;
-  --color-bg: #0f172a;
-  --color-text: #e5e7eb;
-  --color-accent: #ffad86;
-  --color-card: rgba(15, 23, 42, 0.72);
-  --color-border: rgba(229, 231, 235, 0.2);
-  --shadow-soft: 0 12px 24px rgba(2, 6, 23, 0.45);
+  --bg:         #0D0D1A;
+  --bg-card:    #16162A;
+  --bg-glass:   rgba(22, 22, 42, 0.75);
+  --bg-code:    #0A0A14;
+
+  --text:       #F0F0FF;
+  --text-muted: #A0A0C0;
+  --text-light: #6B6B8A;
+
+  --border:       rgba(108, 99, 255, 0.20);
+  --border-strong:rgba(108, 99, 255, 0.45);
+
+  --shadow-xs:   0 1px 3px rgba(0,0,0,.3);
+  --shadow-sm:   0 4px 12px rgba(0,0,0,.4);
+  --shadow-md:   0 8px 24px rgba(0,0,0,.5);
+  --shadow-lg:   0 16px 48px rgba(0,0,0,.6);
+  --shadow-xl:   0 24px 64px rgba(0,0,0,.7);
+
+  --gradient-card: linear-gradient(145deg, rgba(108,99,255,.10), rgba(15,204,206,.07));
 }

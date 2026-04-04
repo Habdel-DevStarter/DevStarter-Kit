@@ -1,142 +1,1968 @@
 ﻿<!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevStarter Kit | Modèles de pieds de page</title>
+    <meta
+      name="description"
+      content="Templates Footer DevStarter Kit — modèles HTML/CSS simples à copier, comprendre et adapter dans de vrais projets."
+    />
+    <title>Templates Footer — DevStarter Kit</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      .footer-showcase {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(18, 159, 122, 0.18),
+            transparent 26%
+          ),
+          radial-gradient(
+            circle at 84% 18%,
+            rgba(108, 99, 255, 0.14),
+            transparent 24%
+          ),
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(247, 250, 252, 0.98)
+          );
+        border: 1px solid rgba(18, 159, 122, 0.1);
+        border-radius: 32px;
+        padding: 32px;
+        margin-bottom: var(--space-10);
+        box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+      }
+      .footer-showcase::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.32), transparent 42%),
+          radial-gradient(
+            circle at 18% 84%,
+            rgba(255, 184, 0, 0.06),
+            transparent 18%
+          );
+        pointer-events: none;
+      }
+      .footer-showcase > * {
+        position: relative;
+        z-index: 1;
+      }
+      .footer-showcase__eyebrow {
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(18, 159, 122, 0.1);
+        color: #178564;
+      }
+      .footer-showcase__grid {
+        display: grid;
+        grid-template-columns: 1.06fr 0.94fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+      .footer-showcase__lead h2 {
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+        margin-bottom: 14px;
+      }
+      .footer-showcase__lead p {
+        max-width: 58ch;
+        color: #5f6477;
+        margin-bottom: 22px;
+      }
+      .footer-showcase__stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .footer-showcase__stat {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(18, 159, 122, 0.1);
+        border-radius: 18px;
+        padding: 14px;
+      }
+      .footer-showcase__stat strong {
+        display: block;
+        font-size: 1rem;
+        color: #1a1a2e;
+        margin-bottom: 4px;
+      }
+      .footer-showcase__stat span {
+        font-size: 0.78rem;
+        color: #6b7280;
+      }
+      .footer-showcase__rail {
+        display: grid;
+        gap: 14px;
+      }
+      .footer-showcase__panel {
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(18, 159, 122, 0.1);
+        border-radius: 22px;
+        padding: 18px;
+        box-shadow: 0 10px 28px rgba(17, 24, 39, 0.04);
+      }
+      .footer-showcase__panel strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+        color: #1a1a2e;
+      }
+      .footer-showcase__panel p {
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-bottom: 14px;
+      }
+      .footer-showcase__mini {
+        display: grid;
+        gap: 12px;
+      }
+      .footer-showcase__mini footer {
+        transform: scale(0.92);
+        transform-origin: left center;
+      }
+      .footer-editorial-intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 0 0 var(--space-6);
+      }
+      .footer-editorial-intro h2 {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        letter-spacing: -0.03em;
+        margin-bottom: 8px;
+      }
+      .footer-editorial-intro p {
+        margin: 0;
+        color: var(--text-muted);
+        max-width: 60ch;
+      }
+      .footer-editorial-intro__badge {
+        background: rgba(18, 159, 122, 0.08);
+        color: #178564;
+      }
+      [data-theme="dark"] .footer-showcase {
+        border-color: rgba(18, 159, 122, 0.2);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(18, 159, 122, 0.22),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 84% 18%,
+            rgba(108, 99, 255, 0.2),
+            transparent 24%
+          ),
+          linear-gradient(
+            145deg,
+            rgba(12, 16, 26, 0.96),
+            rgba(17, 27, 35, 0.98)
+          );
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      }
+      [data-theme="dark"] .footer-showcase::before {
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 42%),
+          radial-gradient(
+            circle at 18% 84%,
+            rgba(255, 184, 0, 0.08),
+            transparent 18%
+          );
+      }
+      [data-theme="dark"] .footer-showcase__eyebrow {
+        background: rgba(14, 28, 28, 0.84);
+        border-color: rgba(18, 159, 122, 0.24);
+        color: #8be7cb;
+      }
+      [data-theme="dark"] .footer-showcase__lead p,
+      [data-theme="dark"] .footer-showcase__stat span,
+      [data-theme="dark"] .footer-showcase__panel p {
+        color: #c0c8d2;
+      }
+      [data-theme="dark"] .footer-showcase__stat,
+      [data-theme="dark"] .footer-showcase__panel {
+        background: rgba(13, 24, 29, 0.84);
+        border-color: rgba(18, 159, 122, 0.16);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+      [data-theme="dark"] .footer-showcase__stat strong,
+      [data-theme="dark"] .footer-showcase__panel strong {
+        color: #f5f7ff;
+      }
+      [data-theme="dark"] .footer-editorial-intro {
+        border: 1px solid rgba(18, 159, 122, 0.16);
+        border-radius: 24px;
+        padding: clamp(1.35rem, 3vw, 2rem);
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(18, 159, 122, 0.14),
+            transparent 28%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(12, 17, 25, 0.94),
+            rgba(18, 25, 34, 0.98)
+          );
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+      }
+      [data-theme="dark"] .footer-editorial-intro__badge {
+        background: rgba(18, 159, 122, 0.16);
+        color: #8be7cb;
+      }
+      .footer-collection-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 0 0 18px;
+        margin: 18px 0 24px;
+        border-bottom: 1px solid rgba(18, 159, 122, 0.12);
+      }
+      .footer-collection-heading:first-child {
+        margin-top: 0;
+      }
+      .footer-collection-heading__eyebrow {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #129f7a;
+        margin-bottom: 8px;
+      }
+      .footer-collection-heading h3 {
+        font-size: 1.5rem;
+        letter-spacing: -0.03em;
+        margin-bottom: 4px;
+      }
+      .footer-collection-heading p {
+        margin: 0;
+        color: var(--text-muted);
+        max-width: 56ch;
+      }
+      .footer-collection-heading__meta {
+        font-size: 0.8rem;
+        color: #6b7280;
+        white-space: nowrap;
+      }
+      @media (max-width: 1024px) {
+        .footer-showcase__grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-showcase__stats {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .footer-showcase {
+          padding: 22px;
+          border-radius: 24px;
+        }
+        .footer-editorial-intro,
+        .footer-collection-heading {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .footer-showcase__mini footer {
+          transform: scale(0.84);
+          margin-bottom: -10px;
+        }
+      }
+    </style>
   </head>
-  <body data-page="footer">
-    <header class="site-header">
-      <div class="container">
-        <nav class="navbar" aria-label="Primary navigation">
-          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
-          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation"><span></span><span></span><span></span></button>
-          <div class="navbar__menu" id="primaryMenu">
-            <a class="navbar__link" href="index.html">Accueil</a><a class="navbar__link" href="templates.html">Templates</a><a class="navbar__link" href="navbar.html">Barres de nav</a><a class="navbar__link is-active" href="footer.html">Pieds de page</a><a class="navbar__link" href="cards.html">Cartes</a><a class="navbar__link" href="forms.html">Formulaires</a>
-            <a class="navbar__link" href="buttons.html">Boutons</a>
-            <a class="navbar__link" href="modals.html">Modales</a>
-            <a class="navbar__link" href="layout.html">Layouts</a>
-            <a class="navbar__link" href="defis.html">Défis</a>
-            <a class="navbar__link" href="theme.html">Thème Lab</a>
-            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+  <body>
+    <div id="page-loader"><span class="loader-logo">Chargement…</span></div>
+
+    <header>
+      <nav class="site-nav">
+        <div class="container">
+          <div class="site-nav__inner">
+            <a href="index.html" class="site-nav__logo">
+              <div class="site-nav__logo-icon">D</div>
+              <span>DevStarter Kit</span>
+            </a>
+            <ul class="site-nav__menu">
+              <li>
+                <a href="index.html" class="site-nav__link">🏠 Accueil</a>
+              </li>
+              <li>
+                <a href="templates.html" class="site-nav__link">📦 Templates</a>
+              </li>
+              <li>
+                <a href="navbar.html" class="site-nav__link">🔝 Navbar</a>
+              </li>
+              <li>
+                <a href="footer.html" class="site-nav__link active"
+                  >⬇️ Footer</a
+                >
+              </li>
+              <li><a href="cards.html" class="site-nav__link">🃏 Cards</a></li>
+              <li><a href="forms.html" class="site-nav__link">📝 Forms</a></li>
+            </ul>
+            <div class="site-nav__actions">
+              <button class="dark-toggle">🌙</button>
+              <button
+                class="hamburger"
+                aria-expanded="false"
+                aria-label="Menu mobile"
+              >
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+              </button>
+            </div>
           </div>
-        </nav>
-      </div>
-    </header>
-    <main class="section">
-      <div class="container">
-        <div class="section__head"><h1>Modèles de pieds de page</h1><p>8 layouts de pied de page avec une hiérarchie moderne et propre.</p></div>
-        <div class="template-stack" data-search-container>
-          <article class="template-block card" data-search-item data-title="simple footer" data-desc="copyright links" data-tech="html css" data-level="beginner">
-            <div class="template-block__head"><h2>Pied de page simple</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-1">Copier le code</button></div>
-            <div class="preview-box">© 2026 DevStarter Kit · Privacy · Terms</div>
-            <pre><code id="code-foot-1">&lt;footer class="footer footer--simple"&gt;
-  &lt;p&gt;© 2026 DevStarter Kit&lt;/p&gt;
-  &lt;nav&gt;&lt;a href="#"&gt;Privacy&lt;/a&gt; &lt;a href="#"&gt;Terms&lt;/a&gt;&lt;/nav&gt;
-&lt;/footer&gt;
-.footer--simple{display:flex;justify-content:space-between;}</code></pre>
-          </article>
-          <article class="template-block card" data-search-item data-title="3 columns footer" data-desc="links grouped sections" data-tech="html css" data-level="beginner">
-            <div class="template-block__head"><h2>Pied de page 3 colonnes</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-2">Copier le code</button></div>
-            <div class="preview-box">Product | Resources | Company</div>
-            <pre><code id="code-foot-2">&lt;footer class="footer footer--cols"&gt;
-  &lt;section&gt;&lt;h4&gt;Produit&lt;/h4&gt;&lt;a href="#"&gt;Templates&lt;/a&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h4&gt;Ressources&lt;/h4&gt;&lt;a href="#"&gt;Guides&lt;/a&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h4&gt;Entreprise&lt;/h4&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/section&gt;
-&lt;/footer&gt;
-.footer--cols{display:grid;grid-template-columns:repeat(3,1fr);}</code></pre>
-          </article>
-          <article class="template-block card" data-search-item data-title="social footer" data-desc="social media icons area" data-tech="html css" data-level="intermediate">
-            <div class="template-block__head"><h2>Pied de page réseaux sociaux</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-3">Copier le code</button></div>
-            <div class="preview-box">Twitter · GitHub · LinkedIn · Discord</div>
-            <pre><code id="code-foot-3">&lt;footer class="footer footer--social"&gt;
-  &lt;p&gt;Suivez-nous&lt;/p&gt;
-  &lt;div&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;a href="#"&gt;GitHub&lt;/a&gt;&lt;a href="#"&gt;LinkedIn&lt;/a&gt;&lt;/div&gt;
-&lt;/footer&gt;
-.footer--social a:hover{transform:translateY(-2px);}</code></pre>
-          </article>
-          <article class="template-block card" data-search-item data-title="newsletter footer" data-desc="email capture footer" data-tech="html css js" data-level="intermediate">
-            <div class="template-block__head"><h2>Pied de page newsletter</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-4">Copier le code</button></div>
-            <div class="preview-box">Subscribe: [email input] [Join]</div>
-            <pre><code id="code-foot-4">&lt;form class="newsletter"&gt;&lt;input type="email"&gt;&lt;button&gt;Join&lt;/button&gt;&lt;/form&gt;
-.newsletter{display:flex;gap:.5rem;}</code></pre>
-          </article>
-          <article class="template-block card" data-search-item data-title="enterprise footer" data-desc="legal columns locations" data-tech="html css" data-level="advanced">
-            <div class="template-block__head"><h2>Pied de page entreprise</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-5">Copier le code</button></div>
-            <div class="preview-box">Solutions · Security · Locations · Legal</div>
-            <pre><code id="code-foot-5">&lt;footer class="footer footer--enterprise"&gt;
-  &lt;section&gt;&lt;h4&gt;Solutions&lt;/h4&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h4&gt;Sécurité&lt;/h4&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h4&gt;Localisations&lt;/h4&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h4&gt;Mentions légales&lt;/h4&gt;&lt;/section&gt;
-&lt;/footer&gt;
-.footer--enterprise{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;}</code></pre>
-          </article>
-
-          <article class="template-block card" data-search-item data-title="minimal legal footer" data-desc="minimal footer with legal line" data-tech="html css" data-level="beginner">
-            <div class="template-block__head"><h2>Pied de page légal minimal</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-6">Copier le code</button></div>
-            <div class="preview-box">© 2026 · Mentions légales · Cookies</div>
-            <pre><code id="code-foot-6">&lt;footer class="footer footer--legal"&gt;
-  &lt;p&gt;© 2026 DevStarter Kit&lt;/p&gt;
-  &lt;a href="#"&gt;Mentions légales&lt;/a&gt;
-  &lt;a href="#"&gt;Cookies&lt;/a&gt;
-&lt;/footer&gt;</code></pre>
-          </article>
-
-          <article class="template-block card" data-search-item data-title="app download footer" data-desc="mobile app badges and links" data-tech="html css" data-level="intermediate">
-            <div class="template-block__head"><h2>Pied de page app mobile</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-7">Copier le code</button></div>
-            <div class="preview-box">Téléchargez l’app : App Store | Google Play</div>
-            <pre><code id="code-foot-7">&lt;footer class="footer footer--app"&gt;
-  &lt;p&gt;Téléchargez notre app&lt;/p&gt;
-  &lt;div class="badges"&gt;&lt;a href="#"&gt;App Store&lt;/a&gt;&lt;a href="#"&gt;Google Play&lt;/a&gt;&lt;/div&gt;
-&lt;/footer&gt;</code></pre>
-          </article>
-
-          <article class="template-block card" data-search-item data-title="sitemap footer" data-desc="extended links and sitemap style" data-tech="html css" data-level="advanced">
-            <div class="template-block__head"><h2>Pied de page sitemap étendu</h2><button class="btn btn--ghost js-copy" data-copy-target="code-foot-8">Copier le code</button></div>
-            <div class="preview-box">Produit | Docs | API | Support | Statut</div>
-            <pre><code id="code-foot-8">&lt;footer class="footer footer--sitemap"&gt;
-  &lt;section&gt;&lt;h4&gt;Produit&lt;/h4&gt;&lt;a href="#"&gt;Fonctionnalités&lt;/a&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h4&gt;Développeurs&lt;/h4&gt;&lt;a href="#"&gt;API&lt;/a&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h4&gt;Support&lt;/h4&gt;&lt;a href="#"&gt;Centre d'aide&lt;/a&gt;&lt;/section&gt;
-&lt;/footer&gt;</code></pre>
-          </article>
         </div>
+      </nav>
+    </header>
 
-        <section class="section">
-          <div class="section__head">
-            <h2>Bonnes pratiques footer</h2>
-          </div>
-          <div class="grid grid--3">
-            <article class="card">
-              <h3>Ajoutez la confiance</h3>
-              <p>Incluez politique de confidentialité, mentions légales et contact.</p>
-            </article>
-            <article class="card">
-              <h3>Structurez par blocs</h3>
-              <p>Produit, Ressources, Entreprise : une colonne = une intention claire.</p>
-            </article>
-            <article class="card">
-              <h3>Pensez conversion</h3>
-              <p>Le footer newsletter peut capter les utilisateurs qui hésitent à acheter.</p>
-            </article>
-          </div>
-        </section>
+    <div class="mobile-overlay"></div>
+    <nav class="mobile-menu">
+      <a href="index.html" class="mobile-menu__link">🏠 Accueil</a>
+      <a href="templates.html" class="mobile-menu__link">📦 Templates</a>
+      <a href="navbar.html" class="mobile-menu__link">🔝 Navbar</a>
+      <a href="footer.html" class="mobile-menu__link active">⬇️ Footer</a>
+      <a href="cards.html" class="mobile-menu__link">🃏 Cards</a>
+      <a href="forms.html" class="mobile-menu__link">📝 Forms</a>
+      <div class="divider"></div>
+      <button
+        class="dark-toggle btn btn--secondary"
+        style="width: 100%; justify-content: center"
+      >
+        🌙 Mode sombre
+      </button>
+    </nav>
+
+    <main class="main-content">
+      <div class="page-header">
+        <nav class="breadcrumb" style="justify-content: center">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb__sep">›</span>
+          <a href="templates.html">Templates</a>
+          <span class="breadcrumb__sep">›</span>
+          <span>Footer</span>
+        </nav>
+        <h1 class="animate-fade-in-up">
+          Templates <span class="gradient-text">Footer</span>
+        </h1>
+        <p class="animate-fade-in-up delay-100">
+          5 pieds de page professionnels — copiez-collez en un clic.
+        </p>
       </div>
+
+      <section class="section section--sm">
+        <div class="container">
+          <section class="footer-showcase reveal">
+            <div class="footer-showcase__eyebrow showcase-eyebrow">
+              Curated Footer Systems
+            </div>
+            <div class="footer-showcase__grid">
+              <div class="footer-showcase__lead">
+                <h2>
+                  Des footers conçus comme une
+                  <span class="gradient-text">signature de fin de page</span>
+                </h2>
+                <p>
+                  Cette collection montre comment terminer une landing, un site
+                  corporate ou une interface produit avec plus de clarté, de
+                  structure et de confiance.
+                </p>
+                <div class="footer-showcase__stats">
+                  <div class="footer-showcase__stat">
+                    <strong>Trust</strong>
+                    <span>Liens, infos légales, clarté</span>
+                  </div>
+                  <div class="footer-showcase__stat">
+                    <strong>Community</strong>
+                    <span>Social, marque, relation</span>
+                  </div>
+                  <div class="footer-showcase__stat">
+                    <strong>Conversion</strong>
+                    <span>Newsletter, contact, action</span>
+                  </div>
+                </div>
+                <div class="showcase-actions">
+                  <a href="#ft-grid" class="btn btn--primary btn-ripple"
+                    >Explorer les footers</a
+                  >
+                  <a href="templates.html" class="btn btn--secondary"
+                    >Retour à la galerie</a
+                  >
+                </div>
+              </div>
+              <div class="footer-showcase__rail">
+                <div class="footer-showcase__panel">
+                  <strong>Trust + Structure</strong>
+                  <p>
+                    Des footers qui clarifient l'écosystème du produit et
+                    rassurent sur la marque.
+                  </p>
+                  <div class="footer-showcase__mini">
+                    <footer
+                      style="
+                        background: #151827;
+                        padding: 18px 22px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-radius: 18px;
+                      "
+                    >
+                      <span
+                        style="
+                          color: rgba(255, 255, 255, 0.55);
+                          font-size: 0.8rem;
+                        "
+                        >© 2026 Studio</span
+                      >
+                      <div style="display: flex; gap: 16px">
+                        <span
+                          style="
+                            color: rgba(255, 255, 255, 0.45);
+                            font-size: 0.76rem;
+                          "
+                          >Privacy</span
+                        >
+                        <span
+                          style="
+                            color: rgba(255, 255, 255, 0.45);
+                            font-size: 0.76rem;
+                          "
+                          >Terms</span
+                        >
+                        <span
+                          style="
+                            color: rgba(255, 255, 255, 0.45);
+                            font-size: 0.76rem;
+                          "
+                          >Contact</span
+                        >
+                      </div>
+                    </footer>
+                    <footer
+                      style="
+                        background: white;
+                        border: 1px solid #e5e7eb;
+                        border-radius: 18px;
+                        padding: 20px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: grid;
+                          grid-template-columns: 1.8fr 1fr 1fr;
+                          gap: 16px;
+                        "
+                      >
+                        <div>
+                          <div
+                            style="
+                              font-weight: 800;
+                              color: #6c63ff;
+                              margin-bottom: 6px;
+                            "
+                          >
+                            Nova
+                          </div>
+                          <div style="font-size: 0.76rem; color: #6b7280">
+                            Infrastructure moderne pour produits ambitieux.
+                          </div>
+                        </div>
+                        <div style="font-size: 0.74rem; color: #6b7280">
+                          Produit<br />Tarifs<br />Docs
+                        </div>
+                        <div style="font-size: 0.74rem; color: #6b7280">
+                          Entreprise<br />Blog<br />Contact
+                        </div>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+                <div class="footer-showcase__panel">
+                  <strong>Conversion + Brand</strong>
+                  <p>
+                    Une approche plus expressive pour collecter des leads et
+                    prolonger l'expérience produit.
+                  </p>
+                  <div class="footer-showcase__mini">
+                    <footer
+                      style="
+                        background: linear-gradient(135deg, #0d0d1a, #1a1a3e);
+                        border-radius: 18px;
+                        padding: 22px;
+                      "
+                    >
+                      <div
+                        style="
+                          color: white;
+                          font-weight: 800;
+                          margin-bottom: 8px;
+                        "
+                      >
+                        Pulse
+                      </div>
+                      <div style="display: flex; gap: 8px">
+                        <div
+                          style="
+                            flex: 1;
+                            height: 36px;
+                            border-radius: 999px;
+                            background: rgba(255, 255, 255, 0.1);
+                            border: 1px solid rgba(255, 255, 255, 0.16);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 92px;
+                            border-radius: 999px;
+                            background: linear-gradient(
+                              135deg,
+                              #6c63ff,
+                              #0fccce
+                            );
+                          "
+                        ></div>
+                      </div>
+                    </footer>
+                    <footer
+                      style="
+                        background: #10111d;
+                        border-radius: 18px;
+                        padding: 22px;
+                        color: rgba(255, 255, 255, 0.65);
+                      "
+                    >
+                      <div
+                        style="
+                          font-size: 1rem;
+                          font-weight: 800;
+                          color: white;
+                          margin-bottom: 10px;
+                        "
+                      >
+                        MonEntreprise
+                      </div>
+                      <div
+                        style="
+                          display: grid;
+                          grid-template-columns: 2fr 1fr 1fr;
+                          gap: 16px;
+                          font-size: 0.74rem;
+                        "
+                      >
+                        <div>Nous construisons les outils de demain.</div>
+                        <div>Produit<br />Careers<br />Press</div>
+                        <div>Docs<br />Support<br />Status</div>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="footer-editorial-intro reveal">
+            <div>
+              <h2>Une collection triée par rôle dans l'expérience</h2>
+              <p>
+                Les premiers modèles servent la structure et la confiance, puis
+                la page glisse vers les footers de marque, de conversion et les
+                compositions plus corporate.
+              </p>
+            </div>
+            <div class="footer-editorial-intro__badge editorial-badge">
+              5 modèles / 3 intentions / sélection premium
+            </div>
+          </div>
+
+          <div class="toolbar reveal">
+            <div class="search-bar">
+              <span class="search-bar__icon">🔍</span>
+              <input type="search" id="ft-search" placeholder="Rechercher…" />
+            </div>
+            <div class="filter-group" id="ft-filters">
+              <button class="filter-chip active" data-filter="all">Tous</button>
+              <button class="filter-chip" data-filter="beginner">
+                Débutant
+              </button>
+              <button class="filter-chip" data-filter="intermediate">
+                Intermédiaire
+              </button>
+              <button class="filter-chip" data-filter="advanced">Avancé</button>
+            </div>
+          </div>
+
+          <div id="ft-grid">
+            <div class="footer-collection-heading reveal" data-ft-heading>
+              <div>
+                <span class="footer-collection-heading__eyebrow">Trust</span>
+                <h3>Footers pensés pour cadrer la fin de page</h3>
+                <p>
+                  Des modèles sobres et structurés pour conclure une interface
+                  avec clarté, navigation et crédibilité.
+                </p>
+              </div>
+              <div class="footer-collection-heading__meta">
+                Simple, colonnes, structure claire
+              </div>
+            </div>
+            <!-- --- 1. Simple --- -->
+            <article
+              id="footer-simple"
+              class="template-item reveal"
+              data-title="Footer Simple"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">1. Footer Simple</div>
+                  <p class="text-sm text-muted mt-4">
+                    Footer minimaliste copyright + liens essentiels.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                  <span class="badge badge--primary">HTML</span>
+                  <span class="badge badge--secondary">CSS</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <footer
+                  style="
+                    background: #1a1a2e;
+                    padding: 20px 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: var(--radius-md);
+                  "
+                >
+                  <span
+                    style="color: rgba(255, 255, 255, 0.5); font-size: 0.85rem"
+                    >© 2025 MonSite.</span
+                  >
+                  <nav style="display: flex; gap: 20px">
+                    <a
+                      href="#"
+                      style="
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: 0.85rem;
+                        text-decoration: none;
+                      "
+                      >Confidentialité</a
+                    >
+                    <a
+                      href="#"
+                      style="
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: 0.85rem;
+                        text-decoration: none;
+                      "
+                      >CGU</a
+                    >
+                    <a
+                      href="#"
+                      style="
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: 0.85rem;
+                        text-decoration: none;
+                      "
+                      >Contact</a
+                    >
+                  </nav>
+                </footer>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="ft1-html">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="ft1-css">
+                  CSS
+                </button>
+              </div>
+              <div
+                class="template-item__code active"
+                data-tab-content="ft1-html"
+              >
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span>
+                    <button class="copy-btn" id="c-ft1h">📋 Copier</button>
+                  </div>
+                  <pre id="p-ft1h"><code>&lt;footer class="footer-simple"&gt;
+  &lt;div class="footer-simple__inner"&gt;
+    &lt;span&gt;© 2025 MonSite. Tous droits réservés.&lt;/span&gt;
+    &lt;nav class="footer-simple__links"&gt;
+      &lt;a href="#"&gt;Confidentialité&lt;/a&gt;
+      &lt;a href="#"&gt;CGU&lt;/a&gt;
+      &lt;a href="#"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="ft1-css">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span>
+                    <button class="copy-btn" id="c-ft1c">📋 Copier</button>
+                  </div>
+                  <pre id="p-ft1c"><code>.footer-simple {
+  background: #1A1A2E;
+  padding: 24px 0;
+}
+.footer-simple__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-simple__inner span { color: rgba(255,255,255,0.5); font-size:.875rem; }
+.footer-simple__links { display: flex; gap: 24px; }
+.footer-simple__links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+.footer-simple__links a:hover { color: white; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 2. 3 colonnes --- -->
+            <article
+              id="footer-columns"
+              class="template-item reveal"
+              data-title="Footer 3 Colonnes"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">2. Footer 3 Colonnes</div>
+                  <p class="text-sm text-muted mt-4">
+                    Footer avec logo, 2 colonnes de liens et ligne de copyright.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                  <span class="badge badge--primary">HTML</span>
+                  <span class="badge badge--secondary">CSS</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <footer
+                  style="
+                    background: var(--bg-card);
+                    border: 1px solid var(--border);
+                    border-radius: var(--radius-md);
+                    padding: 28px 24px 16px;
+                  "
+                >
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 2fr 1fr 1fr;
+                      gap: 20px;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-weight: 800;
+                          font-size: 1rem;
+                          background: linear-gradient(135deg, #6c63ff, #0fccce);
+                          -webkit-background-clip: text;
+                          background-clip: text;
+                          -webkit-text-fill-color: transparent;
+                          margin-bottom: 6px;
+                        "
+                      >
+                        MonSite
+                      </div>
+                      <p
+                        style="
+                          font-size: 0.78rem;
+                          color: var(--text-muted);
+                          line-height: 1.6;
+                        "
+                      >
+                        La meilleure plateforme pour vos projets.
+                      </p>
+                    </div>
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.65rem;
+                          font-weight: 700;
+                          text-transform: uppercase;
+                          letter-spacing: 0.08em;
+                          color: var(--text);
+                          margin-bottom: 8px;
+                        "
+                      >
+                        Produit
+                      </div>
+                      <div
+                        style="display: flex; flex-direction: column; gap: 5px"
+                      >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.78rem;
+                            color: var(--text-muted);
+                            text-decoration: none;
+                          "
+                          >Fonctionnalités</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.78rem;
+                            color: var(--text-muted);
+                            text-decoration: none;
+                          "
+                          >Tarifs</a
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.65rem;
+                          font-weight: 700;
+                          text-transform: uppercase;
+                          letter-spacing: 0.08em;
+                          color: var(--text);
+                          margin-bottom: 8px;
+                        "
+                      >
+                        Entreprise
+                      </div>
+                      <div
+                        style="display: flex; flex-direction: column; gap: 5px"
+                      >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.78rem;
+                            color: var(--text-muted);
+                            text-decoration: none;
+                          "
+                          >À propos</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.78rem;
+                            color: var(--text-muted);
+                            text-decoration: none;
+                          "
+                          >Contact</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      border-top: 1px solid var(--border);
+                      padding-top: 12px;
+                      display: flex;
+                      justify-content: space-between;
+                    "
+                  >
+                    <span style="font-size: 0.75rem; color: var(--text-muted)"
+                      >© 2025 MonSite</span
+                    >
+                    <span style="font-size: 0.75rem; color: var(--text-muted)"
+                      >Fait avec ❤️</span
+                    >
+                  </div>
+                </footer>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="ft2-html">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="ft2-css">
+                  CSS
+                </button>
+              </div>
+              <div
+                class="template-item__code active"
+                data-tab-content="ft2-html"
+              >
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="c-ft2h">📋 Copier</button>
+                  </div>
+                  <pre id="p-ft2h"><code>&lt;footer class="footer-cols"&gt;
+  &lt;div class="footer-cols__inner"&gt;
+    &lt;div class="footer-cols__grid"&gt;
+      &lt;div class="footer-cols__brand"&gt;
+        &lt;a href="#" class="footer-cols__logo"&gt;MonSite&lt;/a&gt;
+        &lt;p&gt;La meilleure plateforme pour vos projets.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="footer-cols__col"&gt;
+        &lt;h4&gt;Produit&lt;/h4&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Fonctionnalités&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tarifs&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="footer-cols__col"&gt;
+        &lt;h4&gt;Entreprise&lt;/h4&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer-cols__bottom"&gt;
+      &lt;span&gt;© 2025 MonSite&lt;/span&gt;
+      &lt;span&gt;Fait avec ❤️&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="ft2-css">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="c-ft2c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-ft2c"
+                  ><code>.footer-cols { background:#fff; border-top:1px solid #e5e7eb; padding:48px 0 24px; }
+.footer-cols__inner { max-width:1200px; margin:0 auto; padding:0 24px; }
+.footer-cols__grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; margin-bottom:32px; }
+.footer-cols__logo { font-size:1.25rem; font-weight:800; color:#6C63FF; text-decoration:none; display:block; margin-bottom:10px; }
+.footer-cols__brand p { color:#6b7280; font-size:.875rem; line-height:1.6; }
+.footer-cols__col h4 { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-bottom:14px; }
+.footer-cols__col ul { list-style:none; padding:0; display:flex; flex-direction:column; gap:8px; }
+.footer-cols__col a { color:#6b7280; text-decoration:none; font-size:.875rem; transition:color .2s; }
+.footer-cols__col a:hover { color:#6C63FF; }
+.footer-cols__bottom { display:flex; justify-content:space-between; padding-top:24px; border-top:1px solid #e5e7eb; font-size:.875rem; color:#9CA3AF; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <div class="footer-collection-heading reveal" data-ft-heading>
+              <div>
+                <span class="footer-collection-heading__eyebrow">Brand</span>
+                <h3>Footers pour relation, communauté et visibilité</h3>
+                <p>
+                  Plus expressifs, ils prolongent la présence de marque et
+                  renforcent l'univers du produit.
+                </p>
+              </div>
+              <div class="footer-collection-heading__meta">
+                Social, présence, identité, contact
+              </div>
+            </div>
+            <!-- --- 3. Social --- -->
+            <article
+              id="footer-social"
+              class="template-item reveal"
+              data-title="Footer Social Media"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">3. Footer Social Media</div>
+                  <p class="text-sm text-muted mt-4">
+                    Footer centré avec icônes réseaux sociaux animées.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                  <span class="badge badge--primary">HTML</span>
+                  <span class="badge badge--secondary">CSS</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <footer
+                  style="
+                    background: var(--bg-card);
+                    border: 1px solid var(--border);
+                    border-radius: var(--radius-md);
+                    padding: 32px 24px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 1.1rem;
+                      font-weight: 800;
+                      background: linear-gradient(135deg, #6c63ff, #0fccce);
+                      -webkit-background-clip: text;
+                      background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    MonSite
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--text-muted);
+                      margin-bottom: 20px;
+                    "
+                  >
+                    Suivez-nous sur les réseaux sociaux
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      gap: 10px;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    <a
+                      href="#"
+                      style="
+                        width: 38px;
+                        height: 38px;
+                        background: var(--bg);
+                        border: 1px solid var(--border);
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.75rem;
+                        font-weight: 700;
+                        color: var(--text-muted);
+                        text-decoration: none;
+                      "
+                      >GH</a
+                    >
+                    <a
+                      href="#"
+                      style="
+                        width: 38px;
+                        height: 38px;
+                        background: var(--bg);
+                        border: 1px solid var(--border);
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.75rem;
+                        font-weight: 700;
+                        color: var(--text-muted);
+                        text-decoration: none;
+                      "
+                      >TW</a
+                    >
+                    <a
+                      href="#"
+                      style="
+                        width: 38px;
+                        height: 38px;
+                        background: var(--bg);
+                        border: 1px solid var(--border);
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.75rem;
+                        font-weight: 700;
+                        color: var(--text-muted);
+                        text-decoration: none;
+                      "
+                      >LI</a
+                    >
+                    <a
+                      href="#"
+                      style="
+                        width: 38px;
+                        height: 38px;
+                        background: var(--bg);
+                        border: 1px solid var(--border);
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.75rem;
+                        font-weight: 700;
+                        color: var(--text-muted);
+                        text-decoration: none;
+                      "
+                      >YT</a
+                    >
+                  </div>
+                  <p style="font-size: 0.75rem; color: var(--text-muted)">
+                    © 2025 MonSite — Tous droits réservés
+                  </p>
+                </footer>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="ft3-html">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="ft3-css">
+                  CSS
+                </button>
+              </div>
+              <div
+                class="template-item__code active"
+                data-tab-content="ft3-html"
+              >
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="c-ft3h">📋 Copier</button>
+                  </div>
+                  <pre id="p-ft3h"><code>&lt;footer class="footer-social"&gt;
+  &lt;div class="footer-social__inner"&gt;
+    &lt;a href="#" class="footer-social__logo"&gt;MonSite&lt;/a&gt;
+    &lt;p&gt;Suivez-nous sur les réseaux sociaux&lt;/p&gt;
+    &lt;div class="footer-social__links"&gt;
+      &lt;a href="#" class="footer-social__link" aria-label="GitHub"&gt;GH&lt;/a&gt;
+      &lt;a href="#" class="footer-social__link" aria-label="Twitter"&gt;TW&lt;/a&gt;
+      &lt;a href="#" class="footer-social__link" aria-label="LinkedIn"&gt;LI&lt;/a&gt;
+      &lt;a href="#" class="footer-social__link" aria-label="YouTube"&gt;YT&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;p class="footer-social__copy"&gt;© 2025 MonSite — Tous droits réservés&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="ft3-css">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="c-ft3c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-ft3c"
+                  ><code>.footer-social { background:#fff; border-top:1px solid #e5e7eb; padding:48px 0; text-align:center; }
+.footer-social__inner { max-width:600px; margin:0 auto; padding:0 24px; }
+.footer-social__logo { display:inline-block; font-size:1.5rem; font-weight:800; color:#6C63FF; text-decoration:none; margin-bottom:8px; }
+.footer-social__inner p { color:#6b7280; font-size:.875rem; margin-bottom:24px; }
+.footer-social__links { display:flex; justify-content:center; gap:12px; margin-bottom:32px; }
+.footer-social__link {
+  width:44px; height:44px;
+  background:#f9fafb; border:1.5px solid #e5e7eb; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  color:#6b7280; text-decoration:none; font-size:.875rem; font-weight:700;
+  transition:all .2s;
+}
+.footer-social__link:hover {
+  background:#6C63FF; color:white; border-color:#6C63FF;
+  transform:translateY(-3px); box-shadow:0 8px 20px rgba(108,99,255,.3);
+}
+.footer-social__copy { font-size:.8rem; color:#9CA3AF; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <div class="footer-collection-heading reveal" data-ft-heading>
+              <div>
+                <span class="footer-collection-heading__eyebrow"
+                  >Conversion</span
+                >
+                <h3>Footers conçus pour engager et convertir</h3>
+                <p>
+                  Newsletter, CTA et versions corporate pour transformer la fin
+                  de page en point de contact stratégique.
+                </p>
+              </div>
+              <div class="footer-collection-heading__meta">
+                Leads, onboarding, corporate, support
+              </div>
+            </div>
+            <!-- --- 4. Newsletter --- -->
+            <article
+              id="footer-newsletter"
+              class="template-item reveal"
+              data-title="Footer Newsletter"
+              data-tags="html,css,js"
+              data-level="intermediate"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">4. Footer Newsletter</div>
+                  <p class="text-sm text-muted mt-4">
+                    Footer sombre avec abonnement email + validation JavaScript.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                  <span class="badge badge--primary">HTML</span>
+                  <span class="badge badge--secondary">CSS</span>
+                  <span class="badge badge--accent">JS</span>
+                </div>
+              </div>
+              <div
+                class="template-item__preview"
+                style="padding: 0; background: none"
+              >
+                <footer
+                  style="
+                    background: linear-gradient(135deg, #0d0d1a, #1a1a3e);
+                    border-radius: var(--radius-md);
+                    padding: 36px 28px 20px;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-start;
+                      flex-wrap: wrap;
+                      gap: 20px;
+                      margin-bottom: 28px;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-size: 1.1rem;
+                          font-weight: 800;
+                          color: #fff;
+                          margin-bottom: 6px;
+                        "
+                      >
+                        MonSite
+                      </div>
+                      <p
+                        style="
+                          color: rgba(255, 255, 255, 0.45);
+                          font-size: 0.8rem;
+                          max-width: 260px;
+                          line-height: 1.6;
+                        "
+                      >
+                        Restez informé des dernières actualités.
+                      </p>
+                    </div>
+                    <div style="flex: 1; min-width: 260px">
+                      <div
+                        style="
+                          font-size: 0.7rem;
+                          font-weight: 700;
+                          color: rgba(255, 255, 255, 0.6);
+                          text-transform: uppercase;
+                          letter-spacing: 0.08em;
+                          margin-bottom: 10px;
+                        "
+                      >
+                        Newsletter
+                      </div>
+                      <div style="display: flex; gap: 8px">
+                        <input
+                          type="email"
+                          id="nl-demo"
+                          placeholder="votre@email.com"
+                          style="
+                            flex: 1;
+                            padding: 10px 16px;
+                            background: rgba(255, 255, 255, 0.1);
+                            border: 1.5px solid rgba(255, 255, 255, 0.2);
+                            border-radius: 999px;
+                            color: #fff;
+                            font-size: 0.8rem;
+                            outline: none;
+                          "
+                        />
+                        <button
+                          onclick="handleNl()"
+                          style="
+                            padding: 10px 18px;
+                            background: linear-gradient(
+                              135deg,
+                              #6c63ff,
+                              #0fccce
+                            );
+                            color: #fff;
+                            border: none;
+                            border-radius: 999px;
+                            font-size: 0.8rem;
+                            font-weight: 700;
+                            cursor: pointer;
+                          "
+                        >
+                          S'inscrire →
+                        </button>
+                      </div>
+                      <p
+                        id="nl-msg"
+                        style="
+                          margin-top: 6px;
+                          font-size: 0.75rem;
+                          min-height: 18px;
+                        "
+                      ></p>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      border-top: 1px solid rgba(255, 255, 255, 0.1);
+                      padding-top: 16px;
+                      text-align: center;
+                      color: rgba(255, 255, 255, 0.3);
+                      font-size: 0.8rem;
+                    "
+                  >
+                    © 2025 MonSite
+                  </div>
+                </footer>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="ft4-html">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="ft4-css">
+                  CSS
+                </button>
+                <button class="template-item__tab" data-tab="ft4-js">JS</button>
+              </div>
+              <div
+                class="template-item__code active"
+                data-tab-content="ft4-html"
+              >
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="c-ft4h">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-ft4h"
+                  ><code>&lt;footer class="footer-newsletter"&gt;
+  &lt;div class="footer-newsletter__inner"&gt;
+    &lt;div class="footer-newsletter__grid"&gt;
+      &lt;div&gt;
+        &lt;span class="footer-newsletter__logo"&gt;MonSite&lt;/span&gt;
+        &lt;p&gt;Restez informé des dernières actualités.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="footer-newsletter__form-col"&gt;
+        &lt;h4&gt;Newsletter&lt;/h4&gt;
+        &lt;form id="newsletter-form"&gt;
+          &lt;input type="email" id="nl-email" placeholder="votre@email.com" required /&gt;
+          &lt;button type="submit"&gt;S'inscrire →&lt;/button&gt;
+        &lt;/form&gt;
+        &lt;p id="nl-msg" class="footer-newsletter__msg"&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer-newsletter__bottom"&gt;
+      &lt;span&gt;© 2025 MonSite. Tous droits réservés.&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="ft4-css">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="c-ft4c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-ft4c"
+                  ><code>.footer-newsletter { background:linear-gradient(135deg,#0D0D1A,#1A1A3E); padding:56px 0 24px; }
+.footer-newsletter__inner { max-width:1200px; margin:0 auto; padding:0 24px; }
+.footer-newsletter__grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-bottom:40px; }
+.footer-newsletter__logo { display:block; font-size:1.5rem; font-weight:800; color:white; margin-bottom:12px; }
+.footer-newsletter__form-col h4 { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:rgba(255,255,255,.7); margin-bottom:14px; }
+.footer-newsletter__form-col form { display:flex; gap:8px; }
+.footer-newsletter__form-col input { flex:1; padding:12px 20px; background:rgba(255,255,255,.1); border:1.5px solid rgba(255,255,255,.2); border-radius:999px; color:white; font-size:.875rem; outline:none; transition:all .2s; }
+.footer-newsletter__form-col input:focus { border-color:#6C63FF; }
+.footer-newsletter__form-col button { padding:12px 24px; background:linear-gradient(135deg,#6C63FF,#0FCCCE); color:white; border:none; border-radius:999px; font-weight:700; cursor:pointer; }
+.footer-newsletter__form-col button:hover { transform:translateY(-2px); }
+.footer-newsletter__msg { margin-top:8px; font-size:.8rem; }
+.footer-newsletter__msg.success { color:#10B981; }
+.footer-newsletter__msg.error   { color:#EF4444; }
+.footer-newsletter__bottom { border-top:1px solid rgba(255,255,255,.1); padding-top:24px; text-align:center; color:rgba(255,255,255,.35); font-size:.875rem; }</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="ft4-js">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">JavaScript</span
+                    ><button class="copy-btn" id="c-ft4j">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-ft4j"
+                  ><code>const form  = document.getElementById('newsletter-form');
+const email = document.getElementById('nl-email');
+const msg   = document.getElementById('nl-msg');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  msg.className = 'footer-newsletter__msg';
+  const val = email.value.trim();
+  const ok  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+
+  if (!val) {
+    msg.textContent = '⚠ Email requis.';
+    msg.classList.add('error');
+  } else if (!ok) {
+    msg.textContent = '⚠ Email invalide.';
+    msg.classList.add('error');
+  } else {
+    msg.textContent = '✅ Inscription réussie !';
+    msg.classList.add('success');
+    email.value = '';
+    setTimeout(() => msg.textContent = '', 4000);
+  }
+});</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 5. Entreprise --- -->
+            <article
+              id="footer-enterprise"
+              class="template-item reveal"
+              data-title="Footer Entreprise"
+              data-tags="html,css"
+              data-level="advanced"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">5. Footer Entreprise</div>
+                  <p class="text-sm text-muted mt-4">
+                    Footer 4 colonnes complet pour site corporate professionnel.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--advanced">Avancé</span>
+                  <span class="badge badge--primary">HTML</span>
+                  <span class="badge badge--secondary">CSS</span>
+                </div>
+              </div>
+              <div
+                class="template-item__preview"
+                style="padding: 0; background: none"
+              >
+                <footer
+                  style="
+                    background: #0f0f1e;
+                    border-radius: var(--radius-md);
+                    padding: 36px 28px 18px;
+                  "
+                >
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 2fr 1fr 1fr 1fr;
+                      gap: 20px;
+                      margin-bottom: 28px;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-size: 1rem;
+                          font-weight: 800;
+                          color: #fff;
+                          margin-bottom: 8px;
+                        "
+                      >
+                        🚀 MonEntreprise
+                      </div>
+                      <p
+                        style="
+                          color: rgba(255, 255, 255, 0.4);
+                          font-size: 0.75rem;
+                          line-height: 1.6;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        Nous construisons les outils de demain.
+                      </p>
+                      <div style="display: flex; gap: 6px">
+                        <a
+                          href="#"
+                          style="
+                            width: 28px;
+                            height: 28px;
+                            background: rgba(255, 255, 255, 0.07);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            border-radius: 7px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: rgba(255, 255, 255, 0.45);
+                            font-size: 0.7rem;
+                            text-decoration: none;
+                          "
+                          >GH</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            width: 28px;
+                            height: 28px;
+                            background: rgba(255, 255, 255, 0.07);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            border-radius: 7px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: rgba(255, 255, 255, 0.45);
+                            font-size: 0.7rem;
+                            text-decoration: none;
+                          "
+                          >TW</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            width: 28px;
+                            height: 28px;
+                            background: rgba(255, 255, 255, 0.07);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            border-radius: 7px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: rgba(255, 255, 255, 0.45);
+                            font-size: 0.7rem;
+                            text-decoration: none;
+                          "
+                          >LI</a
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.62rem;
+                          font-weight: 700;
+                          color: rgba(255, 255, 255, 0.45);
+                          text-transform: uppercase;
+                          letter-spacing: 0.1em;
+                          margin-bottom: 8px;
+                        "
+                      >
+                        Produit
+                      </div>
+                      <div
+                        style="display: flex; flex-direction: column; gap: 5px"
+                      >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >Features</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >Tarifs</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >Docs</a
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.62rem;
+                          font-weight: 700;
+                          color: rgba(255, 255, 255, 0.45);
+                          text-transform: uppercase;
+                          letter-spacing: 0.1em;
+                          margin-bottom: 8px;
+                        "
+                      >
+                        Entreprise
+                      </div>
+                      <div
+                        style="display: flex; flex-direction: column; gap: 5px"
+                      >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >À propos</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >Carrières</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >Blog</a
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.62rem;
+                          font-weight: 700;
+                          color: rgba(255, 255, 255, 0.45);
+                          text-transform: uppercase;
+                          letter-spacing: 0.1em;
+                          margin-bottom: 8px;
+                        "
+                      >
+                        Légal
+                      </div>
+                      <div
+                        style="display: flex; flex-direction: column; gap: 5px"
+                      >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >Confidentialité</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >CGU</a
+                        >
+                        <a
+                          href="#"
+                          style="
+                            font-size: 0.75rem;
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                          "
+                          >Cookies</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      border-top: 1px solid rgba(255, 255, 255, 0.08);
+                      padding-top: 14px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <span
+                      style="
+                        color: rgba(255, 255, 255, 0.25);
+                        font-size: 0.75rem;
+                      "
+                      >© 2025 MonEntreprise SAS. Tous droits réservés.</span
+                    >
+                    <span
+                      style="
+                        color: rgba(255, 255, 255, 0.25);
+                        font-size: 0.75rem;
+                      "
+                      >🇫🇷 France</span
+                    >
+                  </div>
+                </footer>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="ft5-html">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="ft5-css">
+                  CSS
+                </button>
+              </div>
+              <div
+                class="template-item__code active"
+                data-tab-content="ft5-html"
+              >
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="c-ft5h">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-ft5h"
+                  ><code>&lt;footer class="footer-enterprise"&gt;
+  &lt;div class="footer-enterprise__inner"&gt;
+    &lt;div class="footer-enterprise__grid"&gt;
+
+      &lt;!-- Brand --&gt;
+      &lt;div class="footer-enterprise__brand"&gt;
+        &lt;a href="#" class="footer-enterprise__logo"&gt;🚀 MonEntreprise&lt;/a&gt;
+        &lt;p&gt;Nous construisons les outils de demain pour les développeurs d'aujourd'hui.&lt;/p&gt;
+        &lt;div class="footer-enterprise__social"&gt;
+          &lt;a href="#" aria-label="GitHub"&gt;GH&lt;/a&gt;
+          &lt;a href="#" aria-label="Twitter"&gt;TW&lt;/a&gt;
+          &lt;a href="#" aria-label="LinkedIn"&gt;LI&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Colonnes --&gt;
+      &lt;div class="footer-enterprise__col"&gt;
+        &lt;h4&gt;Produit&lt;/h4&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Features&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tarifs&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;API&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Docs&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="footer-enterprise__col"&gt;
+        &lt;h4&gt;Entreprise&lt;/h4&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Carrières&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="footer-enterprise__col"&gt;
+        &lt;h4&gt;Légal&lt;/h4&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Confidentialité&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;CGU&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Cookies&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="footer-enterprise__bottom"&gt;
+      &lt;span&gt;© 2025 MonEntreprise SAS. Tous droits réservés.&lt;/span&gt;
+      &lt;span&gt;🇫🇷 France&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="ft5-css">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="c-ft5c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-ft5c"
+                  ><code>.footer-enterprise { background:#0F0F1E; padding:64px 0 24px; }
+.footer-enterprise__inner { max-width:1200px; margin:0 auto; padding:0 24px; }
+.footer-enterprise__grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:48px; }
+.footer-enterprise__logo { display:block; font-size:1.1rem; font-weight:800; color:white; text-decoration:none; margin-bottom:12px; }
+.footer-enterprise__brand p { color:rgba(255,255,255,.45); font-size:.875rem; line-height:1.7; margin-bottom:20px; max-width:280px; }
+.footer-enterprise__social { display:flex; gap:8px; }
+.footer-enterprise__social a { width:36px; height:36px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:9px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.5); text-decoration:none; font-size:.8rem; font-weight:700; transition:all .2s; }
+.footer-enterprise__social a:hover { background:#6C63FF; color:white; border-color:#6C63FF; transform:translateY(-2px); }
+.footer-enterprise__col h4 { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.4); margin-bottom:16px; }
+.footer-enterprise__col ul { list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; }
+.footer-enterprise__col a { color:rgba(255,255,255,.45); text-decoration:none; font-size:.875rem; transition:color .2s; }
+.footer-enterprise__col a:hover { color:white; }
+.footer-enterprise__bottom { border-top:1px solid rgba(255,255,255,.08); padding-top:24px; display:flex; justify-content:space-between; align-items:center; font-size:.875rem; color:rgba(255,255,255,.25); }
+@media(max-width:768px) { .footer-enterprise__grid { grid-template-columns:1fr 1fr; } .footer-enterprise__brand { grid-column:1/-1; } }</code></pre>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- /ft-grid -->
+
+          <div class="flex-between" style="margin-top: var(--space-12)">
+            <a href="navbar.html" class="btn btn--secondary"
+              >← Templates Navbar</a
+            >
+            <a href="cards.html" class="btn btn--primary btn-ripple"
+              >Templates Cards →</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="js/main.js"></script>
-    <script src="js/copy.js"></script>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="footer-brand">
+            <span class="logo-text">DevStarter Kit</span>
+            <p>Templates pro pour développeurs débutants.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Templates</h4>
+            <ul>
+              <li><a href="navbar.html">→ Navbar</a></li>
+              <li><a href="footer.html">→ Footer</a></li>
+              <li><a href="cards.html">→ Cards</a></li>
+              <li><a href="forms.html">→ Forms</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">→ Accueil</a></li>
+              <li><a href="templates.html">→ Tous les templates</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Projet</h4>
+            <ul>
+              <li>
+                <a href="https://github.com/Habdel-DevStarter" target="_blank"
+                  >→ GitHub</a
+                >
+              </li>
+              <li><a href="about.html">→ À propos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© 2026 DevStarter Kit. Fait avec ❤️</p>
+          <p>HTML5 · CSS3 · Vanilla JS · <a href="LICENSE">Licence MIT</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scroll-top" aria-label="Retour en haut">↑</button>
+    <div id="toast-container" role="alert" aria-live="polite"></div>
+
     <script src="js/darkmode.js"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/favorites.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Démo newsletter preview
+      function handleNl() {
+        const el = document.getElementById("nl-demo");
+        const msg = document.getElementById("nl-msg");
+        const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+        msg.style.color = ok ? "#10B981" : "#EF4444";
+        msg.textContent = ok ? "✅ Inscription réussie !" : "⚠ Email invalide.";
+        if (ok) {
+          el.value = "";
+          setTimeout(() => (msg.textContent = ""), 3000);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Lier copier boutons
+        const pairs = [
+          ["c-ft1h", "p-ft1h"],
+          ["c-ft1c", "p-ft1c"],
+          ["c-ft2h", "p-ft2h"],
+          ["c-ft2c", "p-ft2c"],
+          ["c-ft3h", "p-ft3h"],
+          ["c-ft3c", "p-ft3c"],
+          ["c-ft4h", "p-ft4h"],
+          ["c-ft4c", "p-ft4c"],
+          ["c-ft4j", "p-ft4j"],
+          ["c-ft5h", "p-ft5h"],
+          ["c-ft5c", "p-ft5c"],
+        ];
+        pairs.forEach(([b, p]) => {
+          const btn = document.getElementById(b);
+          const pre = document.getElementById(p);
+          if (btn && pre)
+            btn.addEventListener("click", () =>
+              Copy.copyText(pre.textContent, btn),
+            );
+        });
+
+        FilterGrid.init({
+          gridSelector: "#ft-grid",
+          cardSelector: ".template-item",
+          searchSelector: "#ft-search",
+          filterSelector: "#ft-filters",
+          emptyMessage: "Aucun template trouvé.",
+        });
+
+        const syncFooterHeadings = () => {
+          const nodes = [...document.querySelectorAll("#ft-grid > *")];
+          let currentHeading = null;
+          let visibleItems = 0;
+
+          const applyHeadingState = () => {
+            if (currentHeading) {
+              currentHeading.style.display = visibleItems > 0 ? "" : "none";
+            }
+          };
+
+          nodes.forEach((node) => {
+            if (node.hasAttribute("data-ft-heading")) {
+              applyHeadingState();
+              currentHeading = node;
+              visibleItems = 0;
+              return;
+            }
+
+            if (
+              node.classList.contains("template-item") &&
+              node.style.display !== "none"
+            ) {
+              visibleItems++;
+            }
+          });
+
+          applyHeadingState();
+        };
+
+        syncFooterHeadings();
+
+        new MutationObserver(syncFooterHeadings).observe(
+          document.getElementById("ft-grid"),
+          {
+            subtree: true,
+            attributes: true,
+            attributeFilter: ["style"],
+          },
+        );
+      });
+    </script>
   </body>
 </html>
-
-
-
-
-
-

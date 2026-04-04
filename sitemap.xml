@@ -1,26 +1,89 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/index.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/templates.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/navbar.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/footer.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/cards.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/forms.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/buttons.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/modals.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/layout.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/pricing.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/defis.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/theme.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/projets.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/generateur.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/calculateur.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog-templates-html.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog-navbar-responsive.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/blog-checklist-ux.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/confidentialite.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/conditions.html</loc></url>
-  <url><loc>https://habdel-devstarter.github.io/DevStarter-Kit/cookies.html</loc></url>
-</urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Pages principales -->
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://habdel-devstarter.github.io/DevStarter-Kit/"/>
+  </url>
+
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/templates.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Templates -->
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/navbar.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/footer.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/cards.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/forms.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Ressources -->
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/docs.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/changelog.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Institutionnel -->
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/about.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/contribuer.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://habdel-devstarter.github.io/DevStarter-Kit/contact.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- 404 exclue volontairement (noindex) -->
+
+</urlset>

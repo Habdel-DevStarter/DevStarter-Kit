@@ -1,226 +1,695 @@
 ﻿<!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="DevStarter Kit aide les développeurs débutants à copier des templates HTML, CSS et JavaScript propres."
+      content="DevStarter Kit — Bibliothèque francophone de templates HTML, CSS et JavaScript pour apprendre en construisant. Zéro dépendance, code lisible, vrais projets."
     />
+    <title>DevStarter Kit — Templates pour développeurs débutants</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta name="theme-color" content="#6C63FF" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="DevStarter Kit - Templates Frontend pour Débutants" />
-    <meta property="og:description" content="Bibliothèque moderne de templates HTML/CSS/JS prêts à copier-coller." />
-    <meta property="og:url" content="https://habdel-devstarter.github.io/DevStarter-Kit/index.html" />
-    <meta property="og:image" content="https://habdel-devstarter.github.io/DevStarter-Kit/assets/images/og-home.png" />
+    <meta property="og:site_name" content="DevStarter Kit" />
+    <meta
+      property="og:title"
+      content="DevStarter Kit — Templates prêts à l'emploi"
+    />
+    <meta
+      property="og:description"
+      content="26 templates HTML, CSS et JavaScript vanilla pour débutants francophones. Copy-paste, zéro dépendance, code pédagogique."
+    />
+    <meta
+      property="og:url"
+      content="https://habdel-devstarter.github.io/DevStarter-Kit/"
+    />
+    <meta
+      property="og:image"
+      content="https://habdel-devstarter.github.io/DevStarter-Kit/assets/og-image.svg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DevStarter Kit - Templates Frontend pour Débutants" />
-    <meta name="twitter:description" content="Composants modernes, défis débutants, thème lab et projets complets." />
-    <meta name="twitter:image" content="https://habdel-devstarter.github.io/DevStarter-Kit/assets/images/og-home.png" />
-    <title>DevStarter Kit | Accueil</title>
+    <meta name="twitter:site" content="@DevStarterKit" />
+    <meta
+      name="twitter:title"
+      content="DevStarter Kit — Templates prêts à l'emploi"
+    />
+    <meta
+      name="twitter:description"
+      content="Bibliothèque de 26 templates HTML, CSS et JavaScript vanilla pour développeurs débutants. Copy-paste, zéro dépendance, 100% gratuit."
+    />
+    <meta
+      name="twitter:image"
+      content="https://habdel-devstarter.github.io/DevStarter-Kit/assets/og-image.svg"
+    />
+
+    <!-- SEO -->
+    <link
+      rel="canonical"
+      href="https://habdel-devstarter.github.io/DevStarter-Kit/"
+    />
+    <meta name="author" content="DevStarter Kit" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Preconnect fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
-  <body data-page="home">
-    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
-      <div class="loading-spinner" aria-label="Chargement"></div>
+  <body>
+    <!-- --- Loader --- -->
+    <div id="page-loader" role="status" aria-label="Chargement">
+      <span class="loader-logo">DevStarter Kit</span>
     </div>
 
-    <header class="site-header">
-      <div class="container">
-        <nav class="navbar" aria-label="Primary navigation">
-          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
-          <button
-            class="navbar__toggle"
-            id="menuToggle"
-            aria-expanded="false"
-            aria-controls="primaryMenu"
-            aria-label="Ouvrir ou fermer le menu de navigation"
-          >
-            <span></span><span></span><span></span>
-          </button>
-          <div class="navbar__menu" id="primaryMenu">
-            <a class="navbar__link is-active" href="index.html">Accueil</a>
-            <a class="navbar__link" href="templates.html">Templates</a>
-            <a class="navbar__link" href="navbar.html">Barres de nav</a>
-            <a class="navbar__link" href="footer.html">Pieds de page</a>
-            <a class="navbar__link" href="cards.html">Cartes</a>
-            <a class="navbar__link" href="forms.html">Formulaires</a>
-            <a class="navbar__link" href="buttons.html">Boutons</a>
-            <a class="navbar__link" href="modals.html">Modales</a>
-            <a class="navbar__link" href="layout.html">Layouts</a>
-            <a class="navbar__link" href="defis.html">Défis</a>
-            <a class="navbar__link" href="theme.html">Thème Lab</a>
-            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
-          </div>
-        </nav>
-      </div>
-    </header>
+    <!-- --- Navigation --- -->
+    <header>
+      <nav
+        class="site-nav"
+        role="navigation"
+        aria-label="Navigation principale"
+      >
+        <div class="container">
+          <div class="site-nav__inner">
+            <!-- Logo -->
+            <a
+              href="index.html"
+              class="site-nav__logo"
+              aria-label="DevStarter Kit — Accueil"
+            >
+              <div class="site-nav__logo-icon" aria-hidden="true">D</div>
+              <span>DevStarter Kit</span>
+            </a>
 
-    <main>
-      <section class="hero fade-in">
-        <div class="container hero__layout">
-          <div>
-            <p class="eyebrow">Templates modernes pour débutants</p>
-            <h1>Créez plus vite avec des blocs frontend propres</h1>
-            <p class="hero__text">
-              Copiez-collez des composants prêts pour la production en HTML, CSS et JavaScript natifs.
-              Apprenez avec un code réaliste et professionnel.
-            </p>
-            <div class="hero__actions">
-              <a class="btn btn--primary ripple" href="templates.html">Explorer les templates</a>
-              <a class="btn btn--ghost ripple" href="forms.html">Tester les formulaires</a>
+            <!-- Menu desktop -->
+            <ul class="site-nav__menu" role="menubar">
+              <li role="none">
+                <a
+                  href="index.html"
+                  class="site-nav__link active"
+                  role="menuitem"
+                  >🏠 Accueil</a
+                >
+              </li>
+              <li role="none">
+                <a href="templates.html" class="site-nav__link" role="menuitem"
+                  >📦 Templates</a
+                >
+              </li>
+              <li role="none">
+                <a href="navbar.html" class="site-nav__link" role="menuitem"
+                  >🔝 Navbar</a
+                >
+              </li>
+              <li role="none">
+                <a href="footer.html" class="site-nav__link" role="menuitem"
+                  >⬇️ Footer</a
+                >
+              </li>
+              <li role="none">
+                <a href="cards.html" class="site-nav__link" role="menuitem"
+                  >🃏 Cards</a
+                >
+              </li>
+              <li role="none">
+                <a href="forms.html" class="site-nav__link" role="menuitem"
+                  >📝 Forms</a
+                >
+              </li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="site-nav__actions">
+              <button
+                class="dark-toggle"
+                aria-label="Activer le mode sombre"
+                title="Mode sombre"
+              >
+                🌙
+              </button>
+              <a
+                href="templates.html"
+                class="btn btn--primary btn--sm btn-ripple"
+                >Voir les templates →</a
+              >
+              <button
+                class="hamburger"
+                aria-expanded="false"
+                aria-label="Menu mobile"
+                aria-controls="mobile-menu"
+              >
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+              </button>
             </div>
           </div>
-          <aside class="glass-card hover-lift">
-            <h2>Ce que vous obtenez</h2>
-            <ul class="feature-list">
-              <li>Layouts responsives pour mobile, tablette et desktop</li>
-              <li>Mode sombre, recherche, filtres et copie de code</li>
-              <li>Structure de code sémantique et accessible</li>
-            </ul>
-          </aside>
         </div>
-      </section>
+      </nav>
+    </header>
 
-      <section class="section fade-in">
-        <div class="container">
-          <div class="section__head">
-            <h2>Catégories de templates</h2>
-            <p>Chaque catégorie est pensée pour apprendre vite et réutiliser en projet réel.</p>
-          </div>
-          <div class="grid grid--4" id="homeCategories"></div>
-        </div>
-      </section>
+    <!-- Mobile menu overlay -->
+    <div class="mobile-overlay" role="presentation"></div>
 
-      <section class="section fade-in">
-        <div class="container">
-          <div class="grid grid--4">
-            <article class="card hover-lift">
-              <h3>64+</h3>
-              <p>templates concrets à copier-coller</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>100%</h3>
-              <p>HTML, CSS, JavaScript Vanilla</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>3 niveaux</h3>
-              <p>débutant, intermédiaire, avancé</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>0 dépendance</h3>
-              <p>prêt pour intégration immédiate</p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <!-- Mobile menu -->
+    <nav
+      id="mobile-menu"
+      class="mobile-menu"
+      aria-label="Menu mobile"
+      role="navigation"
+    >
+      <a href="index.html" class="mobile-menu__link">🏠 Accueil</a>
+      <a href="templates.html" class="mobile-menu__link">📦 Templates</a>
+      <a href="navbar.html" class="mobile-menu__link">🔝 Navbar</a>
+      <a href="footer.html" class="mobile-menu__link">⬇️ Footer</a>
+      <a href="cards.html" class="mobile-menu__link">🃏 Cards</a>
+      <a href="forms.html" class="mobile-menu__link">📝 Forms</a>
+      <div class="divider"></div>
+      <button
+        class="dark-toggle btn btn--secondary"
+        style="width: 100%; justify-content: center"
+      >
+        🌙 Mode sombre
+      </button>
+    </nav>
 
-      <section class="section section--soft fade-in">
+    <!-- --- Main --- -->
+    <main class="main-content" id="main">
+      <!-- Hero -->
+      <section class="hero section" aria-label="Hero">
         <div class="container">
-          <div class="section__head">
-            <h2>Pourquoi DevStarter Kit</h2>
-          </div>
-          <div class="grid grid--3">
-            <article class="card hover-lift">
-              <h3>Architecture propre</h3>
-              <p>Dossiers organisés et fichiers modulaires comme dans un vrai dépôt professionnel.</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>Apprentissage rapide</h3>
-              <p>Utilisez des sections réutilisables et apprenez les bonnes pratiques avec des exemples concrets.</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>Zéro dépendance</h3>
-              <p>Sans framework ni librairie. Uniquement HTML5, CSS3 et JavaScript Vanilla.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div class="hero__content">
+            <div class="hero__badge animate-fade-in-down">
+              <span>✨</span> 100% Vanilla — Zéro dépendance
+            </div>
 
-      <section class="section fade-in">
-        <div class="container">
-          <div class="section__head">
-            <h2>Parcours recommandé pour débuter</h2>
-          </div>
-          <div class="grid grid--3">
-            <article class="card hover-lift">
-              <h3>1. Commencez par les navbars</h3>
-              <p>Maîtrisez les bases de structure HTML, alignement Flexbox et responsive mobile.</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>2. Enchaînez avec les cartes</h3>
-              <p>Travaillez les ombres, hiérarchie visuelle, hover states et rythme des espacements.</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>3. Terminez par les formulaires</h3>
-              <p>Apprenez la validation, les messages d’erreur/succès et les bonnes pratiques UX.</p>
-            </article>
+            <h1 class="animate-fade-in-up delay-100">
+              Des templates
+              <span class="gradient-text">prêts à l'emploi</span> pour vos
+              projets web
+            </h1>
+
+            <p class="lead animate-fade-in-up delay-200">
+              Accélérez votre apprentissage avec une bibliothèque de composants
+              HTML, CSS et JavaScript professionnels. Copiez, collez, apprenez.
+            </p>
+
+            <div class="hero__actions animate-fade-in-up delay-300">
+              <a
+                href="templates.html"
+                class="btn btn--primary btn--lg btn-ripple"
+              >
+                🚀 Explorer les templates
+              </a>
+              <a href="#features" class="btn btn--secondary btn--lg">
+                En savoir plus ↓
+              </a>
+            </div>
+
+            <div class="hero__stats animate-fade-in-up delay-400">
+              <div class="hero__stat">
+                <strong data-counter="26" data-suffix="+">0+</strong>
+                <span>Templates</span>
+              </div>
+              <div class="hero__stat">
+                <strong data-counter="6" data-suffix="">0</strong>
+                <span>Catégories</span>
+              </div>
+              <div class="hero__stat">
+                <strong data-counter="100" data-suffix="%">0%</strong>
+                <span>Responsive</span>
+              </div>
+              <div class="hero__stat">
+                <strong data-counter="0" data-suffix=" dep.">0 dep.</strong>
+                <span>Zéro dépendance</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section section--soft fade-in">
+      <!-- Features -->
+      <section
+        class="section section--sm"
+        id="features"
+        aria-label="Fonctionnalités"
+      >
         <div class="container">
-          <div class="section__head">
-            <h2>FAQ rapide</h2>
+          <div class="section-header reveal">
+            <span class="eyebrow">Pourquoi DevStarter Kit ?</span>
+            <h2>
+              Tout ce qu'il vous faut pour
+              <span class="gradient-text">démarrer</span>
+            </h2>
+            <p>
+              Une plateforme pensée pour les développeurs qui veulent apprendre
+              vite et bien.
+            </p>
           </div>
-          <div class="grid grid--3">
-            <article class="card">
-              <h3>Puis-je utiliser ces templates en production ?</h3>
-              <p>Oui, ils sont conçus comme une base propre à adapter à votre identité visuelle.</p>
-            </article>
-            <article class="card">
-              <h3>Dois-je installer un framework ?</h3>
-              <p>Non. Tout fonctionne avec HTML5, CSS3 et JavaScript Vanilla uniquement.</p>
-            </article>
-            <article class="card">
-              <h3>Comment progresser vite ?</h3>
-              <p>Copiez un template, personnalisez-le, puis comparez votre version avec l’original.</p>
-            </article>
+
+          <div class="grid grid-3 gap-6">
+            <div class="feature-card reveal delay-100">
+              <div class="feature-card__icon">📋</div>
+              <h3>Copy-paste facile</h3>
+              <p>
+                Chaque template dispose d'un bouton de copie rapide. Le code est
+                directement dans votre presse-papiers.
+              </p>
+            </div>
+            <div class="feature-card reveal delay-200">
+              <div class="feature-card__icon">🎨</div>
+              <h3>Design moderne</h3>
+              <p>
+                Tous les composants suivent les tendances actuelles :
+                glassmorphism, soft shadows, micro-interactions.
+              </p>
+            </div>
+            <div class="feature-card reveal delay-300">
+              <div class="feature-card__icon">📱</div>
+              <h3>100% Responsive</h3>
+              <p>
+                Chaque template est conçu pour fonctionner parfaitement sur
+                mobile, tablette et desktop.
+              </p>
+            </div>
+            <div class="feature-card reveal delay-400">
+              <div class="feature-card__icon">⚡</div>
+              <h3>Vanilla JS uniquement</h3>
+              <p>
+                Pas de frameworks, pas de librairies. Du code pur pour
+                comprendre les fondamentaux.
+              </p>
+            </div>
+            <div class="feature-card reveal delay-500">
+              <div class="feature-card__icon">🏷️</div>
+              <h3>Niveaux de difficulté</h3>
+              <p>
+                Chaque template est tagué Débutant, Intermédiaire ou Avancé pour
+                progresser à votre rythme.
+              </p>
+            </div>
+            <div class="feature-card reveal delay-600">
+              <div class="feature-card__icon">🔍</div>
+              <h3>Recherche & filtres</h3>
+              <p>
+                Trouvez rapidement le template qu'il vous faut avec la barre de
+                recherche et les filtres par catégorie.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section fade-in">
+      <!-- Categories -->
+      <section class="section" aria-label="Catégories de templates">
         <div class="container">
-          <div class="section__head">
-            <h2>Roadmap d’apprentissage 30 jours</h2>
-            <p>Un plan simple pour progresser chaque semaine sans vous disperser.</p>
-            <a class="btn btn--primary ripple" href="templates.html?level=beginner">Commencer la roadmap</a>
+          <div class="section-header reveal">
+            <span class="eyebrow">Bibliothèque</span>
+            <h2>Explorez nos <span class="gradient-text">catégories</span></h2>
+            <p>
+              Des composants organisés par type pour trouver exactement ce dont
+              vous avez besoin.
+            </p>
           </div>
-          <div class="grid grid--2">
-            <article class="card hover-lift">
-              <h3>Semaine 1 : Fondations HTML/CSS</h3>
-              <p>Objectif : reproduire 2 navbars et 2 footers, puis comprendre chaque classe utilisée.</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>Semaine 2 : Composants UI</h3>
-              <p>Objectif : intégrer 5 types de cards et créer votre propre variante visuelle.</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>Semaine 3 : JavaScript utile</h3>
-              <p>Objectif : maîtriser copy code, dark mode, filtres et recherche côté interface.</p>
-            </article>
-            <article class="card hover-lift">
-              <h3>Semaine 4 : Formulaires et mini-projet</h3>
-              <p>Objectif : construire une landing page complète avec formulaire validé et version mobile propre.</p>
-            </article>
+
+          <div class="grid grid-3 gap-6">
+            <a
+              href="navbar.html"
+              class="category-card reveal delay-100"
+              aria-label="Templates Navbar — 5 templates"
+            >
+              <span class="category-card__icon">🔝</span>
+              <h3>Navbar</h3>
+              <p>
+                Barres de navigation professionnelles pour tous types de
+                projets.
+              </p>
+              <span class="count">5 templates</span>
+            </a>
+            <a
+              href="footer.html"
+              class="category-card reveal delay-200"
+              aria-label="Templates Footer — 5 templates"
+            >
+              <span class="category-card__icon">⬇️</span>
+              <h3>Footer</h3>
+              <p>
+                Pieds de page complets avec liens, social media et newsletter.
+              </p>
+              <span class="count">5 templates</span>
+            </a>
+            <a
+              href="cards.html"
+              class="category-card reveal delay-300"
+              aria-label="Templates Cards — 10 templates"
+            >
+              <span class="category-card__icon">🃏</span>
+              <h3>Cards</h3>
+              <p>Cartes produit, profil, prix, blog et bien plus encore.</p>
+              <span class="count">10 templates</span>
+            </a>
+            <a
+              href="forms.html"
+              class="category-card reveal delay-400"
+              aria-label="Templates Formulaires — 6 templates"
+            >
+              <span class="category-card__icon">📝</span>
+              <h3>Forms</h3>
+              <p>
+                Formulaires avec validation JS, messages d'erreur et de succès.
+              </p>
+              <span class="count">6 templates</span>
+            </a>
+            <a
+              href="templates.html"
+              class="category-card reveal delay-500"
+              aria-label="Voir tous les templates"
+            >
+              <span class="category-card__icon">📦</span>
+              <h3>Tous les templates</h3>
+              <p>
+                Parcourez l'ensemble de la bibliothèque avec recherche et
+                filtres.
+              </p>
+              <span class="count">26 templates</span>
+            </a>
+            <div
+              class="category-card reveal delay-600"
+              style="cursor: default; opacity: 0.7"
+            >
+              <span class="category-card__icon">🔜</span>
+              <h3>Bientôt</h3>
+              <p>
+                Hero sections, modals, sliders et d'autres composants arrivent
+                prochainement.
+              </p>
+              <span class="count">En cours...</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps -->
+      <section
+        class="section section--sm"
+        style="background: var(--gradient-card)"
+        aria-label="Comment ça marche"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">Comment ça marche</span>
+            <h2>3 étapes pour <span class="gradient-text">accélérer</span></h2>
+          </div>
+
+          <div class="steps">
+            <div class="step reveal delay-100">
+              <div class="step__number">1</div>
+              <h3>Parcourez</h3>
+              <p>
+                Explorez la bibliothèque et trouvez le template adapté à votre
+                projet grâce aux filtres.
+              </p>
+            </div>
+            <div class="step reveal delay-200">
+              <div class="step__number">2</div>
+              <h3>Copiez</h3>
+              <p>
+                Cliquez sur "Copier le code" et le HTML, CSS ou JS est
+                instantanément dans votre presse-papiers.
+              </p>
+            </div>
+            <div class="step reveal delay-300">
+              <div class="step__number">3</div>
+              <h3>Personnalisez</h3>
+              <p>
+                Collez dans votre projet, adaptez les couleurs et le contenu.
+                Apprenez en analysant le code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section" aria-label="Témoignages">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">Pourquoi ça aide</span>
+            <h2>
+              Ce que permet <span class="gradient-text">DevStarter Kit</span>
+            </h2>
+          </div>
+
+          <div class="grid grid-3 gap-6">
+            <div class="testimonial-card reveal delay-100">
+              <p class="testimonial-card__quote">
+                Les templates sont pensés pour etre lus, compris puis adaptes.
+                On ne copie pas juste un composant : on comprend comment il est
+                construit.
+              </p>
+              <div class="testimonial-card__author">
+                <div class="avatar">MA</div>
+                <div>
+                  <strong>Code pédagogique</strong>
+                  <span>Pour apprendre plus vite</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal delay-200">
+              <p class="testimonial-card__quote">
+                Le choix du HTML, du CSS et du JavaScript vanilla garde chaque
+                template simple a explorer, sans dependance ni installation
+                supplementaire.
+              </p>
+              <div class="testimonial-card__author">
+                <div class="avatar">TC</div>
+                <div>
+                  <strong>Zéro dépendance</strong>
+                  <span>Prêt à tester immédiatement</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal delay-300">
+              <p class="testimonial-card__quote">
+                Chaque exemple vise un usage concret : interface d'accueil,
+                formulaire, carte, navigation. Le but est d'apprendre avec de
+                vrais morceaux d'interface.
+              </p>
+              <div class="testimonial-card__author">
+                <div class="avatar">SL</div>
+                <div>
+                  <strong>Vrais cas d'usage</strong>
+                  <span>Pour construire des projets complets</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="section section--sm" aria-label="Statistiques">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-card reveal delay-100">
+              <strong
+                class="stat-card__number"
+                data-counter="26"
+                data-suffix="+"
+                >0+</strong
+              >
+              <span class="stat-card__label">Templates disponibles</span>
+            </div>
+            <div class="stat-card reveal delay-200">
+              <strong class="stat-card__number" data-counter="6" data-suffix=""
+                >0</strong
+              >
+              <span class="stat-card__label">Catégories</span>
+            </div>
+            <div class="stat-card reveal delay-300">
+              <strong
+                class="stat-card__number"
+                data-counter="100"
+                data-suffix="%"
+                >0%</strong
+              >
+              <span class="stat-card__label">Vanilla JS</span>
+            </div>
+            <div class="stat-card reveal delay-400">
+              <strong
+                class="stat-card__number"
+                data-counter="0"
+                data-suffix=" dep."
+                >0 dep.</strong
+              >
+              <span class="stat-card__label">Zéro dépendance</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--sm" aria-label="Appel à l'action">
+        <div class="container">
+          <div class="cta-section reveal">
+            <h2>Prêt à accélérer votre développement ?</h2>
+            <p class="mt-4" style="margin-bottom: var(--space-8)">
+              Commencez à utiliser DevStarter Kit dès maintenant — c'est
+              gratuit, sans inscription.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="templates.html"
+                class="btn btn--white btn--lg btn-ripple"
+              >
+                🚀 Voir tous les templates
+              </a>
+              <a
+                href="navbar.html"
+                class="btn btn--lg"
+                style="
+                  background: rgba(255, 255, 255, 0.15);
+                  color: white;
+                  border: 1px solid rgba(255, 255, 255, 0.3);
+                "
+              >
+                Commencer par les navbars →
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <!-- --- Footer --- -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="footer-brand">
+            <span class="logo-text">DevStarter Kit</span>
+            <p>
+              La bibliothèque de templates HTML, CSS et JavaScript pour
+              développeurs débutants. Apprenez en copiant du code professionnel.
+            </p>
+            <div class="social-links" style="margin-top: var(--space-5)">
+              <a
+                href="https://github.com/Habdel-DevStarter"
+                target="_blank"
+                class="social-link"
+                aria-label="GitHub"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  /></svg
+              ></a>
+              <a
+                href="https://twitter.com/DevStarterKit"
+                target="_blank"
+                rel="noreferrer"
+                class="social-link"
+                aria-label="Twitter"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  /></svg
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/habdel-coulibaly-0290423ba/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BcbkukVnWTcCKkH0Ouag5Tw%3D%3D"
+                target="_blank"
+                class="social-link"
+                aria-label="LinkedIn"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Templates</h4>
+            <ul>
+              <li><a href="navbar.html">→ Navbar</a></li>
+              <li><a href="footer.html">→ Footer</a></li>
+              <li><a href="cards.html">→ Cards</a></li>
+              <li><a href="forms.html">→ Forms</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Ressources</h4>
+            <ul>
+              <li><a href="templates.html">→ Tous les templates</a></li>
+              <li><a href="docs.html">→ Documentation</a></li>
+              <li><a href="changelog.html">→ Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Projet</h4>
+            <ul>
+              <li><a href="about.html">→ À propos</a></li>
+              <li><a href="contribuer.html">→ Contribuer</a></li>
+              <li><a href="contact.html">→ Contact</a></li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="site-footer__bottom">
+          <p>
+            © 2026 <strong>DevStarter Kit</strong>. Fait avec ❤️ pour les
+            développeurs.
+          </p>
+          <p>HTML5 · CSS3 · Vanilla JS · Zéro dépendance · <a href="LICENSE">Licence MIT</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- --- UI helpers --- -->
+    <button id="scroll-top" aria-label="Retour en haut" title="Retour en haut">
+      ↑
+    </button>
+    <div id="toast-container" role="alert" aria-live="polite"></div>
+
+    <!-- --- Scripts --- -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/darkmode.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-

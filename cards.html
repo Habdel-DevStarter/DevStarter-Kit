@@ -1,90 +1,2272 @@
 ﻿<!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevStarter Kit | Modèles de cartes</title>
+    <meta
+      name="description"
+      content="Templates Cards DevStarter Kit — cartes HTML/CSS/JavaScript prêtes à l'emploi pour pratiquer sur des interfaces concrètes."
+    />
+    <title>Templates Cards — DevStarter Kit</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body data-page="cards">
-    <header class="site-header">
-      <div class="container">
-        <nav class="navbar" aria-label="Primary navigation">
-          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
-          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation"><span></span><span></span><span></span></button>
-          <div class="navbar__menu" id="primaryMenu">
-            <a class="navbar__link" href="index.html">Accueil</a><a class="navbar__link" href="templates.html">Templates</a><a class="navbar__link" href="navbar.html">Barres de nav</a><a class="navbar__link" href="footer.html">Pieds de page</a><a class="navbar__link is-active" href="cards.html">Cartes</a><a class="navbar__link" href="forms.html">Formulaires</a>
-            <a class="navbar__link" href="buttons.html">Boutons</a>
-            <a class="navbar__link" href="modals.html">Modales</a>
-            <a class="navbar__link" href="layout.html">Layouts</a>
-            <a class="navbar__link" href="defis.html">Défis</a>
-            <a class="navbar__link" href="theme.html">Thème Lab</a>
-            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main class="section">
-      <div class="container">
-        <div class="section__head"><h1>Modèles de cartes</h1><p>16 modèles de cartes réutilisables avec hover animation et ombres douces.</p></div>
-        <div class="toolbar">
-          <input class="input" type="search" placeholder="Rechercher des cards..." data-search-input />
-          <select class="input" data-filter-tech><option value="all">Toutes les technos</option><option value="html">HTML</option><option value="css">CSS</option><option value="js">JS</option></select>
-          <select class="input" data-filter-level><option value="all">Tous les niveaux</option><option value="beginner">Débutant</option><option value="intermediate">Intermédiaire</option><option value="advanced">Avancé</option></select>
-        </div>
-        <div class="grid grid--3" data-search-container>
-          <article class="card template-overview hover-lift" data-search-item data-title="product card" data-desc="product image and price" data-tech="html css" data-level="beginner"><h3>Product Card</h3><p>Image, titre, prix, CTA.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='product-card'><h3>Pack Starter</h3><p>29€</p><button>Acheter</button></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="profile card" data-desc="avatar and bio" data-tech="html css" data-level="beginner"><h3>Profile Card</h3><p>Avatar, rôle, liens sociaux.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='profile-card'><img alt='Avatar'><h3>Jane Doe</h3><p>Développeuse Frontend</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="pricing card" data-desc="plan features" data-tech="html css js" data-level="intermediate"><h3>Pricing Card</h3><p>Nom d'offre, prix, fonctionnalités.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='pricing-card'><h3>Pro</h3><p>49€/mois</p><ul><li>Projets illimités</li></ul></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="blog card" data-desc="article preview layout" data-tech="html css" data-level="beginner"><h3>Blog Card</h3><p>Miniature, date, résumé.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='blog-card'><h3>Comment créer une navbar</h3><p>Lecture 5 min</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="testimonial card" data-desc="user quote card" data-tech="html css" data-level="intermediate"><h3>Testimonial Card</h3><p>Avis, note, avatar.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='testimonial-card'><p>Excellent starter kit.</p><strong>- Alex</strong></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="feature card" data-desc="icon and feature detail" data-tech="html css" data-level="beginner"><h3>Feature Card</h3><p>Icône, description courte.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='feature-card'><h3>Mise en place rapide</h3><p>Démarrez en quelques minutes.</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="stats card" data-desc="metric display card" data-tech="html css js" data-level="intermediate"><h3>Stats Card</h3><p>Métrique et tendance.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='stats-card'><h3>Conversion</h3><p>12.4%</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="service card" data-desc="service details card" data-tech="html css" data-level="beginner"><h3>Service Card</h3><p>Titre du service et CTA.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='service-card'><h3>Audit UI</h3><p>Améliorez votre UX rapidement.</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="team card" data-desc="member profile card" data-tech="html css" data-level="beginner"><h3>Team Card</h3><p>Photo, rôle, contact.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='team-card'><h3>Sarah</h3><p>Designer Produit</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="dashboard card" data-desc="analytics widget card" data-tech="html css js" data-level="advanced"><h3>Dashboard Card</h3><p>Widget data avec statut.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='dashboard-card'><h3>Revenus</h3><p>18 420€</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="event card" data-desc="event date place and call to action" data-tech="html css" data-level="beginner"><h3>Event Card</h3><p>Date, lieu, inscription.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='event-card'><h3>Frontend Meetup</h3><p>12 mai • Paris</p><button>Réserver</button></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="job card" data-desc="job offer card with tags" data-tech="html css" data-level="intermediate"><h3>Job Card</h3><p>Poste, stack, salaire.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='job-card'><h3>Développeur Frontend</h3><p>React • Remote • 45k€</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="course card" data-desc="online course card with progress" data-tech="html css js" data-level="intermediate"><h3>Course Card</h3><p>Module, durée, progression.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='course-card'><h3>CSS Avancé</h3><p>Progression: 70%</p></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="project card" data-desc="portfolio project card with stack tags" data-tech="html css" data-level="beginner"><h3>Project Card</h3><p>Projet, stack, lien démo.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='project-card'><h3>SaaS Landing</h3><p>HTML • CSS • JS</p><a href='#'>Voir la démo</a></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="notification card" data-desc="alert and update message card" data-tech="html css js" data-level="advanced"><h3>Notification Card</h3><p>Message système et action rapide.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='notification-card'><p>Mise à jour disponible.</p><button>Installer</button></article>">Copier le code</button></article>
-          <article class="card template-overview hover-lift" data-search-item data-title="faq card" data-desc="question answer accordion card" data-tech="html css js" data-level="advanced"><h3>FAQ Card</h3><p>Question/réponse compacte.</p><button class="btn btn--ghost js-copy" data-copy-inline="<article class='faq-card'><h3>Comment déployer ?</h3><p>Utilisez un hébergement statique.</p></article>">Copier le code</button></article>
-        </div>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      /* --- Styles isolés pour toutes les cards preview --- */
 
-        <section class="section">
-          <div class="section__head">
-            <h2>Quand utiliser chaque type de card</h2>
+      .cards-showcase {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(108, 99, 255, 0.18),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 85% 18%,
+            rgba(15, 204, 206, 0.16),
+            transparent 24%
+          ),
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(246, 248, 255, 0.96)
+          );
+        border: 1px solid rgba(108, 99, 255, 0.12);
+        border-radius: 32px;
+        padding: 32px;
+        margin-bottom: var(--space-10);
+        box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+      }
+      .cards-showcase::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent 40%),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 184, 0, 0.08),
+            transparent 20%
+          );
+        pointer-events: none;
+      }
+      .cards-showcase > * {
+        position: relative;
+        z-index: 1;
+      }
+      .cards-showcase__eyebrow {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(108, 99, 255, 0.12);
+        color: #5146d8;
+      }
+      .cards-showcase__grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+      .cards-showcase__lead h2 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1;
+        letter-spacing: -0.05em;
+        margin-bottom: 14px;
+      }
+      .cards-showcase__lead p {
+        max-width: 58ch;
+        color: #5f6477;
+        margin-bottom: 22px;
+      }
+      .cards-showcase__points {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+      .cards-showcase__point {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(108, 99, 255, 0.1);
+        border-radius: 18px;
+        padding: 14px;
+      }
+      .cards-showcase__point strong {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 4px;
+        color: #1a1a2e;
+      }
+      .cards-showcase__point span {
+        font-size: 0.78rem;
+        color: #6b7280;
+      }
+      .cards-showcase__rail {
+        display: grid;
+        gap: 14px;
+      }
+      .cards-showcase__collection {
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(108, 99, 255, 0.1);
+        border-radius: 22px;
+        padding: 18px;
+        box-shadow: 0 10px 28px rgba(17, 24, 39, 0.04);
+      }
+      .cards-showcase__collection strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+        color: #1a1a2e;
+      }
+      .cards-showcase__collection p {
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-bottom: 14px;
+      }
+      .cards-showcase__mini {
+        display: flex;
+        align-items: end;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .cards-showcase__mini .product-card,
+      .cards-showcase__mini .profile-card,
+      .cards-showcase__mini .blog-card,
+      .cards-showcase__mini .stats-c,
+      .cards-showcase__mini .dash-card {
+        transform: scale(0.82);
+        transform-origin: left bottom;
+        margin-right: -18px;
+        box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+      }
+      .cards-editorial-intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 0 0 var(--space-6);
+      }
+      .cards-editorial-intro h2 {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        margin-bottom: 8px;
+        letter-spacing: -0.03em;
+      }
+      .cards-editorial-intro p {
+        margin: 0;
+        color: var(--text-muted);
+        max-width: 60ch;
+      }
+      .cards-editorial-intro__badge {
+        background: rgba(108, 99, 255, 0.08);
+        color: #574cff;
+      }
+      [data-theme="dark"] .cards-showcase {
+        border-color: rgba(108, 99, 255, 0.26);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(108, 99, 255, 0.28),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 85% 18%,
+            rgba(15, 204, 206, 0.22),
+            transparent 24%
+          ),
+          linear-gradient(
+            145deg,
+            rgba(12, 15, 31, 0.96),
+            rgba(20, 24, 45, 0.98)
+          );
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      }
+      [data-theme="dark"] .cards-showcase::before {
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 40%),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 184, 0, 0.08),
+            transparent 20%
+          );
+      }
+      [data-theme="dark"] .cards-showcase__eyebrow {
+        background: rgba(18, 24, 42, 0.82);
+        border-color: rgba(139, 133, 255, 0.28);
+        color: #bebaff;
+      }
+      [data-theme="dark"] .cards-showcase__lead p,
+      [data-theme="dark"] .cards-showcase__point span,
+      [data-theme="dark"] .cards-showcase__collection p {
+        color: #c0c6dc;
+      }
+      [data-theme="dark"] .cards-showcase__point,
+      [data-theme="dark"] .cards-showcase__collection {
+        background: rgba(15, 19, 36, 0.84);
+        border-color: rgba(139, 133, 255, 0.18);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+      [data-theme="dark"] .cards-showcase__point strong,
+      [data-theme="dark"] .cards-showcase__collection strong {
+        color: #f5f7ff;
+      }
+      [data-theme="dark"] .cards-editorial-intro {
+        border: 1px solid rgba(108, 99, 255, 0.18);
+        border-radius: 24px;
+        padding: clamp(1.35rem, 3vw, 2rem);
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(15, 204, 206, 0.14),
+            transparent 28%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(13, 16, 32, 0.94),
+            rgba(20, 24, 42, 0.98)
+          );
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+      }
+      [data-theme="dark"] .cards-editorial-intro__badge {
+        background: rgba(108, 99, 255, 0.16);
+        color: #d8d6ff;
+      }
+      .cards-collection-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 0 0 18px;
+        margin: 18px 0 24px;
+        border-bottom: 1px solid rgba(108, 99, 255, 0.12);
+      }
+      .cards-collection-heading:first-child {
+        margin-top: 0;
+      }
+      .cards-collection-heading__eyebrow {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #6c63ff;
+        margin-bottom: 8px;
+      }
+      .cards-collection-heading h3 {
+        font-size: 1.5rem;
+        letter-spacing: -0.03em;
+        margin-bottom: 4px;
+      }
+      .cards-collection-heading p {
+        margin: 0;
+        color: var(--text-muted);
+        max-width: 56ch;
+      }
+      .cards-collection-heading__meta {
+        font-size: 0.8rem;
+        color: #6b7280;
+        white-space: nowrap;
+      }
+      @media (max-width: 1024px) {
+        .cards-showcase__grid {
+          grid-template-columns: 1fr;
+        }
+        .cards-showcase__points {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .cards-showcase {
+          padding: 22px;
+          border-radius: 24px;
+        }
+        .cards-editorial-intro,
+        .cards-collection-heading {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .cards-showcase__mini .product-card,
+        .cards-showcase__mini .profile-card,
+        .cards-showcase__mini .blog-card,
+        .cards-showcase__mini .stats-c,
+        .cards-showcase__mini .dash-card {
+          transform: scale(0.74);
+          margin-right: -28px;
+        }
+      }
+
+      /* Product Card */
+      .product-card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s;
+        width: 220px;
+      }
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+      }
+      .product-card__img {
+        height: 140px;
+        background: linear-gradient(135deg, #f0f0ff, #e0e8ff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+      }
+      .product-card__body {
+        padding: 16px;
+      }
+      .product-card__tag {
+        font-size: 0.65rem;
+        font-weight: 700;
+        color: #6c63ff;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .product-card__name {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 4px 0;
+      }
+      .product-card__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12px;
+      }
+      .product-card__price {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #6c63ff;
+      }
+      .product-card__btn {
+        padding: 7px 14px;
+        background: linear-gradient(135deg, #6c63ff, #0fccce);
+        color: #fff;
+        border: none;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .product-card__btn:hover {
+        transform: scale(1.05);
+      }
+      [data-theme="dark"] .product-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .product-card__name {
+        color: #f0f0ff;
+      }
+      [data-theme="dark"] .product-card__img {
+        background: linear-gradient(135deg, #1e1e3a, #2a2a50);
+      }
+
+      /* Profile Card */
+      .profile-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #e5e7eb;
+        padding: 32px 24px;
+        text-align: center;
+        width: 220px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .profile-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(108, 99, 255, 0.15);
+      }
+      .profile-card__av {
+        width: 72px;
+        height: 72px;
+        background: linear-gradient(135deg, #6c63ff, #0fccce);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 12px;
+      }
+      .profile-card__name {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #1a1a2e;
+      }
+      .profile-card__role {
+        font-size: 0.75rem;
+        color: #6b7280;
+        margin-bottom: 16px;
+      }
+      .profile-card__stats {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding: 14px 0;
+        border-top: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e5e7eb;
+        margin-bottom: 14px;
+      }
+      .profile-card__stat strong {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: #1a1a2e;
+      }
+      .profile-card__stat span {
+        font-size: 0.65rem;
+        color: #6b7280;
+      }
+      .profile-card__follow {
+        width: 100%;
+        padding: 9px;
+        background: linear-gradient(135deg, #6c63ff, #0fccce);
+        color: #fff;
+        border: none;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .profile-card__follow:hover {
+        opacity: 0.9;
+        transform: scale(1.02);
+      }
+      [data-theme="dark"] .profile-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .profile-card__name {
+        color: #f0f0ff;
+      }
+
+      /* Pricing Card */
+      .pricing-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #e5e7eb;
+        padding: 28px 24px;
+        width: 220px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        position: relative;
+      }
+      .pricing-card.featured {
+        background: linear-gradient(145deg, #6c63ff, #5a54e6);
+        border: none;
+        color: #fff;
+        box-shadow: 0 16px 40px rgba(108, 99, 255, 0.35);
+      }
+      .pricing-card__badge {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ff6584;
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 3px 12px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .pricing-card__plan {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #6b7280;
+        margin-bottom: 8px;
+      }
+      .pricing-card.featured .pricing-card__plan {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .pricing-card__price {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #1a1a2e;
+      }
+      .pricing-card.featured .pricing-card__price {
+        color: #fff;
+      }
+      .pricing-card__per {
+        font-size: 0.75rem;
+        color: #6b7280;
+      }
+      .pricing-card.featured .pricing-card__per {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .pricing-card__features {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .pricing-card__features li {
+        font-size: 0.78rem;
+        color: #6b7280;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .pricing-card.featured .pricing-card__features li {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .pricing-card__features li::before {
+        content: "✓";
+        font-weight: 700;
+        color: #10b981;
+      }
+      .pricing-card.featured .pricing-card__features li::before {
+        color: #0fccce;
+      }
+      .pricing-card__cta {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: linear-gradient(135deg, #6c63ff, #0fccce);
+        color: #fff;
+      }
+      .pricing-card.featured .pricing-card__cta {
+        background: white;
+        color: #6c63ff;
+      }
+      .pricing-card__cta:hover {
+        transform: scale(1.03);
+      }
+      [data-theme="dark"] .pricing-card:not(.featured) {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .pricing-card:not(.featured) .pricing-card__price {
+        color: #f0f0ff;
+      }
+
+      /* Blog Card */
+      .blog-card {
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid #e5e7eb;
+        overflow: hidden;
+        width: 220px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+      }
+      .blog-card__img {
+        height: 110px;
+        background: linear-gradient(135deg, #6c63ff 0%, #0fccce 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+      }
+      .blog-card__body {
+        padding: 14px;
+      }
+      .blog-card__cat {
+        font-size: 0.65rem;
+        font-weight: 700;
+        color: #6c63ff;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .blog-card__title {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 4px 0 6px;
+        line-height: 1.3;
+      }
+      .blog-card__meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.65rem;
+        color: #9ca3af;
+      }
+      .blog-card__av {
+        width: 20px;
+        height: 20px;
+        background: #6c63ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.55rem;
+        font-weight: 700;
+      }
+      [data-theme="dark"] .blog-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .blog-card__title {
+        color: #f0f0ff;
+      }
+
+      /* Testimonial Card */
+      .testi-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #e5e7eb;
+        padding: 24px;
+        width: 260px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .testi-card:hover {
+        box-shadow: 0 16px 40px rgba(108, 99, 255, 0.12);
+        transform: translateY(-4px);
+      }
+      .testi-card__stars {
+        color: #f59e0b;
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+      }
+      .testi-card__quote {
+        font-size: 0.82rem;
+        color: #6b7280;
+        line-height: 1.6;
+        font-style: italic;
+        margin-bottom: 14px;
+      }
+      .testi-card__author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .testi-card__av {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, #6c63ff, #0fccce);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .testi-card__name {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #1a1a2e;
+      }
+      .testi-card__role {
+        font-size: 0.65rem;
+        color: #9ca3af;
+      }
+      [data-theme="dark"] .testi-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .testi-card__name {
+        color: #f0f0ff;
+      }
+
+      /* Feature Card */
+      .feat-card {
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid #e5e7eb;
+        padding: 24px;
+        width: 200px;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .feat-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(135deg, #6c63ff, #0fccce);
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+      }
+      .feat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(108, 99, 255, 0.15);
+      }
+      .feat-card:hover::before {
+        transform: scaleX(1);
+      }
+      .feat-card__icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(
+          135deg,
+          rgba(108, 99, 255, 0.1),
+          rgba(15, 204, 206, 0.1)
+        );
+        border: 1px solid rgba(108, 99, 255, 0.15);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+      }
+      .feat-card__title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 6px;
+      }
+      .feat-card__desc {
+        font-size: 0.75rem;
+        color: #6b7280;
+        line-height: 1.5;
+      }
+      [data-theme="dark"] .feat-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .feat-card__title {
+        color: #f0f0ff;
+      }
+
+      /* Stats Card */
+      .stats-c {
+        background: linear-gradient(145deg, #6c63ff, #0fccce);
+        border-radius: 16px;
+        padding: 24px;
+        width: 180px;
+        color: #fff;
+        transition: all 0.3s;
+        box-shadow: 0 8px 24px rgba(108, 99, 255, 0.3);
+      }
+      .stats-c:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 16px 40px rgba(108, 99, 255, 0.45);
+      }
+      .stats-c__icon {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+      }
+      .stats-c__num {
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .stats-c__label {
+        font-size: 0.75rem;
+        opacity: 0.8;
+      }
+      .stats-c__trend {
+        font-size: 0.7rem;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-top: 10px;
+        display: inline-block;
+      }
+
+      /* Service Card */
+      .service-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #e5e7eb;
+        padding: 28px 20px;
+        width: 200px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .service-card:hover {
+        background: linear-gradient(145deg, #6c63ff, #5a54e6);
+        border-color: transparent;
+        box-shadow: 0 16px 40px rgba(108, 99, 255, 0.35);
+      }
+      .service-card:hover .service-card__title,
+      .service-card:hover .service-card__desc {
+        color: #fff;
+      }
+      .service-card__icon {
+        font-size: 2rem;
+        margin-bottom: 14px;
+      }
+      .service-card__title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 6px;
+        transition: color 0.3s;
+      }
+      .service-card__desc {
+        font-size: 0.75rem;
+        color: #6b7280;
+        line-height: 1.5;
+        transition: color 0.3s;
+      }
+      [data-theme="dark"] .service-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .service-card__title {
+        color: #f0f0ff;
+      }
+
+      /* Team Card */
+      .team-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #e5e7eb;
+        overflow: hidden;
+        width: 200px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(108, 99, 255, 0.15);
+      }
+      .team-card__cover {
+        height: 70px;
+        background: linear-gradient(135deg, #6c63ff, #ff6584);
+      }
+      .team-card__body {
+        padding: 0 20px 20px;
+        text-align: center;
+      }
+      .team-card__av {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #0fccce, #6c63ff);
+        border-radius: 50%;
+        border: 4px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: -28px auto 10px;
+      }
+      .team-card__name {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1a1a2e;
+      }
+      .team-card__role {
+        font-size: 0.7rem;
+        color: #6b7280;
+        margin-bottom: 12px;
+      }
+      .team-card__skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+      }
+      .team-card__skill {
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        background: rgba(108, 99, 255, 0.1);
+        color: #6c63ff;
+        border-radius: 999px;
+      }
+      [data-theme="dark"] .team-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .team-card__name {
+        color: #f0f0ff;
+      }
+      [data-theme="dark"] .team-card__av {
+        border-color: #16162a;
+      }
+
+      /* Dashboard Card */
+      .dash-card {
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid #e5e7eb;
+        padding: 20px;
+        width: 240px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .dash-card:hover {
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+      }
+      .dash-card__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+      .dash-card__title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .dash-card__icon {
+        width: 32px;
+        height: 32px;
+        background: rgba(108, 99, 255, 0.1);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+      }
+      .dash-card__value {
+        font-size: 1.75rem;
+        font-weight: 900;
+        color: #1a1a2e;
+        margin-bottom: 4px;
+      }
+      .dash-card__change {
+        font-size: 0.72rem;
+        font-weight: 600;
+      }
+      .dash-card__change.up {
+        color: #10b981;
+      }
+      .dash-card__change.down {
+        color: #ef4444;
+      }
+      .dash-card__bar {
+        height: 5px;
+        background: #e5e7eb;
+        border-radius: 999px;
+        margin-top: 12px;
+        overflow: hidden;
+      }
+      .dash-card__progress {
+        height: 100%;
+        background: linear-gradient(90deg, #6c63ff, #0fccce);
+        border-radius: 999px;
+      }
+      [data-theme="dark"] .dash-card {
+        background: #16162a;
+        border-color: #2a2a4a;
+      }
+      [data-theme="dark"] .dash-card__value {
+        color: #f0f0ff;
+      }
+      [data-theme="dark"] .dash-card__bar {
+        background: #2a2a4a;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page-loader"><span class="loader-logo">Chargement…</span></div>
+
+    <header>
+      <nav class="site-nav">
+        <div class="container">
+          <div class="site-nav__inner">
+            <a href="index.html" class="site-nav__logo">
+              <div class="site-nav__logo-icon">D</div>
+              <span>DevStarter Kit</span>
+            </a>
+            <ul class="site-nav__menu">
+              <li>
+                <a href="index.html" class="site-nav__link">🏠 Accueil</a>
+              </li>
+              <li>
+                <a href="templates.html" class="site-nav__link">📦 Templates</a>
+              </li>
+              <li>
+                <a href="navbar.html" class="site-nav__link">🔝 Navbar</a>
+              </li>
+              <li>
+                <a href="footer.html" class="site-nav__link">⬇️ Footer</a>
+              </li>
+              <li>
+                <a href="cards.html" class="site-nav__link active">🃏 Cards</a>
+              </li>
+              <li><a href="forms.html" class="site-nav__link">📝 Forms</a></li>
+            </ul>
+            <div class="site-nav__actions">
+              <button class="dark-toggle">🌙</button>
+              <button
+                class="hamburger"
+                aria-expanded="false"
+                aria-label="Menu mobile"
+              >
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+              </button>
+            </div>
           </div>
-          <div class="grid grid--3">
-            <article class="card">
-              <h3>Produit / Pricing</h3>
-              <p>Parfait pour landing pages, pages e-commerce et comparatifs d’offres.</p>
-            </article>
-            <article class="card">
-              <h3>Blog / Testimonial</h3>
-              <p>Idéal pour crédibiliser un site et améliorer l’engagement des visiteurs.</p>
-            </article>
-            <article class="card">
-              <h3>Stats / Dashboard</h3>
-              <p>À utiliser dans les back-offices pour suivre les KPI en un coup d’œil.</p>
-            </article>
-          </div>
-        </section>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mobile-overlay"></div>
+    <nav class="mobile-menu">
+      <a href="index.html" class="mobile-menu__link">🏠 Accueil</a>
+      <a href="templates.html" class="mobile-menu__link">📦 Templates</a>
+      <a href="navbar.html" class="mobile-menu__link">🔝 Navbar</a>
+      <a href="footer.html" class="mobile-menu__link">⬇️ Footer</a>
+      <a href="cards.html" class="mobile-menu__link active">🃏 Cards</a>
+      <a href="forms.html" class="mobile-menu__link">📝 Forms</a>
+      <div class="divider"></div>
+      <button
+        class="dark-toggle btn btn--secondary"
+        style="width: 100%; justify-content: center"
+      >
+        🌙 Mode sombre
+      </button>
+    </nav>
+
+    <main class="main-content">
+      <div class="page-header">
+        <nav class="breadcrumb" style="justify-content: center">
+          <a href="index.html">Accueil</a><span class="breadcrumb__sep">›</span>
+          <a href="templates.html">Templates</a
+          ><span class="breadcrumb__sep">›</span>
+          <span>Cards</span>
+        </nav>
+        <h1 class="animate-fade-in-up">
+          Templates <span class="gradient-text">Cards</span>
+        </h1>
+        <p class="animate-fade-in-up delay-100">
+          10 cartes premium à explorer, prévisualiser et réutiliser rapidement.
+        </p>
       </div>
+
+      <section class="section section--sm">
+        <div class="container">
+          <section class="cards-showcase reveal">
+            <div class="cards-showcase__eyebrow showcase-eyebrow">
+              Curated Card Systems
+            </div>
+            <div class="cards-showcase__grid">
+              <div class="cards-showcase__lead">
+                <h2>
+                  Des cartes pensées comme une
+                  <span class="gradient-text">vraie galerie produit</span>
+                </h2>
+                <p>
+                  Explorez des cartes prêtes à l'emploi pour e-commerce, SaaS,
+                  dashboards et equipes. Chaque modele est presente comme un
+                  système visuel premium, pas seulement un bloc isolé.
+                </p>
+                <div class="cards-showcase__points">
+                  <div class="cards-showcase__point">
+                    <strong>Commerce</strong>
+                    <span>Produits, pricing, conversion</span>
+                  </div>
+                  <div class="cards-showcase__point">
+                    <strong>Editorial</strong>
+                    <span>Blog, temoignages, features</span>
+                  </div>
+                  <div class="cards-showcase__point">
+                    <strong>Product UI</strong>
+                    <span>Stats, team, dashboard</span>
+                  </div>
+                </div>
+                <div class="showcase-actions">
+                  <a href="#card-grid" class="btn btn--primary btn-ripple"
+                    >Voir la collection</a
+                  >
+                  <a href="templates.html" class="btn btn--secondary"
+                    >Retour à la galerie</a
+                  >
+                </div>
+              </div>
+              <div class="cards-showcase__rail">
+                <div class="cards-showcase__collection">
+                  <strong>Commerce Premium</strong>
+                  <p>
+                    Une direction visuelle pensée pour vendre, mettre en avant
+                    et convertir.
+                  </p>
+                  <div class="cards-showcase__mini">
+                    <div class="product-card">
+                      <div class="product-card__img">👟</div>
+                      <div class="product-card__body">
+                        <span class="product-card__tag">Drop</span>
+                        <div class="product-card__name">Studio Runner</div>
+                        <div class="product-card__row">
+                          <span class="product-card__price">129 €</span>
+                          <button class="product-card__btn">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pricing-card featured">
+                      <div class="pricing-card__badge">Best value</div>
+                      <div class="pricing-card__plan">Pro</div>
+                      <div class="pricing-card__price">29 €</div>
+                      <button class="pricing-card__cta">Start</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards-showcase__collection">
+                  <strong>Editorial + Product UI</strong>
+                  <p>
+                    Des cartes qui peuvent vivre dans une landing, un dashboard
+                    ou une page contenu.
+                  </p>
+                  <div class="cards-showcase__mini">
+                    <div class="blog-card">
+                      <div class="blog-card__img">✍️</div>
+                      <div class="blog-card__body">
+                        <span class="blog-card__cat">Insights</span>
+                        <div class="blog-card__title">
+                          Design systems for 2026
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dash-card">
+                      <div class="dash-card__header">
+                        <span class="dash-card__title">ARR</span>
+                        <div class="dash-card__icon">📈</div>
+                      </div>
+                      <div class="dash-card__value">91k €</div>
+                      <div class="dash-card__change up">↑ +14%</div>
+                      <div class="dash-card__bar">
+                        <div
+                          class="dash-card__progress"
+                          style="width: 68%"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="cards-editorial-intro reveal">
+            <div>
+              <h2>Une collection organisée par usages réels</h2>
+              <p>
+                Les premières cartes servent l'acquisition et la conversion,
+                puis la page bascule vers les modèles éditoriaux et les cartes
+                d'interface produit.
+              </p>
+            </div>
+            <div class="cards-editorial-intro__badge editorial-badge">
+              10 modèles / 3 univers / sélection premium
+            </div>
+          </div>
+
+          <div class="toolbar reveal">
+            <div class="search-bar">
+              <span class="search-bar__icon">🔍</span>
+              <input
+                type="search"
+                id="card-search"
+                placeholder="Rechercher une card..."
+              />
+            </div>
+            <div class="filter-group" id="card-filters">
+              <button class="filter-chip active" data-filter="all">
+                Toutes
+              </button>
+              <button class="filter-chip" data-filter="beginner">
+                Débutant
+              </button>
+              <button class="filter-chip" data-filter="intermediate">
+                Intermédiaire
+              </button>
+              <button class="filter-chip" data-filter="advanced">Avancé</button>
+            </div>
+          </div>
+
+          <div id="card-grid">
+            <div class="cards-collection-heading reveal" data-card-heading>
+              <div>
+                <span class="cards-collection-heading__eyebrow">Commerce</span>
+                <h3>Cartes pour vendre, comparer et convertir</h3>
+                <p>
+                  Une sélection orientée acquisition avec fiches produit,
+                  profils, pricing et contenu éditorial.
+                </p>
+              </div>
+              <div class="cards-collection-heading__meta">
+                E-commerce, marketing, product-led pages
+              </div>
+            </div>
+            <!-- --- 1. Product --- -->
+            <article
+              id="product-card"
+              class="template-item reveal"
+              data-title="Product Card"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">1. Product Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte produit avec image, prix et bouton d'achat.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <div class="product-card">
+                  <div class="product-card__img">👟</div>
+                  <div class="product-card__body">
+                    <span class="product-card__tag">Sneakers</span>
+                    <div class="product-card__name">Air Max Pro</div>
+                    <div class="product-card__row">
+                      <span class="product-card__price">89,99 €</span>
+                      <button class="product-card__btn">Acheter</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c1h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c1c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c1h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c1h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c1h"><code>&lt;div class="product-card"&gt;
+  &lt;div class="product-card__img"&gt;
+    &lt;img src="produit.jpg" alt="Air Max Pro" /&gt;
+  &lt;/div&gt;
+  &lt;div class="product-card__body"&gt;
+    &lt;span class="product-card__tag"&gt;Sneakers&lt;/span&gt;
+    &lt;h3 class="product-card__name"&gt;Air Max Pro&lt;/h3&gt;
+    &lt;div class="product-card__row"&gt;
+      &lt;span class="product-card__price"&gt;89,99 €&lt;/span&gt;
+      &lt;button class="product-card__btn"&gt;Acheter&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c1c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c1c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c1c"
+                  ><code>.product-card { background:#fff; border-radius:16px; overflow:hidden; border:1px solid #e5e7eb; box-shadow:0 4px 12px rgba(0,0,0,.06); transition:all .3s; }
+.product-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,.12); }
+.product-card__img { height:200px; background:#f3f4f6; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.product-card__img img { width:100%; height:100%; object-fit:cover; }
+.product-card__body { padding:20px; }
+.product-card__tag { font-size:.7rem; font-weight:700; color:#6C63FF; text-transform:uppercase; letter-spacing:.06em; }
+.product-card__name { font-size:1rem; font-weight:700; color:#1A1A2E; margin:6px 0; }
+.product-card__row { display:flex; align-items:center; justify-content:space-between; margin-top:14px; }
+.product-card__price { font-size:1.25rem; font-weight:800; color:#6C63FF; }
+.product-card__btn { padding:8px 18px; background:linear-gradient(135deg,#6C63FF,#0FCCCE); color:#fff; border:none; border-radius:999px; font-size:.8rem; font-weight:700; cursor:pointer; transition:all .2s; }
+.product-card__btn:hover { transform:scale(1.05); box-shadow:0 4px 12px rgba(108,99,255,.4); }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 2. Profile --- -->
+            <article
+              id="profile-card"
+              class="template-item reveal"
+              data-title="Profile Card"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">2. Profile Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte profil utilisateur avec stats et bouton de suivi.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <div class="profile-card">
+                  <div class="profile-card__av">JD</div>
+                  <div class="profile-card__name">Jean Dupont</div>
+                  <div class="profile-card__role">Développeur Full-Stack</div>
+                  <div class="profile-card__stats">
+                    <div class="profile-card__stat">
+                      <strong>142</strong><span>Posts</span>
+                    </div>
+                    <div class="profile-card__stat">
+                      <strong>4.2k</strong><span>Abonnés</span>
+                    </div>
+                    <div class="profile-card__stat">
+                      <strong>318</strong><span>Suivis</span>
+                    </div>
+                  </div>
+                  <button class="profile-card__follow">+ Suivre</button>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c2h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c2c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c2h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c2h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c2h"><code>&lt;div class="profile-card"&gt;
+  &lt;div class="profile-card__avatar"&gt;JD&lt;/div&gt;
+  &lt;h3 class="profile-card__name"&gt;Jean Dupont&lt;/h3&gt;
+  &lt;p class="profile-card__role"&gt;Développeur Full-Stack&lt;/p&gt;
+  &lt;div class="profile-card__stats"&gt;
+    &lt;div class="profile-card__stat"&gt;
+      &lt;strong&gt;142&lt;/strong&gt;&lt;span&gt;Posts&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="profile-card__stat"&gt;
+      &lt;strong&gt;4.2k&lt;/strong&gt;&lt;span&gt;Abonnés&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="profile-card__stat"&gt;
+      &lt;strong&gt;318&lt;/strong&gt;&lt;span&gt;Suivis&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class="profile-card__follow"&gt;+ Suivre&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c2c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c2c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c2c"
+                  ><code>.profile-card { background:#fff; border-radius:20px; border:1px solid #e5e7eb; padding:32px 24px; text-align:center; transition:all .3s; }
+.profile-card:hover { transform:translateY(-5px); box-shadow:0 16px 40px rgba(108,99,255,.15); }
+.profile-card__avatar { width:80px; height:80px; background:linear-gradient(135deg,#6C63FF,#0FCCCE); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.75rem; font-weight:700; margin:0 auto 14px; }
+.profile-card__name { font-size:1.1rem; font-weight:700; color:#1A1A2E; }
+.profile-card__role { font-size:.8rem; color:#6b7280; margin-bottom:20px; }
+.profile-card__stats { display:flex; justify-content:center; gap:28px; padding:16px 0; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb; margin-bottom:20px; }
+.profile-card__stat strong { display:block; font-size:1rem; font-weight:800; color:#1A1A2E; }
+.profile-card__stat span { font-size:.7rem; color:#6b7280; }
+.profile-card__follow { width:100%; padding:11px; background:linear-gradient(135deg,#6C63FF,#0FCCCE); color:#fff; border:none; border-radius:999px; font-size:.875rem; font-weight:700; cursor:pointer; transition:all .2s; }
+.profile-card__follow:hover { opacity:.9; transform:scale(1.02); }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 3. Pricing --- -->
+            <article
+              id="pricing-card"
+              class="template-item reveal"
+              data-title="Pricing Card"
+              data-tags="html,css"
+              data-level="intermediate"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">3. Pricing Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte de tarification avec plan, fonctionnalités et CTA.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+              </div>
+              <div
+                class="template-item__preview"
+                style="gap: 20px; flex-wrap: wrap"
+              >
+                <div class="pricing-card">
+                  <div class="pricing-card__plan">Starter</div>
+                  <div class="pricing-card__price">
+                    9 € <span class="pricing-card__per">/mois</span>
+                  </div>
+                  <ul class="pricing-card__features">
+                    <li>5 projets</li>
+                    <li>10 Go stockage</li>
+                    <li>Support email</li>
+                  </ul>
+                  <button class="pricing-card__cta">Commencer</button>
+                </div>
+                <div class="pricing-card featured">
+                  <div class="pricing-card__badge">Populaire</div>
+                  <div class="pricing-card__plan">Pro</div>
+                  <div class="pricing-card__price">
+                    29 € <span class="pricing-card__per">/mois</span>
+                  </div>
+                  <ul class="pricing-card__features">
+                    <li>Projets illimités</li>
+                    <li>100 Go stockage</li>
+                    <li>Support prioritaire</li>
+                  </ul>
+                  <button class="pricing-card__cta">Choisir Pro</button>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c3h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c3c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c3h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c3h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c3h"><code>&lt;!-- Card normale --&gt;
+&lt;div class="pricing-card"&gt;
+  &lt;div class="pricing-card__plan"&gt;Starter&lt;/div&gt;
+  &lt;div class="pricing-card__price"&gt;9 €&lt;span class="pricing-card__per"&gt;/mois&lt;/span&gt;&lt;/div&gt;
+  &lt;ul class="pricing-card__features"&gt;
+    &lt;li&gt;5 projets&lt;/li&gt;
+    &lt;li&gt;10 Go stockage&lt;/li&gt;
+    &lt;li&gt;Support email&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;button class="pricing-card__cta"&gt;Commencer&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Card mise en avant --&gt;
+&lt;div class="pricing-card featured"&gt;
+  &lt;div class="pricing-card__badge"&gt;Populaire&lt;/div&gt;
+  &lt;div class="pricing-card__plan"&gt;Pro&lt;/div&gt;
+  &lt;div class="pricing-card__price"&gt;29 €&lt;span class="pricing-card__per"&gt;/mois&lt;/span&gt;&lt;/div&gt;
+  &lt;ul class="pricing-card__features"&gt;
+    &lt;li&gt;Projets illimités&lt;/li&gt;
+    &lt;li&gt;100 Go stockage&lt;/li&gt;
+    &lt;li&gt;Support prioritaire&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;button class="pricing-card__cta"&gt;Choisir Pro&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c3c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c3c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c3c"
+                  ><code>.pricing-card { background:#fff; border-radius:20px; border:1px solid #e5e7eb; padding:32px 28px; transition:all .3s; position:relative; }
+.pricing-card.featured { background:linear-gradient(145deg,#6C63FF,#5A54E6); border:none; color:#fff; box-shadow:0 16px 40px rgba(108,99,255,.35); }
+.pricing-card__badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#FF6584; color:#fff; font-size:.7rem; font-weight:700; padding:4px 16px; border-radius:999px; white-space:nowrap; }
+.pricing-card__plan { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:#6b7280; margin-bottom:8px; }
+.pricing-card.featured .pricing-card__plan { color:rgba(255,255,255,.7); }
+.pricing-card__price { font-size:2.5rem; font-weight:900; color:#1A1A2E; }
+.pricing-card.featured .pricing-card__price { color:#fff; }
+.pricing-card__per { font-size:.875rem; color:#6b7280; }
+.pricing-card.featured .pricing-card__per { color:rgba(255,255,255,.6); }
+.pricing-card__features { list-style:none; padding:0; margin:20px 0; display:flex; flex-direction:column; gap:10px; }
+.pricing-card__features li { font-size:.875rem; color:#6b7280; display:flex; align-items:center; gap:8px; }
+.pricing-card.featured .pricing-card__features li { color:rgba(255,255,255,.85); }
+.pricing-card__features li::before { content:'✓'; font-weight:700; color:#10B981; flex-shrink:0; }
+.pricing-card.featured .pricing-card__features li::before { color:#0FCCCE; }
+.pricing-card__cta { width:100%; padding:12px; border:none; border-radius:999px; font-size:.875rem; font-weight:700; cursor:pointer; transition:all .2s; background:linear-gradient(135deg,#6C63FF,#0FCCCE); color:#fff; }
+.pricing-card.featured .pricing-card__cta { background:white; color:#6C63FF; }
+.pricing-card__cta:hover { transform:scale(1.03); }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 4. Blog --- -->
+            <article
+              id="blog-card"
+              class="template-item reveal"
+              data-title="Blog Card"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">4. Blog Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte article avec image, catégorie, titre et auteur.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <div class="blog-card">
+                  <div class="blog-card__img">✍️</div>
+                  <div class="blog-card__body">
+                    <span class="blog-card__cat">Design</span>
+                    <div class="blog-card__title">
+                      Les tendances UI/UX à suivre en 2025
+                    </div>
+                    <div class="blog-card__meta">
+                      <div class="blog-card__av">MA</div>
+                      <span>Marie A.</span>
+                      <span>·</span>
+                      <span>5 min</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c4h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c4c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c4h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c4h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c4h"><code>&lt;article class="blog-card"&gt;
+  &lt;div class="blog-card__img"&gt;
+    &lt;img src="cover.jpg" alt="Article" /&gt;
+  &lt;/div&gt;
+  &lt;div class="blog-card__body"&gt;
+    &lt;span class="blog-card__cat"&gt;Design&lt;/span&gt;
+    &lt;h3 class="blog-card__title"&gt;Les tendances UI/UX 2025&lt;/h3&gt;
+    &lt;div class="blog-card__meta"&gt;
+      &lt;div class="blog-card__avatar"&gt;MA&lt;/div&gt;
+      &lt;span&gt;Marie A.&lt;/span&gt;
+      &lt;span&gt;·&lt;/span&gt;
+      &lt;span&gt;5 min de lecture&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c4c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c4c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c4c"
+                  ><code>.blog-card { background:#fff; border-radius:16px; border:1px solid #e5e7eb; overflow:hidden; transition:all .3s; }
+.blog-card:hover { transform:translateY(-5px); box-shadow:0 16px 40px rgba(0,0,0,.1); }
+.blog-card__img { height:200px; overflow:hidden; }
+.blog-card__img img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+.blog-card:hover .blog-card__img img { transform:scale(1.05); }
+.blog-card__body { padding:20px; }
+.blog-card__cat { font-size:.72rem; font-weight:700; color:#6C63FF; text-transform:uppercase; letter-spacing:.06em; }
+.blog-card__title { font-size:1rem; font-weight:700; color:#1A1A2E; margin:6px 0 12px; line-height:1.4; }
+.blog-card__meta { display:flex; align-items:center; gap:8px; font-size:.75rem; color:#9CA3AF; }
+.blog-card__avatar { width:24px; height:24px; background:#6C63FF; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:.6rem; font-weight:700; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <div class="cards-collection-heading reveal" data-card-heading>
+              <div>
+                <span class="cards-collection-heading__eyebrow">Editorial</span>
+                <h3>Cartes narratives pour rassurer et valoriser</h3>
+                <p>
+                  Des composants parfaits pour landing pages, preuve sociale,
+                  argumentaires produit et sections contenu.
+                </p>
+              </div>
+              <div class="cards-collection-heading__meta">
+                Testimonial, feature, stats, services
+              </div>
+            </div>
+            <!-- --- 5. Testimonial --- -->
+            <article
+              class="template-item reveal"
+              data-title="Testimonial Card"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">5. Testimonial Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte témoignage avec étoiles, citation et auteur.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <div class="testi-card">
+                  <div class="testi-card__stars">★★★★★</div>
+                  <p class="testi-card__quote">
+                    Un outil incroyable qui a transformé ma façon de travailler.
+                    Je le recommande vivement !
+                  </p>
+                  <div class="testi-card__author">
+                    <div class="testi-card__av">SC</div>
+                    <div>
+                      <div class="testi-card__name">Sophie C.</div>
+                      <div class="testi-card__role">Designer UI/UX</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c5h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c5c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c5h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c5h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c5h"><code>&lt;div class="testimonial-card"&gt;
+  &lt;div class="testimonial-card__stars"&gt;★★★★★&lt;/div&gt;
+  &lt;p class="testimonial-card__quote"&gt;
+    Un outil incroyable qui a transformé ma façon de travailler !
+  &lt;/p&gt;
+  &lt;div class="testimonial-card__author"&gt;
+    &lt;div class="testimonial-card__avatar"&gt;SC&lt;/div&gt;
+    &lt;div&gt;
+      &lt;strong&gt;Sophie C.&lt;/strong&gt;
+      &lt;span&gt;Designer UI/UX&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c5c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c5c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c5c"
+                  ><code>.testimonial-card { background:#fff; border-radius:20px; border:1px solid #e5e7eb; padding:28px; transition:all .3s; }
+.testimonial-card:hover { box-shadow:0 16px 40px rgba(108,99,255,.12); transform:translateY(-4px); }
+.testimonial-card__stars { color:#F59E0B; letter-spacing:2px; margin-bottom:14px; }
+.testimonial-card__quote { font-size:.9rem; color:#6b7280; line-height:1.7; font-style:italic; margin-bottom:18px; }
+.testimonial-card__author { display:flex; align-items:center; gap:12px; }
+.testimonial-card__avatar { width:44px; height:44px; background:linear-gradient(135deg,#6C63FF,#0FCCCE); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:.8rem; font-weight:700; flex-shrink:0; }
+.testimonial-card__author strong { display:block; font-size:.875rem; color:#1A1A2E; }
+.testimonial-card__author span { font-size:.75rem; color:#9CA3AF; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 6. Feature --- -->
+            <article
+              class="template-item reveal"
+              data-title="Feature Card"
+              data-tags="html,css"
+              data-level="beginner"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">6. Feature Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte fonctionnalité avec icône et barre de progression.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+              </div>
+              <div
+                class="template-item__preview"
+                style="gap: 16px; flex-wrap: wrap"
+              >
+                <div class="feat-card">
+                  <div class="feat-card__icon">⚡</div>
+                  <div class="feat-card__title">Ultra rapide</div>
+                  <p class="feat-card__desc">
+                    Performances optimisées pour une expérience fluide.
+                  </p>
+                </div>
+                <div class="feat-card">
+                  <div class="feat-card__icon">🔒</div>
+                  <div class="feat-card__title">Sécurisé</div>
+                  <p class="feat-card__desc">
+                    Chiffrement de bout en bout pour vos données.
+                  </p>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c6h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c6c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c6h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c6h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c6h"><code>&lt;div class="feature-card"&gt;
+  &lt;div class="feature-card__icon"&gt;⚡&lt;/div&gt;
+  &lt;h3 class="feature-card__title"&gt;Ultra rapide&lt;/h3&gt;
+  &lt;p class="feature-card__desc"&gt;
+    Performances optimisées pour une expérience fluide.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c6c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c6c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c6c"
+                  ><code>.feature-card { background:#fff; border-radius:16px; border:1px solid #e5e7eb; padding:28px; transition:all .3s; position:relative; overflow:hidden; }
+.feature-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(135deg,#6C63FF,#0FCCCE); transform:scaleX(0); transition:transform .3s; transform-origin:left; }
+.feature-card:hover { transform:translateY(-5px); box-shadow:0 16px 40px rgba(108,99,255,.15); }
+.feature-card:hover::before { transform:scaleX(1); }
+.feature-card__icon { width:52px; height:52px; background:rgba(108,99,255,.1); border:1px solid rgba(108,99,255,.15); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:16px; }
+.feature-card__title { font-size:1rem; font-weight:700; color:#1A1A2E; margin-bottom:8px; }
+.feature-card__desc { font-size:.875rem; color:#6b7280; line-height:1.6; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 7. Stats --- -->
+            <article
+              class="template-item reveal"
+              data-title="Stats Card"
+              data-tags="html,css"
+              data-level="intermediate"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">7. Stats Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte statistique avec gradient, valeur et tendance.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+              </div>
+              <div
+                class="template-item__preview"
+                style="gap: 16px; flex-wrap: wrap"
+              >
+                <div class="stats-c">
+                  <div class="stats-c__icon">💰</div>
+                  <div class="stats-c__num">48 290 €</div>
+                  <div class="stats-c__label">Revenu mensuel</div>
+                  <div class="stats-c__trend">↑ +12.5%</div>
+                </div>
+                <div
+                  class="stats-c"
+                  style="background: linear-gradient(145deg, #0fccce, #6c63ff)"
+                >
+                  <div class="stats-c__icon">👥</div>
+                  <div class="stats-c__num">12 840</div>
+                  <div class="stats-c__label">Utilisateurs actifs</div>
+                  <div class="stats-c__trend">↑ +8.3%</div>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c7h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c7c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c7h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c7h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c7h"><code>&lt;div class="stats-card"&gt;
+  &lt;div class="stats-card__icon"&gt;💰&lt;/div&gt;
+  &lt;div class="stats-card__value"&gt;48 290 €&lt;/div&gt;
+  &lt;div class="stats-card__label"&gt;Revenu mensuel&lt;/div&gt;
+  &lt;div class="stats-card__trend up"&gt;↑ +12.5% ce mois&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c7c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c7c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c7c"
+                  ><code>.stats-card { background:linear-gradient(145deg,#6C63FF,#0FCCCE); border-radius:20px; padding:28px; color:#fff; transition:all .3s; box-shadow:0 8px 24px rgba(108,99,255,.3); }
+.stats-card:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 16px 40px rgba(108,99,255,.45); }
+.stats-card__icon { font-size:1.75rem; margin-bottom:14px; }
+.stats-card__value { font-size:2rem; font-weight:900; line-height:1.1; margin-bottom:4px; }
+.stats-card__label { font-size:.8rem; opacity:.8; }
+.stats-card__trend { font-size:.75rem; background:rgba(255,255,255,.2); padding:4px 10px; border-radius:999px; margin-top:14px; display:inline-block; }
+.stats-card__trend.up   { background:rgba(16,185,129,.2); }
+.stats-card__trend.down { background:rgba(239,68,68,.2); }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 8. Service --- -->
+            <article
+              class="template-item reveal"
+              data-title="Service Card"
+              data-tags="html,css"
+              data-level="intermediate"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">8. Service Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte service avec effet hover qui change le fond.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+              </div>
+              <div
+                class="template-item__preview"
+                style="gap: 16px; flex-wrap: wrap"
+              >
+                <div class="service-card">
+                  <div class="service-card__icon">🎨</div>
+                  <div class="service-card__title">UI/UX Design</div>
+                  <p class="service-card__desc">
+                    Créez des interfaces belles et intuitives.
+                  </p>
+                </div>
+                <div class="service-card">
+                  <div class="service-card__icon">💻</div>
+                  <div class="service-card__title">Développement</div>
+                  <p class="service-card__desc">
+                    Code propre et performant pour vos projets.
+                  </p>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c8h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c8c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c8h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c8h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c8h"><code>&lt;div class="service-card"&gt;
+  &lt;div class="service-card__icon"&gt;🎨&lt;/div&gt;
+  &lt;h3 class="service-card__title"&gt;UI/UX Design&lt;/h3&gt;
+  &lt;p class="service-card__desc"&gt;
+    Créez des interfaces belles et intuitives.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c8c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c8c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c8c"
+                  ><code>.service-card { background:#fff; border-radius:20px; border:1px solid #e5e7eb; padding:32px 24px; text-align:center; transition:all .3s; }
+.service-card:hover { background:linear-gradient(145deg,#6C63FF,#5A54E6); border-color:transparent; box-shadow:0 16px 40px rgba(108,99,255,.35); }
+.service-card:hover .service-card__title,
+.service-card:hover .service-card__desc { color:#fff; }
+.service-card__icon { font-size:2.5rem; margin-bottom:16px; }
+.service-card__title { font-size:1rem; font-weight:700; color:#1A1A2E; margin-bottom:8px; transition:color .3s; }
+.service-card__desc { font-size:.875rem; color:#6b7280; line-height:1.6; transition:color .3s; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <div class="cards-collection-heading reveal" data-card-heading>
+              <div>
+                <span class="cards-collection-heading__eyebrow"
+                  >Product UI</span
+                >
+                <h3>Cartes d'interface pour équipes et dashboards</h3>
+                <p>
+                  Pensées pour les produits numériques, admin panels et vues de
+                  suivi plus premium.
+                </p>
+              </div>
+              <div class="cards-collection-heading__meta">
+                Team, KPI, analytics, internal tools
+              </div>
+            </div>
+            <!-- --- 9. Team --- -->
+            <article
+              class="template-item reveal"
+              data-title="Team Card"
+              data-tags="html,css"
+              data-level="intermediate"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">9. Team Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte membre d'équipe avec couverture, avatar et
+                    compétences.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+              </div>
+              <div class="template-item__preview">
+                <div class="team-card">
+                  <div class="team-card__cover"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__av">AL</div>
+                    <div class="team-card__name">Alice Leblanc</div>
+                    <div class="team-card__role">Lead Developer</div>
+                    <div class="team-card__skills">
+                      <span class="team-card__skill">React</span>
+                      <span class="team-card__skill">Node.js</span>
+                      <span class="team-card__skill">Python</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c9h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c9c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c9h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c9h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c9h"><code>&lt;div class="team-card"&gt;
+  &lt;div class="team-card__cover"&gt;&lt;/div&gt;
+  &lt;div class="team-card__body"&gt;
+    &lt;div class="team-card__avatar"&gt;AL&lt;/div&gt;
+    &lt;h3 class="team-card__name"&gt;Alice Leblanc&lt;/h3&gt;
+    &lt;p class="team-card__role"&gt;Lead Developer&lt;/p&gt;
+    &lt;div class="team-card__skills"&gt;
+      &lt;span class="team-card__skill"&gt;React&lt;/span&gt;
+      &lt;span class="team-card__skill"&gt;Node.js&lt;/span&gt;
+      &lt;span class="team-card__skill"&gt;Python&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c9c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c9c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c9c"
+                  ><code>.team-card { background:#fff; border-radius:20px; border:1px solid #e5e7eb; overflow:hidden; transition:all .3s; }
+.team-card:hover { transform:translateY(-5px); box-shadow:0 16px 40px rgba(108,99,255,.15); }
+.team-card__cover { height:80px; background:linear-gradient(135deg,#6C63FF,#FF6584); }
+.team-card__body { padding:0 24px 24px; text-align:center; }
+.team-card__avatar { width:64px; height:64px; background:linear-gradient(135deg,#0FCCCE,#6C63FF); border-radius:50%; border:4px solid #fff; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.25rem; font-weight:700; margin:-32px auto 14px; }
+.team-card__name { font-size:1rem; font-weight:700; color:#1A1A2E; }
+.team-card__role { font-size:.8rem; color:#6b7280; margin-bottom:14px; }
+.team-card__skills { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; }
+.team-card__skill { font-size:.7rem; font-weight:700; padding:3px 10px; background:rgba(108,99,255,.1); color:#6C63FF; border-radius:999px; }</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <!-- --- 10. Dashboard --- -->
+            <article
+              class="template-item reveal"
+              data-title="Dashboard Card"
+              data-tags="html,css"
+              data-level="advanced"
+            >
+              <div class="template-item__header">
+                <div>
+                  <div class="template-item__title">10. Dashboard Card</div>
+                  <p class="text-sm text-muted mt-4">
+                    Carte KPI pour tableau de bord avec barre de progression.
+                  </p>
+                </div>
+                <div class="template-item__meta">
+                  <span class="badge badge--advanced">Avancé</span>
+                </div>
+              </div>
+              <div
+                class="template-item__preview"
+                style="gap: 16px; flex-wrap: wrap"
+              >
+                <div class="dash-card">
+                  <div class="dash-card__header">
+                    <span class="dash-card__title">Ventes totales</span>
+                    <div class="dash-card__icon">📈</div>
+                  </div>
+                  <div class="dash-card__value">24 530 €</div>
+                  <div class="dash-card__change up">
+                    ↑ +18.2% vs mois dernier
+                  </div>
+                  <div class="dash-card__bar">
+                    <div class="dash-card__progress" style="width: 72%"></div>
+                  </div>
+                </div>
+                <div class="dash-card">
+                  <div class="dash-card__header">
+                    <span class="dash-card__title">Taux de conversion</span>
+                    <div class="dash-card__icon">🎯</div>
+                  </div>
+                  <div class="dash-card__value">3.48%</div>
+                  <div class="dash-card__change down">
+                    ↓ -0.3% vs semaine dernière
+                  </div>
+                  <div class="dash-card__bar">
+                    <div
+                      class="dash-card__progress"
+                      style="
+                        width: 35%;
+                        background: linear-gradient(90deg, #ef4444, #f59e0b);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-item__tabs">
+                <button class="template-item__tab active" data-tab="c10h">
+                  HTML
+                </button>
+                <button class="template-item__tab" data-tab="c10c">CSS</button>
+              </div>
+              <div class="template-item__code active" data-tab-content="c10h">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">HTML</span
+                    ><button class="copy-btn" id="b-c10h">📋 Copier</button>
+                  </div>
+                  <pre id="p-c10h"><code>&lt;div class="dashboard-card"&gt;
+  &lt;div class="dashboard-card__header"&gt;
+    &lt;span class="dashboard-card__title"&gt;Ventes totales&lt;/span&gt;
+    &lt;div class="dashboard-card__icon"&gt;📈&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="dashboard-card__value"&gt;24 530 €&lt;/div&gt;
+  &lt;div class="dashboard-card__change up"&gt;↑ +18.2% vs mois dernier&lt;/div&gt;
+  &lt;div class="dashboard-card__bar"&gt;
+    &lt;div class="dashboard-card__progress" style="width: 72%;"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="template-item__code" data-tab-content="c10c">
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__lang">CSS</span
+                    ><button class="copy-btn" id="b-c10c">📋 Copier</button>
+                  </div>
+                  <pre
+                    id="p-c10c"
+                  ><code>.dashboard-card { background:#fff; border-radius:16px; border:1px solid #e5e7eb; padding:24px; transition:all .3s; }
+.dashboard-card:hover { box-shadow:0 12px 32px rgba(0,0,0,.08); transform:translateY(-3px); }
+.dashboard-card__header { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+.dashboard-card__title { font-size:.75rem; font-weight:600; color:#6b7280; text-transform:uppercase; letter-spacing:.06em; }
+.dashboard-card__icon { width:36px; height:36px; background:rgba(108,99,255,.1); border-radius:10px; display:flex; align-items:center; justify-content:center; }
+.dashboard-card__value { font-size:2rem; font-weight:900; color:#1A1A2E; margin-bottom:4px; }
+.dashboard-card__change { font-size:.75rem; font-weight:600; }
+.dashboard-card__change.up   { color:#10B981; }
+.dashboard-card__change.down { color:#EF4444; }
+.dashboard-card__bar { height:6px; background:#e5e7eb; border-radius:999px; margin-top:16px; overflow:hidden; }
+.dashboard-card__progress { height:100%; background:linear-gradient(90deg,#6C63FF,#0FCCCE); border-radius:999px; transition:width .8s ease; }</code></pre>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- /card-grid -->
+
+          <div class="flex-between" style="margin-top: var(--space-12)">
+            <a href="footer.html" class="btn btn--secondary"
+              >← Templates Footer</a
+            >
+            <a href="forms.html" class="btn btn--primary btn-ripple"
+              >Templates Forms →</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="js/main.js"></script>
-    <script src="js/copy.js"></script>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="footer-brand">
+            <span class="logo-text">DevStarter Kit</span>
+            <p>Templates pro pour développeurs débutants.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Templates</h4>
+            <ul>
+              <li><a href="navbar.html">→ Navbar</a></li>
+              <li><a href="footer.html">→ Footer</a></li>
+              <li><a href="cards.html">→ Cards</a></li>
+              <li><a href="forms.html">→ Forms</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">→ Accueil</a></li>
+              <li><a href="templates.html">→ Tous les templates</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Projet</h4>
+            <ul>
+              <li>
+                <a href="https://github.com/Habdel-DevStarter" target="_blank"
+                  >→ GitHub</a
+                >
+              </li>
+              <li><a href="about.html">→ À propos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© 2026 DevStarter Kit. Fait avec ❤️</p>
+          <p>HTML5 · CSS3 · Vanilla JS · <a href="LICENSE">Licence MIT</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scroll-top" aria-label="Retour en haut">↑</button>
+    <div id="toast-container" role="alert" aria-live="polite"></div>
+
     <script src="js/darkmode.js"></script>
+    <script src="js/copy.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/filters.js"></script>
-    <script src="js/favorites.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const pairs = [
+          ["b-c1h", "p-c1h"],
+          ["b-c1c", "p-c1c"],
+          ["b-c2h", "p-c2h"],
+          ["b-c2c", "p-c2c"],
+          ["b-c3h", "p-c3h"],
+          ["b-c3c", "p-c3c"],
+          ["b-c4h", "p-c4h"],
+          ["b-c4c", "p-c4c"],
+          ["b-c5h", "p-c5h"],
+          ["b-c5c", "p-c5c"],
+          ["b-c6h", "p-c6h"],
+          ["b-c6c", "p-c6c"],
+          ["b-c7h", "p-c7h"],
+          ["b-c7c", "p-c7c"],
+          ["b-c8h", "p-c8h"],
+          ["b-c8c", "p-c8c"],
+          ["b-c9h", "p-c9h"],
+          ["b-c9c", "p-c9c"],
+          ["b-c10h", "p-c10h"],
+          ["b-c10c", "p-c10c"],
+        ];
+        pairs.forEach(([b, p]) => {
+          const btn = document.getElementById(b);
+          const pre = document.getElementById(p);
+          if (btn && pre)
+            btn.addEventListener("click", () =>
+              Copy.copyText(pre.textContent, btn),
+            );
+        });
+
+        FilterGrid.init({
+          gridSelector: "#card-grid",
+          cardSelector: ".template-item",
+          searchSelector: "#card-search",
+          filterSelector: "#card-filters",
+          emptyMessage: "Aucune card trouvée.",
+        });
+
+        const syncCollectionHeadings = () => {
+          const nodes = [...document.querySelectorAll("#card-grid > *")];
+          let currentHeading = null;
+          let visibleItems = 0;
+
+          const applyHeadingState = () => {
+            if (currentHeading) {
+              currentHeading.style.display = visibleItems > 0 ? "" : "none";
+            }
+          };
+
+          nodes.forEach((node) => {
+            if (node.hasAttribute("data-card-heading")) {
+              applyHeadingState();
+              currentHeading = node;
+              visibleItems = 0;
+              return;
+            }
+
+            if (
+              node.classList.contains("template-item") &&
+              node.style.display !== "none"
+            ) {
+              visibleItems++;
+            }
+          });
+
+          applyHeadingState();
+        };
+
+        syncCollectionHeadings();
+
+        new MutationObserver(syncCollectionHeadings).observe(
+          document.getElementById("card-grid"),
+          {
+            subtree: true,
+            attributes: true,
+            attributeFilter: ["style"],
+          },
+        );
+      });
+    </script>
   </body>
 </html>
-
-
-
-
-
-

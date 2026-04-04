@@ -1,0 +1,1137 @@
+﻿<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contacter DevStarter Kit — Support technique, signalement de bug, proposition de template ou simple bonjour. Réponse habituelle sous 24h."
+    />
+    <title>Contact — DevStarter Kit</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      /* --- Styles spécifiques contact --- */
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap: var(--space-16);
+        align-items: start;
+      }
+
+      /* Sidebar infos */
+      .contact-info {
+        position: sticky;
+        top: 100px;
+      }
+      .contact-info h2 {
+        font-size: var(--text-3xl);
+        margin-bottom: var(--space-4);
+      }
+      .contact-info > p {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-8);
+      }
+
+      .contact-channels {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        margin-bottom: var(--space-8);
+      }
+      .contact-channel {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+        padding: var(--space-4) var(--space-5);
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        text-decoration: none;
+        transition: all var(--transition-normal);
+      }
+      .contact-channel:hover {
+        border-color: var(--primary);
+        box-shadow: var(--shadow-sm);
+        transform: translateX(4px);
+        color: var(--text);
+      }
+      .contact-channel__icon {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .contact-channel__label {
+        font-size: var(--text-xs);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-muted);
+      }
+      .contact-channel__value {
+        font-size: var(--text-sm);
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .response-time {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-4);
+        background: rgba(16, 185, 129, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: var(--radius-md);
+      }
+      .response-time__dot {
+        width: 10px;
+        height: 10px;
+        background: #10b981;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+        flex-shrink: 0;
+      }
+      .response-time p {
+        color: var(--text);
+        margin: 0;
+        font-size: var(--text-sm);
+      }
+      .response-time strong {
+        color: #10b981;
+      }
+
+      /* Form de contact */
+      .contact-form-wrap {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        padding: var(--space-10);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .contact-form-wrap h3 {
+        font-size: var(--text-2xl);
+        margin-bottom: var(--space-2);
+      }
+      .contact-form-wrap > p {
+        margin-bottom: var(--space-8);
+      }
+
+      /* Sujet chips */
+      .subject-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        margin-bottom: var(--space-6);
+      }
+      .subject-chip {
+        padding: var(--space-2) var(--space-4);
+        border-radius: var(--radius-full);
+        border: 1.5px solid var(--border);
+        background: var(--bg);
+        color: var(--text-muted);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+      }
+      .subject-chip:hover,
+      .subject-chip.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+
+      /* Champs du formulaire */
+      .cf-group {
+        margin-bottom: var(--space-5);
+      }
+      .cf-label {
+        display: block;
+        font-size: var(--text-sm);
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: var(--space-2);
+      }
+      .cf-label .required {
+        color: var(--accent);
+      }
+      .cf-input {
+        width: 100%;
+        padding: var(--space-3) var(--space-4);
+        background: var(--bg);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-md);
+        color: var(--text);
+        font-size: var(--text-sm);
+        font-family: var(--font-sans);
+        outline: none;
+        transition: all var(--transition-normal);
+      }
+      .cf-input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
+        background: var(--bg-card);
+      }
+      .cf-input.error {
+        border-color: #ef4444;
+        box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.08);
+      }
+      .cf-input.success {
+        border-color: #10b981;
+      }
+      .cf-input::placeholder {
+        color: var(--text-light);
+      }
+      textarea.cf-input {
+        resize: vertical;
+        min-height: 140px;
+        line-height: 1.6;
+      }
+
+      .cf-error {
+        font-size: var(--text-xs);
+        color: #ef4444;
+        margin-top: var(--space-1);
+        display: none;
+      }
+      .cf-error.show {
+        display: block;
+      }
+
+      .cf-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-4);
+      }
+
+      .cf-char-count {
+        font-size: var(--text-xs);
+        color: var(--text-muted);
+        text-align: right;
+        margin-top: var(--space-1);
+      }
+      .cf-char-count.warn {
+        color: #f59e0b;
+      }
+      .cf-char-count.over {
+        color: #ef4444;
+      }
+
+      .cf-submit {
+        width: 100%;
+        padding: var(--space-4);
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        border-radius: var(--radius-full);
+        font-size: var(--text-base);
+        font-weight: 700;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-2);
+        margin-top: var(--space-6);
+        position: relative;
+        overflow: hidden;
+      }
+      .cf-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      .cf-submit:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      /* Succès */
+      .contact-success {
+        display: none;
+        text-align: center;
+        padding: var(--space-12) var(--space-8);
+      }
+      .contact-success.show {
+        display: block;
+      }
+      .contact-success__icon {
+        font-size: 4rem;
+        display: block;
+        margin-bottom: var(--space-4);
+        animation: bounce 0.6s ease;
+      }
+      .contact-success h3 {
+        font-size: var(--text-2xl);
+        margin-bottom: var(--space-3);
+      }
+      .contact-success p {
+        font-size: var(--text-lg);
+        max-width: 400px;
+        margin: 0 auto var(--space-8);
+      }
+
+      /* Map / localisation déco */
+      .location-card {
+        background: var(--gradient-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: var(--space-5);
+        margin-top: var(--space-6);
+      }
+      .location-card__title {
+        font-size: var(--text-xs);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        margin-bottom: var(--space-3);
+      }
+      .location-flag {
+        font-size: 1.5rem;
+        margin-right: var(--space-2);
+      }
+
+      @media (max-width: 1024px) {
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+        .contact-info {
+          position: static;
+        }
+      }
+      @media (max-width: 640px) {
+        .cf-row {
+          grid-template-columns: 1fr;
+        }
+        .contact-form-wrap {
+          padding: var(--space-6);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page-loader"><span class="loader-logo">Chargement…</span></div>
+
+    <header>
+      <nav
+        class="site-nav"
+        role="navigation"
+        aria-label="Navigation principale"
+      >
+        <div class="container">
+          <div class="site-nav__inner">
+            <a href="index.html" class="site-nav__logo">
+              <div class="site-nav__logo-icon">D</div>
+              <span>DevStarter Kit</span>
+            </a>
+            <ul class="site-nav__menu" role="menubar">
+              <li>
+                <a href="index.html" class="site-nav__link">🏠 Accueil</a>
+              </li>
+              <li>
+                <a href="templates.html" class="site-nav__link">📦 Templates</a>
+              </li>
+              <li>
+                <a href="navbar.html" class="site-nav__link">🔝 Navbar</a>
+              </li>
+              <li>
+                <a href="footer.html" class="site-nav__link">⬇️ Footer</a>
+              </li>
+              <li><a href="cards.html" class="site-nav__link">🃏 Cards</a></li>
+              <li><a href="forms.html" class="site-nav__link">📝 Forms</a></li>
+            </ul>
+            <div class="site-nav__actions">
+              <button class="dark-toggle" aria-label="Basculer le thème">
+                🌙
+              </button>
+              <a
+                href="templates.html"
+                class="btn btn--primary btn--sm btn-ripple"
+                >Voir les templates →</a
+              >
+              <button
+                class="hamburger"
+                aria-expanded="false"
+                aria-label="Menu mobile"
+              >
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mobile-overlay"></div>
+    <nav class="mobile-menu" aria-label="Menu mobile">
+      <a href="index.html" class="mobile-menu__link">🏠 Accueil</a>
+      <a href="templates.html" class="mobile-menu__link">📦 Templates</a>
+      <a href="navbar.html" class="mobile-menu__link">🔝 Navbar</a>
+      <a href="footer.html" class="mobile-menu__link">⬇️ Footer</a>
+      <a href="cards.html" class="mobile-menu__link">🃏 Cards</a>
+      <a href="forms.html" class="mobile-menu__link">📝 Forms</a>
+      <div class="divider"></div>
+      <button
+        class="dark-toggle btn btn--secondary"
+        style="width: 100%; justify-content: center"
+      >
+        🌙 Mode sombre
+      </button>
+    </nav>
+
+    <main class="main-content" id="main">
+      <!-- Page header -->
+      <div class="page-header">
+        <nav class="breadcrumb" style="justify-content: center">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb__sep">›</span>
+          <span>Contact</span>
+        </nav>
+        <h1 class="animate-fade-in-up">
+          Parlons-nous <span class="gradient-text">📬</span>
+        </h1>
+          <p class="animate-fade-in-up delay-100">
+            Une question, une suggestion, un bug ? Je lis chaque message avec
+            attention et je réponds dès que possible.
+          </p>
+      </div>
+
+      <section class="section section--sm">
+        <div class="container">
+          <div class="contact-layout">
+            <!-- Colonne gauche — Infos -->
+            <aside class="contact-info reveal">
+              <h2>Je suis là pour vous <span class="gradient-text">aider</span></h2>
+              <p>
+                Que vous soyez bloqué sur un template, que vous ayez trouvé un
+                bug ou que vous souhaitiez simplement dire bonjour — votre
+                message compte.
+              </p>
+
+              <div class="contact-channels">
+                <a
+                  href="mailto:habdelcoulibaly01@gmail.com"
+                  class="contact-channel"
+                >
+                  <div
+                    class="contact-channel__icon"
+                    style="background: rgba(108, 99, 255, 0.1)"
+                  >
+                    📧
+                  </div>
+                  <div>
+                    <div class="contact-channel__label">Email</div>
+                    <div class="contact-channel__value">
+                      habdelcoulibaly01@gmail.com
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/Habdel-DevStarter"
+                  class="contact-channel"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div
+                    class="contact-channel__icon"
+                    style="background: rgba(0, 0, 0, 0.06)"
+                  >
+                    🐙
+                  </div>
+                  <div>
+                    <div class="contact-channel__label">GitHub</div>
+                    <div class="contact-channel__value">
+                      github.com/Habdel-DevStarter
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://twitter.com/DevStarterKit"
+                  class="contact-channel"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div
+                    class="contact-channel__icon"
+                    style="background: rgba(29, 161, 242, 0.1)"
+                  >
+                    🐦
+                  </div>
+                  <div>
+                    <div class="contact-channel__label">Twitter / X</div>
+                    <div class="contact-channel__value">@DevStarterKit</div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="response-time">
+                <div class="response-time__dot"></div>
+                <p>
+                  Temps de réponse habituel : <strong>moins de 24h</strong> en
+                  semaine.
+                </p>
+              </div>
+
+              <div class="location-card">
+                <div class="location-card__title">Basé à Abidjan, Côte d'Ivoire</div>
+                <p
+                  style="
+                    font-size: var(--text-sm);
+                    color: var(--text-muted);
+                    margin: 0;
+                  "
+                >
+                  <span class="location-flag">🇨🇮</span>
+                  DevStarter Kit est un projet francophone indépendant basé à
+                  Abidjan, en Côte d'Ivoire. Vous pouvez m'écrire en français.
+                </p>
+              </div>
+            </aside>
+
+            <!-- Colonne droite — Formulaire -->
+            <div class="contact-form-wrap reveal delay-200">
+              <!-- Formulaire -->
+              <div id="contact-form-container">
+                <h3>Envoyez-moi un message</h3>
+                <p>
+                  Tous les champs marqués
+                  <span style="color: var(--accent)">*</span> sont obligatoires.
+                </p>
+
+                <!-- Sélection du sujet -->
+                <div style="margin-bottom: var(--space-6)">
+                  <div class="cf-label">Sujet de votre message</div>
+                  <div class="subject-chips" id="subject-chips">
+                    <button
+                      class="subject-chip active"
+                      data-subject="Question technique"
+                    >
+                      ❓ Question technique
+                    </button>
+                    <button
+                      class="subject-chip"
+                      data-subject="Signalement de bug"
+                    >
+                      🐛 Bug
+                    </button>
+                    <button
+                      class="subject-chip"
+                      data-subject="Proposition de template"
+                    >
+                      🧩 Template
+                    </button>
+                    <button class="subject-chip" data-subject="Partenariat">
+                      🤝 Partenariat
+                    </button>
+                    <button class="subject-chip" data-subject="Autre">
+                      💬 Autre
+                    </button>
+                  </div>
+                </div>
+
+                <form
+                  id="contact-form"
+                  action="https://formsubmit.co/habdelcoulibaly01@gmail.com"
+                  method="POST"
+                  novalidate
+                >
+                  <input
+                    type="hidden"
+                    id="cf-mail-subject"
+                    name="_subject"
+                    value="[DevStarter Kit] Question technique"
+                  />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://habdel-devstarter.github.io/DevStarter-Kit/contact.html?sent=1"
+                  />
+                  <input
+                    type="hidden"
+                    id="cf-subject-hidden"
+                    name="Sujet"
+                    value="Question technique"
+                  />
+
+                  <div class="cf-row">
+                    <div class="cf-group">
+                      <label class="cf-label" for="cf-firstname">
+                        Prénom <span class="required">*</span>
+                      </label>
+                      <input
+                        class="cf-input"
+                        type="text"
+                        id="cf-firstname"
+                        name="Prénom"
+                        placeholder="Jean"
+                        autocomplete="given-name"
+                      />
+                      <div class="cf-error" id="err-firstname">
+                        Prénom requis.
+                      </div>
+                    </div>
+                    <div class="cf-group">
+                      <label class="cf-label" for="cf-lastname">
+                        Nom <span class="required">*</span>
+                      </label>
+                      <input
+                        class="cf-input"
+                        type="text"
+                        id="cf-lastname"
+                        name="Nom"
+                        placeholder="Dupont"
+                        autocomplete="family-name"
+                      />
+                      <div class="cf-error" id="err-lastname">Nom requis.</div>
+                    </div>
+                  </div>
+
+                  <div class="cf-group">
+                    <label class="cf-label" for="cf-email">
+                      Adresse email <span class="required">*</span>
+                    </label>
+                    <input
+                      class="cf-input"
+                      type="email"
+                      id="cf-email"
+                      name="Email"
+                      placeholder="jean.dupont@exemple.fr"
+                      autocomplete="email"
+                    />
+                    <div class="cf-error" id="err-email">
+                      Veuillez entrer une adresse email valide.
+                    </div>
+                  </div>
+
+                  <div class="cf-group">
+                    <label class="cf-label" for="cf-message">
+                      Votre message <span class="required">*</span>
+                    </label>
+                    <textarea
+                      class="cf-input"
+                      id="cf-message"
+                      name="Message"
+                      placeholder="Décrivez votre question ou votre demande avec le plus de détails possible. Plus vous êtes précis, plus je pourrai vous aider efficacement."
+                      maxlength="1000"
+                      oninput="updateCharCount(this)"
+                    ></textarea>
+                    <div class="cf-char-count" id="char-count">
+                      0 / 1000 caractères
+                    </div>
+                    <div class="cf-error" id="err-message">
+                      Message requis (20 caractères minimum).
+                    </div>
+                  </div>
+
+                  <div
+                    style="
+                      display: flex;
+                      align-items: flex-start;
+                      gap: var(--space-3);
+                      margin-bottom: var(--space-4);
+                    "
+                  >
+                    <input
+                      type="checkbox"
+                      id="cf-rgpd"
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        margin-top: 2px;
+                        accent-color: var(--primary);
+                        cursor: pointer;
+                        flex-shrink: 0;
+                      "
+                    />
+                    <label
+                      for="cf-rgpd"
+                      style="
+                        font-size: var(--text-sm);
+                        color: var(--text-muted);
+                        cursor: pointer;
+                        line-height: 1.5;
+                      "
+                    >
+                      J'accepte que mes données soient utilisées pour traiter ma
+                      demande. Elles ne seront jamais partagées avec des tiers.
+                      <a
+                        href="mailto:habdelcoulibaly01@gmail.com?subject=Question%20sur%20la%20gestion%20des%20donn%C3%A9es"
+                        style="color: var(--primary)"
+                        >En savoir plus</a
+                      >
+                    </label>
+                  </div>
+                  <div
+                    class="cf-error"
+                    id="err-rgpd"
+                    style="margin-bottom: var(--space-3)"
+                  >
+                      Veuillez accepter cette mention avant l'envoi du message.
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="cf-submit btn-ripple"
+                    id="cf-submit-btn"
+                  >
+                      <span id="cf-btn-text">Envoyer le message →</span>
+                    <span
+                      id="cf-btn-loader"
+                      class="spinner"
+                      style="display: none"
+                    ></span>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Écran de succès -->
+              <div class="contact-success" id="contact-success">
+                <span class="contact-success__icon">🎉</span>
+                <h3>Message envoyé</h3>
+                <p>
+                  Merci <strong id="success-name">pour votre message</strong>. Votre message a été
+                  transmis. Si vous n'obtenez pas de réponse rapidement, vous
+                  pouvez aussi écrire directement à
+                  <a href="mailto:habdelcoulibaly01@gmail.com"
+                    >habdelcoulibaly01@gmail.com</a
+                  >.
+                </p>
+                <div
+                  style="
+                    display: flex;
+                    gap: var(--space-3);
+                    justify-content: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a href="templates.html" class="btn btn--primary btn-ripple"
+                    >Explorer les templates →</a
+                  >
+                  <button
+                    onclick="resetContactForm()"
+                    class="btn btn--secondary"
+                  >
+                    Envoyer un autre message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ rapide -->
+      <section
+        class="section section--sm"
+        style="
+          background: linear-gradient(
+            180deg,
+            rgba(108, 99, 255, 0.04) 0%,
+            transparent 100%
+          );
+        "
+      >
+        <div class="container container--narrow">
+          <div class="section-header reveal">
+            <span class="eyebrow">Avant d'écrire</span>
+            <h2>Réponses <span class="gradient-text">rapides</span></h2>
+            <p>Votre question est peut-être déjà répondue ici.</p>
+          </div>
+
+          <div>
+            <div class="accordion-item reveal delay-100">
+              <div class="accordion-header">
+                <span>Les templates sont-ils vraiment gratuits ?</span>
+                <span class="accordion-icon" style="transition: transform 0.3s"
+                  >▼</span
+                >
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  <p>
+                    Oui, totalement et définitivement. Tous les templates
+                    DevStarter Kit sont gratuits pour un usage personnel et
+                    commercial, sans limite de projets. Pas d'abonnement, pas de
+                    crédits requis, pas de « freemium ». Vous copiez, vous
+                    utilisez, c'est tout.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item reveal delay-200">
+              <div class="accordion-header">
+                <span
+                  >Puis-je utiliser les templates dans un projet client ?</span
+                >
+                <span class="accordion-icon" style="transition: transform 0.3s"
+                  >▼</span
+                >
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  <p>
+                    Absolument. Vous pouvez utiliser n'importe quel template
+                    dans vos projets personnels, vos projets clients, vos
+                    projets commerciaux, et les modifier sans restriction. La
+                    seule chose que j'apprécie (mais n'exige pas) :
+                    mentionner DevStarter Kit dans votre projet si vous en avez
+                    l'occasion.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item reveal delay-300">
+              <div class="accordion-header">
+                <span
+                  >Un template ne s'affiche pas correctement, que faire ?</span
+                >
+                <span class="accordion-icon" style="transition: transform 0.3s"
+                  >▼</span
+                >
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  <p>
+                    Vérifiez d'abord que vous avez bien copié le HTML
+                    <strong>et</strong> le CSS ensemble. Chaque template
+                    nécessite les deux. Si le problème persiste, signalez-le via
+                    ce formulaire en précisant votre navigateur, la version de
+                    l'OS et une description du comportement attendu vs observé.
+                     Je corrige généralement les bugs sous 48h.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item reveal delay-400">
+              <div class="accordion-header">
+                <span
+                  >Pouvez-vous créer un template sur mesure pour mon projet
+                  ?</span
+                >
+                <span class="accordion-icon" style="transition: transform 0.3s"
+                  >▼</span
+                >
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  <p>
+                     Le projet est entièrement bénévole et je ne propose pas
+                     de prestations sur mesure. En revanche, si votre besoin est
+                     suffisamment universel pour être utile à d'autres
+                     développeurs, je peux l'intégrer à la bibliothèque.
+                     Écrivez-moi avec une description détaillée et j'étudierai
+                     la demande.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="footer-brand">
+            <span class="logo-text">DevStarter Kit</span>
+            <p>
+              La bibliothèque de templates HTML, CSS et JavaScript pour
+              développeurs débutants. Apprenez en copiant du code professionnel.
+            </p>
+            <div class="social-links" style="margin-top: var(--space-5)">
+              <a
+                href="https://github.com/Habdel-DevStarter"
+                target="_blank"
+                rel="noreferrer"
+                class="social-link"
+                aria-label="GitHub"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  /></svg
+              ></a>
+              <a
+                href="https://twitter.com/DevStarterKit"
+                target="_blank"
+                rel="noreferrer"
+                class="social-link"
+                aria-label="Twitter"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  /></svg
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/habdel-coulibaly-0290423ba/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BcbkukVnWTcCKkH0Ouag5Tw%3D%3D"
+                target="_blank"
+                rel="noreferrer"
+                class="social-link"
+                aria-label="LinkedIn"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Templates</h4>
+            <ul>
+              <li><a href="navbar.html">→ Navbar</a></li>
+              <li><a href="footer.html">→ Footer</a></li>
+              <li><a href="cards.html">→ Cards</a></li>
+              <li><a href="forms.html">→ Forms</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Ressources</h4>
+            <ul>
+              <li><a href="templates.html">→ Tous les templates</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Projet</h4>
+            <ul>
+              <li><a href="about.html">→ À propos</a></li>
+              <li><a href="contribuer.html">→ Contribuer</a></li>
+              <li><a href="contact.html" class="active">→ Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>
+            © 2026 <strong>DevStarter Kit</strong>. Fait avec ❤️ pour les
+            développeurs.
+          </p>
+          <p>HTML5 · CSS3 · Vanilla JS · Zéro dépendance · <a href="LICENSE">Licence MIT</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scroll-top" aria-label="Retour en haut">↑</button>
+    <div id="toast-container" role="alert" aria-live="polite"></div>
+
+    <script src="js/darkmode.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      /* --- Sélection du sujet --- */
+      document.querySelectorAll(".subject-chip").forEach((chip) => {
+        chip.addEventListener("click", function () {
+          document
+            .querySelectorAll(".subject-chip")
+            .forEach((c) => c.classList.remove("active"));
+          this.classList.add("active");
+          document.getElementById("cf-subject-hidden").value =
+            this.dataset.subject;
+          document.getElementById("cf-mail-subject").value =
+            `[DevStarter Kit] ${this.dataset.subject}`;
+        });
+      });
+
+      /* --- Compteur de caractères --- */
+      function updateCharCount(el) {
+        const len = el.value.length;
+        const max = parseInt(el.getAttribute("maxlength"), 10);
+        const el2 = document.getElementById("char-count");
+        el2.textContent = `${len} / ${max} caractères`;
+        el2.className = "cf-char-count";
+        if (len > max * 0.9) el2.classList.add("warn");
+        if (len >= max) el2.classList.add("over");
+      }
+
+      /* --- Validation helper --- */
+      function setField(inputId, errId, isValid, forceCheck = false) {
+        const input = document.getElementById(inputId);
+        const err = document.getElementById(errId);
+        if (!input) return isValid;
+        const hasVal = input.value.trim() !== "" || forceCheck;
+        input.classList.toggle("error", !isValid && hasVal);
+        input.classList.toggle("success", isValid && hasVal);
+        err?.classList.toggle("show", !isValid && hasVal);
+        return isValid;
+      }
+
+      /* --- Validation en temps réel --- */
+      document
+        .getElementById("cf-firstname")
+        .addEventListener("blur", function () {
+          setField(
+            "cf-firstname",
+            "err-firstname",
+            this.value.trim().length >= 2,
+            true,
+          );
+        });
+      document
+        .getElementById("cf-lastname")
+        .addEventListener("blur", function () {
+          setField(
+            "cf-lastname",
+            "err-lastname",
+            this.value.trim().length >= 2,
+            true,
+          );
+        });
+      document.getElementById("cf-email").addEventListener("blur", function () {
+        setField(
+          "cf-email",
+          "err-email",
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value),
+          true,
+        );
+      });
+      document
+        .getElementById("cf-message")
+        .addEventListener("blur", function () {
+          setField(
+            "cf-message",
+            "err-message",
+            this.value.trim().length >= 20,
+            true,
+          );
+        });
+
+      /* --- Soumission --- */
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const firstname = document
+            .getElementById("cf-firstname")
+            .value.trim();
+          const lastname = document.getElementById("cf-lastname").value.trim();
+          const email = document.getElementById("cf-email").value.trim();
+          const message = document.getElementById("cf-message").value.trim();
+          const rgpd = document.getElementById("cf-rgpd").checked;
+
+          let valid = true;
+
+          valid =
+            setField(
+              "cf-firstname",
+              "err-firstname",
+              firstname.length >= 2,
+              true,
+            ) && valid;
+          valid =
+            setField(
+              "cf-lastname",
+              "err-lastname",
+              lastname.length >= 2,
+              true,
+            ) && valid;
+          valid =
+            setField(
+              "cf-email",
+              "err-email",
+              /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email),
+              true,
+            ) && valid;
+          valid =
+            setField("cf-message", "err-message", message.length >= 20, true) &&
+            valid;
+
+          // RGPD
+          const rgpdErr = document.getElementById("err-rgpd");
+          if (!rgpd) {
+            rgpdErr.classList.add("show");
+            valid = false;
+          } else {
+            rgpdErr.classList.remove("show");
+          }
+
+          if (!valid) return;
+
+          // Préparer l'envoi réel via FormSubmit
+          const btn = document.getElementById("cf-submit-btn");
+          const btnTxt = document.getElementById("cf-btn-text");
+          const loader = document.getElementById("cf-btn-loader");
+
+          btn.disabled = true;
+          btnTxt.style.display = "none";
+          loader.style.display = "block";
+          this.submit();
+        });
+
+      if (window.location.search.includes("sent=1")) {
+        document.getElementById("contact-form-container").style.display = "none";
+        const successEl = document.getElementById("contact-success");
+        successEl.classList.add("show");
+        document.getElementById("success-name").textContent =
+          "pour votre message";
+        if (window.history.replaceState) {
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      }
+
+      /* --- Reset formulaire --- */
+      function resetContactForm() {
+        document.getElementById("contact-form-container").style.display =
+          "block";
+        document.getElementById("contact-success").classList.remove("show");
+        document.getElementById("contact-form").reset();
+        document.getElementById("char-count").textContent =
+          "0 / 1000 caractères";
+        document
+          .querySelectorAll(".cf-input")
+          .forEach((i) => i.classList.remove("error", "success"));
+        document
+          .querySelectorAll(".cf-error")
+          .forEach((e) => e.classList.remove("show"));
+        const btn = document.getElementById("cf-submit-btn");
+        const btnTxt = document.getElementById("cf-btn-text");
+        const loader = document.getElementById("cf-btn-loader");
+        btn.disabled = false;
+        btnTxt.style.display = "";
+        loader.style.display = "none";
+        // Reset sujet
+        document
+          .querySelectorAll(".subject-chip")
+          .forEach((c, i) => c.classList.toggle("active", i === 0));
+        document.getElementById("cf-subject-hidden").value =
+          "Question technique";
+      }
+    </script>
+  </body>
+</html>

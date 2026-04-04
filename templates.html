@@ -1,249 +1,1347 @@
 ﻿<!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explorez 60+ templates frontend: navbars, cards, formulaires, boutons, modales et layouts." />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="DevStarter Kit - Bibliothèque de Templates" />
-    <meta property="og:description" content="Trouvez, filtrez et copiez des templates HTML/CSS/JS prêts à intégrer." />
-    <meta property="og:url" content="https://habdel-devstarter.github.io/DevStarter-Kit/templates.html" />
-    <meta property="og:image" content="https://habdel-devstarter.github.io/DevStarter-Kit/assets/images/og-templates.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DevStarter Kit - Bibliothèque de Templates" />
-    <meta name="twitter:description" content="Templates modernes classés par niveau et technologie." />
-    <title>DevStarter Kit | Bibliothèque</title>
+    <meta
+      name="description"
+      content="Tous les templates DevStarter Kit — Navbar, Footer, Cards et Forms en HTML, CSS et JavaScript. Recherchez, filtrez et apprenez en les adaptant."
+    />
+    <title>Templates — DevStarter Kit</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      .templates-showcase {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: var(--space-8);
+        padding: clamp(1.75rem, 4vw, 3rem);
+        border: 1px solid rgba(108, 99, 255, 0.12);
+        border-radius: 32px;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(108, 99, 255, 0.18),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 85% 18%,
+            rgba(15, 204, 206, 0.14),
+            transparent 24%
+          ),
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.94),
+            rgba(246, 248, 255, 0.98)
+          );
+        box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+      }
+      .templates-showcase::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.28), transparent 42%),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 184, 0, 0.08),
+            transparent 20%
+          );
+        pointer-events: none;
+      }
+      .templates-showcase > * {
+        position: relative;
+        z-index: 1;
+      }
+      .templates-showcase__eyebrow {
+        border: 1px solid rgba(108, 99, 255, 0.12);
+        background: rgba(255, 255, 255, 0.74);
+        color: #574cff;
+      }
+      .templates-showcase__grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+      .templates-showcase__lead h2 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+      }
+      .templates-showcase__lead p {
+        max-width: 58ch;
+        margin: 0 0 22px;
+        color: #5f6477;
+      }
+      .templates-showcase__stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .templates-showcase__stat {
+        padding: 14px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.74);
+        border: 1px solid rgba(108, 99, 255, 0.1);
+      }
+      .templates-showcase__stat strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #1a1a2e;
+        font-size: 1rem;
+      }
+      .templates-showcase__stat span {
+        color: #6b7280;
+        font-size: 0.8rem;
+      }
+      .templates-showcase__rail {
+        display: grid;
+        gap: 14px;
+      }
+      .templates-showcase__panel {
+        padding: 18px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(108, 99, 255, 0.1);
+        box-shadow: 0 10px 28px rgba(17, 24, 39, 0.04);
+      }
+      .templates-showcase__panel strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #1a1a2e;
+        font-size: 0.95rem;
+      }
+      .templates-showcase__panel p {
+        margin: 0 0 14px;
+        color: #6b7280;
+        font-size: 0.8rem;
+      }
+      .templates-showcase__chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .templates-showcase__chips a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(108, 99, 255, 0.08);
+        color: #574cff;
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+      }
+      .templates-showcase__chips a:hover {
+        transform: translateY(-2px);
+        background: rgba(108, 99, 255, 0.14);
+      }
+      .templates-editorial-intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 0 0 var(--space-6);
+      }
+      .templates-editorial-intro h2 {
+        margin: 0 0 8px;
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        letter-spacing: -0.03em;
+      }
+      .templates-editorial-intro p {
+        margin: 0;
+        max-width: 60ch;
+        color: var(--text-muted);
+      }
+      .templates-editorial-intro__badge {
+        background: rgba(108, 99, 255, 0.08);
+        color: #574cff;
+      }
+      [data-theme="dark"] .templates-showcase {
+        border-color: rgba(108, 99, 255, 0.26);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(108, 99, 255, 0.28),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 85% 18%,
+            rgba(15, 204, 206, 0.2),
+            transparent 24%
+          ),
+          linear-gradient(
+            145deg,
+            rgba(12, 14, 30, 0.96),
+            rgba(20, 24, 45, 0.98)
+          );
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      }
+      [data-theme="dark"] .templates-showcase::before {
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 42%),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 184, 0, 0.08),
+            transparent 20%
+          );
+      }
+      [data-theme="dark"] .templates-showcase__eyebrow {
+        background: rgba(18, 24, 42, 0.82);
+        border-color: rgba(139, 133, 255, 0.28);
+        color: #b9b6ff;
+      }
+      [data-theme="dark"] .templates-showcase__lead p,
+      [data-theme="dark"] .templates-showcase__stat span,
+      [data-theme="dark"] .templates-showcase__panel p {
+        color: #c0c6dc;
+      }
+      [data-theme="dark"] .templates-showcase__stat,
+      [data-theme="dark"] .templates-showcase__panel {
+        background: rgba(15, 19, 36, 0.82);
+        border-color: rgba(139, 133, 255, 0.18);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+      }
+      [data-theme="dark"] .templates-showcase__stat strong,
+      [data-theme="dark"] .templates-showcase__panel strong {
+        color: #f5f7ff;
+      }
+      [data-theme="dark"] .templates-showcase__chips a {
+        background: rgba(108, 99, 255, 0.16);
+        color: #d8d6ff;
+      }
+      [data-theme="dark"] .templates-showcase__chips a:hover {
+        background: rgba(108, 99, 255, 0.26);
+      }
+      [data-theme="dark"] .templates-editorial-intro {
+        border: 1px solid rgba(108, 99, 255, 0.18);
+        border-radius: 24px;
+        padding: clamp(1.35rem, 3vw, 2rem);
+        border-color: rgba(108, 99, 255, 0.18);
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(15, 204, 206, 0.14),
+            transparent 28%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(13, 16, 32, 0.94),
+            rgba(20, 24, 42, 0.98)
+          );
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+      }
+      [data-theme="dark"] .templates-editorial-intro__badge {
+        background: rgba(108, 99, 255, 0.16);
+        color: #d8d6ff;
+      }
+      @media (max-width: 1024px) {
+        .templates-showcase__grid {
+          grid-template-columns: 1fr;
+        }
+        .templates-showcase__stats {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .templates-showcase {
+          padding: 22px;
+          border-radius: 24px;
+        }
+        .templates-editorial-intro {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
   </head>
-  <body data-page="templates">
-    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
-      <div class="loading-spinner" aria-label="Chargement"></div>
+  <body>
+    <div id="page-loader" role="status">
+      <span class="loader-logo">Chargement…</span>
     </div>
-    <header class="site-header">
-      <div class="container">
-        <nav class="navbar" aria-label="Primary navigation">
-          <a class="navbar__brand" href="index.html">DevStarter Kit</a>
-          <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Ouvrir ou fermer le menu de navigation">
-            <span></span><span></span><span></span>
-          </button>
-          <div class="navbar__menu" id="primaryMenu">
-            <a class="navbar__link" href="index.html">Accueil</a>
-            <a class="navbar__link is-active" href="templates.html">Templates</a>
-            <a class="navbar__link" href="navbar.html">Barres de nav</a>
-            <a class="navbar__link" href="footer.html">Pieds de page</a>
-            <a class="navbar__link" href="cards.html">Cartes</a>
-            <a class="navbar__link" href="forms.html">Formulaires</a>
-            <a class="navbar__link" href="buttons.html">Boutons</a>
-            <a class="navbar__link" href="modals.html">Modales</a>
-            <a class="navbar__link" href="layout.html">Layouts</a>
-            <a class="navbar__link" href="defis.html">Défis</a>
-            <a class="navbar__link" href="theme.html">Thème Lab</a>
-            <button class="btn btn--ghost" id="themeToggle" type="button">Sombre</button>
+
+    <!-- Navbar -->
+    <header>
+      <nav
+        class="site-nav"
+        role="navigation"
+        aria-label="Navigation principale"
+      >
+        <div class="container">
+          <div class="site-nav__inner">
+            <a href="index.html" class="site-nav__logo">
+              <div class="site-nav__logo-icon">D</div>
+              <span>DevStarter Kit</span>
+            </a>
+            <ul class="site-nav__menu" role="menubar">
+              <li>
+                <a href="index.html" class="site-nav__link">🏠 Accueil</a>
+              </li>
+              <li>
+                <a href="templates.html" class="site-nav__link active"
+                  >📦 Templates</a
+                >
+              </li>
+              <li>
+                <a href="navbar.html" class="site-nav__link">🔝 Navbar</a>
+              </li>
+              <li>
+                <a href="footer.html" class="site-nav__link">⬇️ Footer</a>
+              </li>
+              <li><a href="cards.html" class="site-nav__link">🃏 Cards</a></li>
+              <li><a href="forms.html" class="site-nav__link">📝 Forms</a></li>
+            </ul>
+            <div class="site-nav__actions">
+              <button class="dark-toggle" aria-label="Toggle thème">🌙</button>
+              <button
+                class="hamburger"
+                aria-expanded="false"
+                aria-label="Menu mobile"
+              >
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+              </button>
+            </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="section">
-      <div class="container">
-        <div class="section__head">
-          <h1>Bibliothèque de templates</h1>
-          <p>Recherchez des composants, filtrez par techno et niveau, puis copiez un code propre instantanément.</p>
-        </div>
+    <div class="mobile-overlay"></div>
+    <nav class="mobile-menu" aria-label="Menu mobile">
+      <a href="index.html" class="mobile-menu__link">🏠 Accueil</a>
+      <a href="templates.html" class="mobile-menu__link">📦 Templates</a>
+      <a href="navbar.html" class="mobile-menu__link">🔝 Navbar</a>
+      <a href="footer.html" class="mobile-menu__link">⬇️ Footer</a>
+      <a href="cards.html" class="mobile-menu__link">🃏 Cards</a>
+      <a href="forms.html" class="mobile-menu__link">📝 Forms</a>
+      <div class="divider"></div>
+      <button
+        class="dark-toggle btn btn--secondary"
+        style="width: 100%; justify-content: center"
+      >
+        🌙 Mode sombre
+      </button>
+    </nav>
 
-        <div class="grid grid--3 templates-intro-grid">
-          <article class="card hover-lift">
-            <h3>Code orienté apprentissage</h3>
-            <p>Chaque bloc est écrit pour rester lisible, commentable et facile à modifier.</p>
-          </article>
-          <article class="card hover-lift">
-            <h3>Approche progressive</h3>
-            <p>Commencez par les modèles débutants puis montez en complexité sans rupture.</p>
-          </article>
-          <article class="card hover-lift">
-            <h3>Copie instantanée</h3>
-            <p>Un clic pour copier, puis testez directement dans votre projet local.</p>
-          </article>
-        </div>
-
-        <div class="toolbar">
-          <label class="visually-hidden" for="templateSearch">Rechercher des templates</label>
-          <input id="templateSearch" class="input" type="search" placeholder="Rechercher des templates..." data-search-input />
-          <select class="input" data-filter-tech aria-label="Filtrer par technologie">
-            <option value="all">Toutes les technos</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="js">JS</option>
-          </select>
-          <select class="input" data-filter-level aria-label="Filtrer par niveau">
-            <option value="all">Tous les niveaux</option>
-            <option value="beginner">Débutant</option>
-            <option value="intermediate">Intermédiaire</option>
-            <option value="advanced">Avancé</option>
-          </select>
-        </div>
-
-        <div class="grid grid--4 skeleton-wrap" id="templateSkeleton">
-          <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
-        </div>
-
-        <div class="grid grid--4 hidden" data-search-container id="templateGrid">
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="beginner" data-title="navbar templates" data-desc="responsive navigation components">
-            <h3>Modèles de barres de navigation</h3>
-            <p>8 barres de navigation prêtes pour landing pages et dashboards.</p>
-            <p class="meta">Niveau : Débutant</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="navbar.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<nav class='navbar'><a class='logo' href='#'>Marque</a><div class='links'><a href='#'>Accueil</a></div></nav>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="beginner" data-title="footer templates" data-desc="modern footer patterns">
-            <h3>Modèles de pieds de page</h3>
-            <p>8 footers propres et professionnels avec variantes social et newsletter.</p>
-            <p class="meta">Niveau : Débutant</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="footer.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<footer class='footer'><p>© 2026 DevStarter Kit</p><a href='#'>Confidentialité</a></footer>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="cards templates" data-desc="ui cards collection">
-            <h3>Modèles de cartes</h3>
-            <p>16 cartes réutilisables : produit, blog, dashboard, pricing et plus.</p>
-            <p class="meta">Niveau : Intermédiaire</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="cards.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<article class='card'><h3>Titre de carte</h3><p>Description de carte</p></article>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="advanced" data-title="forms templates" data-desc="validated forms javascript">
-            <h3>Modèles de formulaires</h3>
-            <p>10 formulaires avec validation JavaScript, messages de retour et effets de focus.</p>
-            <p class="meta">Niveau : Avancé</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="forms.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<form class='form'><input type='email' required><button>Envoyer</button></form>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="buttons templates" data-desc="cta and action button variants">
-            <h3>Modèles de boutons</h3>
-            <p>8 boutons UI: CTA, loading, danger, icône, groupe pill et plus.</p>
-            <p class="meta">Niveau : Intermédiaire</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="buttons.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<button class='btn btn--primary'>Commencer</button>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="advanced" data-title="modals templates" data-desc="popup and dialog interface patterns">
-            <h3>Modèles de modales</h3>
-            <p>6 modales prêtes: confirmation, onboarding, formulaire, paiement.</p>
-            <p class="meta">Niveau : Avancé</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="modals.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<dialog open><h3>Confirmer</h3><button>OK</button></dialog>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css" data-level="intermediate" data-title="layout templates" data-desc="hero pricing contact sections">
-            <h3>Layouts de page</h3>
-            <p>Hero, pricing et contact sections pour assembler des landing pages complètes.</p>
-            <p class="meta">Niveau : Intermédiaire</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="layout.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<section class='hero'><h1>Titre</h1><p>Sous-titre</p></section>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="js" data-level="beginner" data-title="beginner challenges" data-desc="10 guided beginner exercises">
-            <h3>Défis débutants</h3>
-            <p>10 mini-exercices guidés avec correction pour progresser rapidement.</p>
-            <p class="meta">Niveau : Débutant</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="defis.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="Défi: créer un menu mobile avec aria-expanded">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="css js" data-level="intermediate" data-title="theme generator" data-desc="custom css variables generator">
-            <h3>Générateur de thème</h3>
-            <p>Personnalisez couleurs/radius et copiez vos variables CSS en 1 clic.</p>
-            <p class="meta">Niveau : Intermédiaire</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="theme.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline=":root { --color-primary: #0e8cff; --radius-lg: 16px; }">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="pricing demo page" data-desc="assembled real-world pricing page">
-            <h3>Page pricing fictive</h3>
-            <p>Exemple réel d’assemblage de templates pour un mini-projet SaaS.</p>
-            <p class="meta">Niveau : Intermédiaire</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="pricing.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<section class='pricing'><article class='plan'>...</article></section>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="landing generator tool" data-desc="assemble a complete landing page automatically">
-            <h3>Générateur de landing</h3>
-            <p>Assemble Hero + Pricing + CTA + Footer et récupérez un HTML complet.</p>
-            <p class="meta">Niveau : Intermédiaire</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="generateur.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="<!doctype html><html lang='fr'><body>...</body></html>">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="js" data-level="beginner" data-title="learning time calculator" data-desc="estimate learning timeline with custom hours">
-            <h3>Calculateur d'apprentissage</h3>
-            <p>Estimez vos semaines d’étude selon votre niveau, votre objectif et vos heures.</p>
-            <p class="meta">Niveau : Débutant</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="calculateur.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="Durée estimée = heures nécessaires / heures par semaine">Copier le code</button>
-            </div>
-          </article>
-          <article class="template-overview card hover-lift" data-search-item data-tech="html css js" data-level="intermediate" data-title="downloadable complete projects" data-desc="landing saas portfolio dashboard ecommerce packs">
-            <h3>Projets téléchargeables</h3>
-            <p>4 projets complets (landing SaaS, portfolio, dashboard admin, mini e-commerce).</p>
-            <p class="meta">Niveau : Débutant à Intermédiaire</p>
-            <div class="card__actions">
-              <a class="btn btn--primary ripple" href="projets.html">Voir</a>
-              <button class="btn btn--ghost js-copy ripple" data-copy-inline="Téléchargement ZIP + niveau + temps estimé + compétences">Copier le code</button>
-            </div>
-          </article>
-        </div>
-
-        <section class="section">
-          <div class="section__head">
-            <h2>Comment utiliser la bibliothèque</h2>
-          </div>
-          <div class="grid grid--3">
-            <article class="card">
-              <h3>1. Choisir un template</h3>
-              <p>Utilisez la recherche et les filtres pour cibler exactement votre besoin.</p>
-            </article>
-            <article class="card">
-              <h3>2. Copier et adapter</h3>
-              <p>Copiez le bloc, renommez les classes et ajustez les couleurs de votre projet.</p>
-            </article>
-            <article class="card">
-              <h3>3. Vérifier en mobile</h3>
-              <p>Testez toujours les breakpoints mobile/tablette avant de valider une intégration.</p>
-            </article>
-          </div>
-        </section>
+    <main class="main-content" id="main">
+      <div class="page-header">
+        <nav class="breadcrumb" style="justify-content: center">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb__sep">›</span>
+          <span>Templates</span>
+        </nav>
+        <h1 class="animate-fade-in-up">
+          Tous les <span class="gradient-text">templates</span>
+        </h1>
+        <p class="animate-fade-in-up delay-100">
+          26 composants prêts à l'emploi — cherchez, filtrez et copiez en un
+          clic.
+        </p>
       </div>
+
+      <section class="section section--sm">
+        <div class="container">
+          <section class="templates-showcase reveal">
+            <div class="templates-showcase__eyebrow showcase-eyebrow">
+              Curated Template Library
+            </div>
+            <div class="templates-showcase__grid">
+              <div class="templates-showcase__lead">
+                <h2>
+                  Une galerie premium pour parcourir
+                  <span class="gradient-text">tout le kit plus vite</span>
+                </h2>
+                <p>
+                  Cette page rassemble les familles clés du projet dans une
+                  seule vue: navigation, footer, cards et formulaires. L’idée
+                  est de choisir rapidement un style, puis d’entrer dans la page
+                  dédiée pour explorer les variantes.
+                </p>
+                <div class="templates-showcase__stats">
+                  <div class="templates-showcase__stat">
+                    <strong>26 templates</strong>
+                    <span
+                      >Une bibliothèque compacte et facile à parcourir.</span
+                    >
+                  </div>
+                  <div class="templates-showcase__stat">
+                    <strong>4 familles</strong>
+                    <span
+                      >Navbar, Footer, Cards et Forms dans un même flux.</span
+                    >
+                  </div>
+                  <div class="templates-showcase__stat">
+                    <strong>Showcase + code</strong>
+                    <span>Chaque carte mène vers une page plus détaillée.</span>
+                  </div>
+                </div>
+                <div class="showcase-actions">
+                  <a href="#templates-grid" class="btn btn--primary btn-ripple"
+                    >Explorer la galerie</a
+                  >
+                  <a href="index.html" class="btn btn--secondary"
+                    >Retour à l'accueil</a
+                  >
+                </div>
+              </div>
+              <div class="templates-showcase__rail">
+                <div class="templates-showcase__panel">
+                  <strong>Entrées rapides</strong>
+                  <p>
+                    Accédez directement à la famille qui correspond à votre
+                    besoin actuel.
+                  </p>
+                  <div class="templates-showcase__chips">
+                    <a href="navbar.html">Navbar</a>
+                    <a href="footer.html">Footer</a>
+                    <a href="cards.html">Cards</a>
+                    <a href="forms.html">Forms</a>
+                  </div>
+                </div>
+                <div class="templates-showcase__panel">
+                  <strong>Lecture de la page</strong>
+                  <p>
+                    Utilisez la recherche et les filtres ici, puis ouvrez la
+                    page dédiée quand vous voulez une expérience plus
+                    éditoriale.
+                  </p>
+                  <div class="templates-showcase__chips">
+                    <a href="#templates-filters">Filtres</a>
+                    <a href="#templates-grid">Grid</a>
+                    <a href="templates.html">Overview</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="templates-editorial-intro reveal">
+            <div>
+              <h2>Une vue d’ensemble pensée comme un point d’entrée.</h2>
+              <p>
+                On garde la grille telle qu’elle existe, mais la page prend un
+                ton plus premium: meilleure hiérarchie, accès rapides et
+                sensation de collection plutôt que simple index.
+              </p>
+            </div>
+            <div class="templates-editorial-intro__badge editorial-badge">
+              26 modèles / 4 familles / sélection premium
+            </div>
+          </div>
+
+          <div class="toolbar reveal">
+            <div class="search-bar">
+              <span class="search-bar__icon">🔍</span>
+              <input
+                type="search"
+                id="templates-search"
+                placeholder="Rechercher un template…"
+                aria-label="Rechercher un template"
+              />
+            </div>
+            <div
+              class="filter-group"
+              id="templates-filters"
+              role="group"
+              aria-label="Filtres"
+            >
+              <button class="filter-chip active" data-filter="all">Tous</button>
+              <button class="filter-chip" data-filter="navbar">Navbar</button>
+              <button class="filter-chip" data-filter="footer">Footer</button>
+              <button class="filter-chip" data-filter="cards">Cards</button>
+              <button class="filter-chip" data-filter="forms">Forms</button>
+              <button class="filter-chip" data-filter="beginner">
+                Débutant
+              </button>
+              <button class="filter-chip" data-filter="intermediate">
+                Intermédiaire
+              </button>
+              <button class="filter-chip" data-filter="advanced">Avancé</button>
+            </div>
+          </div>
+
+          <div class="grid grid-auto gap-6" id="templates-grid" role="list">
+            <!-- Navbar templates -->
+            <article
+              class="template-card reveal"
+              role="listitem"
+              data-title="Navbar Simple"
+              data-desc="Navigation horizontale épurée"
+              data-tags="navbar,html,css"
+              data-level="beginner"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--navbar-simple"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-navbar">
+                    <span class="mini-logo"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-btn"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Navbar Simple</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>
+                  Navigation horizontale épurée avec logo et liens. Parfaite
+                  pour commencer.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="navbar.html#navbar-simple"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="navbar.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-100"
+              role="listitem"
+              data-title="Navbar Centrée"
+              data-desc="Logo centré avec liens des deux côtés"
+              data-tags="navbar,html,css"
+              data-level="beginner"
+            >
+              <div
+                class="template-card__preview"
+                style="background: linear-gradient(135deg, #0d0d1a, #1a1a3e)"
+              >
+                <div
+                  class="template-card__illustration ill--navbar-centered"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-navbar mini-navbar--center">
+                    <div class="mini-group">
+                      <span class="mini-nav-link"></span
+                      ><span class="mini-nav-link"></span>
+                    </div>
+                    <span class="mini-logo"></span>
+                    <div class="mini-group">
+                      <span class="mini-nav-link"></span
+                      ><span class="mini-nav-link"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Navbar Centrée</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>
+                  Logo centré avec liens de chaque côté. Idéale pour les marques
+                  premium.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="navbar.html#navbar-centered"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="navbar.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-200"
+              role="listitem"
+              data-title="Navbar avec CTA"
+              data-desc="Navbar avec bouton d'appel à l'action"
+              data-tags="navbar,html,css"
+              data-level="intermediate"
+            >
+              <div
+                class="template-card__preview"
+                style="background: var(--gradient-card)"
+              >
+                <div
+                  class="template-card__illustration ill--navbar-cta"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-navbar">
+                    <span class="mini-logo"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-cta"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Navbar avec CTA</h3>
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+                <p>
+                  Navigation professionnelle avec bouton d'appel à l'action mis
+                  en avant.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="navbar.html#navbar-cta"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="navbar.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-300"
+              role="listitem"
+              data-title="Navbar Dashboard"
+              data-desc="Barre de navigation pour administration"
+              data-tags="navbar,html,css,js"
+              data-level="intermediate"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--navbar-dashboard"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-dashboard-nav">
+                    <span class="mini-logo"></span>
+                    <span class="mini-search"></span>
+                    <span class="mini-icon"></span>
+                    <span class="mini-icon"></span>
+                    <span class="mini-avatar"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Navbar Dashboard</h3>
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+                <p>
+                  Barre de navigation pour interface d'administration avec
+                  avatar et notifications.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="navbar.html#navbar-dashboard"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="navbar.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-400"
+              role="listitem"
+              data-title="Navbar Glassmorphism"
+              data-desc="Navbar effet verre tendance 2025"
+              data-tags="navbar,html,css"
+              data-level="advanced"
+            >
+              <div
+                class="template-card__preview"
+                style="background: linear-gradient(135deg, #667eea, #764ba2)"
+              >
+                <div
+                  class="template-card__illustration ill--navbar-glass"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-navbar mini-navbar--glass">
+                    <span class="mini-logo"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-link"></span>
+                    <span class="mini-nav-btn"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Navbar Glass</h3>
+                  <span class="badge badge--advanced">Avancé</span>
+                </div>
+                <p>
+                  Navbar transparente effet verre avec backdrop-filter blur —
+                  tendance 2025.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="navbar.html#navbar-glass"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="navbar.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Footer templates -->
+            <article
+              class="template-card reveal"
+              role="listitem"
+              data-title="Footer Simple"
+              data-desc="Footer minimaliste avec copyright"
+              data-tags="footer,html,css"
+              data-level="beginner"
+            >
+              <div class="template-card__preview" style="background: #1a1a2e">
+                <div
+                  class="template-card__illustration ill--footer-simple"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-footer mini-footer--simple">
+                    <span class="mini-footer-title"></span>
+                    <span class="mini-footer-line"></span>
+                    <span class="mini-footer-line"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Footer Simple</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>
+                  Footer minimaliste avec copyright et liens essentiels sur fond
+                  sombre.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="footer.html#footer-simple"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="footer.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-100"
+              role="listitem"
+              data-title="Footer 3 Colonnes"
+              data-desc="Footer avec 3 colonnes de liens"
+              data-tags="footer,html,css"
+              data-level="beginner"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--footer-columns"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-footer mini-footer--columns">
+                    <div class="mini-col">
+                      <span class="mini-col-title"></span
+                      ><span class="mini-col-line"></span
+                      ><span class="mini-col-line"></span>
+                    </div>
+                    <div class="mini-col">
+                      <span class="mini-col-title"></span
+                      ><span class="mini-col-line"></span
+                      ><span class="mini-col-line"></span>
+                    </div>
+                    <div class="mini-col">
+                      <span class="mini-col-title"></span
+                      ><span class="mini-col-line"></span
+                      ><span class="mini-col-line"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Footer 3 Colonnes</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>
+                  Footer organisé en 3 colonnes avec logo, liens et informations
+                  légales.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="footer.html#footer-columns"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="footer.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-200"
+              role="listitem"
+              data-title="Footer Social Media"
+              data-desc="Footer avec icônes réseaux sociaux"
+              data-tags="footer,html,css"
+              data-level="beginner"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--footer-social"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-footer mini-footer--social">
+                    <span class="mini-footer-title"></span>
+                    <div class="mini-socials">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="mini-footer-line"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Footer Social</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>
+                  Footer centré avec liens vers réseaux sociaux et animations
+                  hover.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="footer.html#footer-social"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="footer.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-300"
+              role="listitem"
+              data-title="Footer Newsletter"
+              data-desc="Footer avec formulaire d'abonnement"
+              data-tags="footer,html,css,js"
+              data-level="intermediate"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--footer-newsletter"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-footer mini-footer--newsletter">
+                    <span class="mini-footer-title"></span>
+                    <div class="mini-newsletter">
+                      <span class="mini-input"></span
+                      ><span class="mini-btn"></span>
+                    </div>
+                    <span class="mini-footer-line"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Footer Newsletter</h3>
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+                <p>
+                  Footer avec formulaire d'abonnement intégré et validation
+                  JavaScript.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="footer.html#footer-newsletter"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="footer.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-400"
+              role="listitem"
+              data-title="Footer Entreprise"
+              data-desc="Footer complet pour site corporate"
+              data-tags="footer,html,css"
+              data-level="advanced"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--footer-enterprise"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-footer mini-footer--enterprise">
+                    <div class="mini-col">
+                      <span class="mini-col-title"></span
+                      ><span class="mini-col-line"></span
+                      ><span class="mini-col-line"></span>
+                    </div>
+                    <div class="mini-col">
+                      <span class="mini-col-title"></span
+                      ><span class="mini-col-line"></span
+                      ><span class="mini-col-line"></span>
+                    </div>
+                    <div class="mini-col">
+                      <span class="mini-col-title"></span
+                      ><span class="mini-col-line"></span
+                      ><span class="mini-col-line"></span>
+                    </div>
+                    <div class="mini-col">
+                      <span class="mini-col-title"></span
+                      ><span class="mini-col-line"></span
+                      ><span class="mini-col-line"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Footer Entreprise</h3>
+                  <span class="badge badge--advanced">Avancé</span>
+                </div>
+                <p>
+                  Footer complet 4 colonnes pour site corporate avec toutes les
+                  sections nécessaires.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="footer.html#footer-enterprise"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="footer.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Cards templates -->
+            <article
+              class="template-card reveal"
+              role="listitem"
+              data-title="Product Card"
+              data-desc="Carte produit avec image et prix"
+              data-tags="cards,html,css"
+              data-level="beginner"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--product-card"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-product">
+                    <span class="mini-product-image"></span>
+                    <span class="mini-product-title"></span>
+                    <div class="mini-product-row">
+                      <span class="mini-price"></span
+                      ><span class="mini-btn"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Product Card</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>Carte produit avec image, titre, prix et bouton d'achat.</p>
+                <div class="template-card__actions">
+                  <a
+                    href="cards.html#product-card"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="cards.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-100"
+              role="listitem"
+              data-title="Profile Card"
+              data-desc="Carte profil utilisateur"
+              data-tags="cards,html,css"
+              data-level="beginner"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--profile-card"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-profile">
+                    <span class="mini-avatar"></span>
+                    <span class="mini-profile-name"></span>
+                    <span class="mini-profile-role"></span>
+                    <div class="mini-socials">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Profile Card</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>
+                  Carte de profil avec avatar, nom, poste et réseaux sociaux.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="cards.html#profile-card"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="cards.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-200"
+              role="listitem"
+              data-title="Pricing Card"
+              data-desc="Carte de tarification"
+              data-tags="cards,html,css"
+              data-level="intermediate"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--pricing-card"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-pricing">
+                    <span class="mini-plan"></span>
+                    <span class="mini-price"></span>
+                    <span class="mini-check"></span>
+                    <span class="mini-check"></span>
+                    <span class="mini-check"></span>
+                    <span class="mini-btn"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Pricing Card</h3>
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+                <p>
+                  Carte de tarification avec fonctionnalités listées et mise en
+                  avant.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="cards.html#pricing-card"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="cards.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-300"
+              role="listitem"
+              data-title="Blog Card"
+              data-desc="Carte article de blog"
+              data-tags="cards,html,css"
+              data-level="beginner"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--blog-card"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-blog">
+                    <span class="mini-blog-image"></span>
+                    <span class="mini-tag"></span>
+                    <span class="mini-blog-title"></span>
+                    <span class="mini-blog-line"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Blog Card</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>Carte article avec image, catégorie, titre et extrait.</p>
+                <div class="template-card__actions">
+                  <a
+                    href="cards.html#blog-card"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="cards.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Forms templates -->
+            <article
+              class="template-card reveal"
+              role="listitem"
+              data-title="Formulaire Login"
+              data-desc="Formulaire de connexion avec validation"
+              data-tags="forms,html,css,js"
+              data-level="beginner"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--login-form"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-form">
+                    <span class="mini-form-title"></span>
+                    <span class="mini-input"></span>
+                    <span class="mini-input"></span>
+                    <span class="mini-btn"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Login Form</h3>
+                  <span class="badge badge--beginner">Débutant</span>
+                </div>
+                <p>
+                  Formulaire de connexion complet avec validation JavaScript en
+                  temps réel.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="forms.html#login-form"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="forms.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="template-card reveal delay-100"
+              role="listitem"
+              data-title="Formulaire Contact"
+              data-desc="Formulaire de contact complet"
+              data-tags="forms,html,css,js"
+              data-level="intermediate"
+            >
+              <div class="template-card__preview">
+                <div
+                  class="template-card__illustration ill--contact-form"
+                  aria-hidden="true"
+                >
+                  <div class="mini-ui mini-form mini-form--contact">
+                    <span class="mini-form-title"></span>
+                    <div class="mini-row">
+                      <span class="mini-input"></span
+                      ><span class="mini-input"></span>
+                    </div>
+                    <span class="mini-input mini-input--area"></span>
+                    <span class="mini-btn"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card__body">
+                <div class="template-card__header-row">
+                  <h3>Contact Form</h3>
+                  <span class="badge badge--intermediate">Intermédiaire</span>
+                </div>
+                <p>
+                  Formulaire de contact avec validation, messages d'erreur et de
+                  succès.
+                </p>
+                <div class="template-card__actions">
+                  <a
+                    href="forms.html#contact-form"
+                    class="btn btn--secondary btn--sm"
+                    >👁 Voir</a
+                  >
+                  <a
+                    href="forms.html"
+                    class="btn btn--primary btn--sm btn-ripple"
+                    >→ Aller</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- /templates-grid -->
+        </div>
+      </section>
     </main>
 
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Retour en haut">Haut</button>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="js/main.js"></script>
-    <script src="js/copy.js"></script>
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="footer-brand">
+            <span class="logo-text">DevStarter Kit</span>
+            <p>La bibliothèque de templates pour développeurs débutants.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Templates</h4>
+            <ul>
+              <li><a href="navbar.html">→ Navbar</a></li>
+              <li><a href="footer.html">→ Footer</a></li>
+              <li><a href="cards.html">→ Cards</a></li>
+              <li><a href="forms.html">→ Forms</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">→ Accueil</a></li>
+              <li><a href="templates.html">→ Tous les templates</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Projet</h4>
+            <ul>
+              <li>
+                <a href="https://github.com/Habdel-DevStarter" target="_blank"
+                  >→ GitHub</a
+                >
+              </li>
+              <li><a href="about.html">→ À propos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© 2026 DevStarter Kit. Fait avec ❤️</p>
+          <p>HTML5 · CSS3 · Vanilla JS · <a href="LICENSE">Licence MIT</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scroll-top" aria-label="Retour en haut">↑</button>
+    <div id="toast-container" role="alert" aria-live="polite"></div>
+
     <script src="js/darkmode.js"></script>
+    <script src="js/copy.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/filters.js"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/favorites.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Init filtres sur cette page
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".template-card").forEach((card) => {
+          const preview = card.querySelector(".template-card__preview");
+          const previewTarget =
+            card
+              .querySelector(".template-card__actions .btn--secondary")
+              ?.getAttribute("href") ||
+            card
+              .querySelector(".template-card__actions .btn--primary")
+              ?.getAttribute("href");
+
+          if (
+            !preview ||
+            !previewTarget ||
+            preview.querySelector(".template-card__preview-link")
+          ) {
+            return;
+          }
+
+          const overlayLink = document.createElement("a");
+          overlayLink.href = previewTarget;
+          overlayLink.className = "template-card__preview-link";
+          overlayLink.setAttribute("aria-label", "Aperçu rapide du template");
+          overlayLink.innerHTML = "<span>👁 Aperçu</span>";
+          preview.appendChild(overlayLink);
+        });
+
+        FilterGrid.init({
+          gridSelector: "#templates-grid",
+          cardSelector: ".template-card",
+          searchSelector: "#templates-search",
+          filterSelector: "#templates-filters",
+          emptyMessage: "Aucun template ne correspond à votre recherche.",
+        });
+      });
+    </script>
   </body>
 </html>
-
-
-
-
-
-
-

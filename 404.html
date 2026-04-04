@@ -1,24 +1,98 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 | DevStarter Kit</title>
-    <meta name="description" content="Page introuvable. Retournez à l'accueil ou explorez les templates." />
+    <meta
+      name="description"
+      content="Page introuvable — DevStarter Kit."
+    />
+    <title>404 — Page introuvable</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <style>
+      .error-hero {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: var(--space-10) 0;
+      }
+      .error-card {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: clamp(2rem, 4vw, 3.5rem);
+        border-radius: 32px;
+        border: 1px solid rgba(108, 99, 255, 0.14);
+        background:
+          radial-gradient(circle at top left, rgba(108, 99, 255, 0.16), transparent 28%),
+          radial-gradient(circle at 85% 18%, rgba(15, 204, 206, 0.12), transparent 24%),
+          linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(245, 247, 255, 0.98));
+        box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+        text-align: center;
+      }
+      .error-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.55rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(108, 99, 255, 0.08);
+        color: #574cff;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .error-card h1 {
+        margin-bottom: 1rem;
+        font-size: clamp(2.2rem, 6vw, 4.5rem);
+      }
+      .error-card p {
+        max-width: 54ch;
+        margin: 0 auto 1.75rem;
+      }
+      .error-actions {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+      }
+      [data-theme="dark"] .error-card {
+        border-color: rgba(108, 99, 255, 0.22);
+        background:
+          radial-gradient(circle at top left, rgba(108, 99, 255, 0.24), transparent 30%),
+          radial-gradient(circle at 85% 18%, rgba(15, 204, 206, 0.18), transparent 24%),
+          linear-gradient(145deg, rgba(12, 15, 31, 0.96), rgba(20, 24, 45, 0.98));
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      }
+      [data-theme="dark"] .error-badge {
+        background: rgba(108, 99, 255, 0.16);
+        color: #d8d6ff;
+      }
+    </style>
   </head>
-  <body data-page="404">
-    <main class="section">
+  <body>
+    <main class="error-hero">
       <div class="container">
-        <article class="card" style="max-width:700px;margin:auto;text-align:center;">
-          <h1>404 - Page introuvable</h1>
-          <p>Le lien demandé n’existe pas (ou plus). Vous pouvez repartir de l’accueil.</p>
-          <div class="card__actions" style="justify-content:center;">
-            <a class="btn btn--primary" href="index.html">Retour à l’accueil</a>
-            <a class="btn btn--ghost" href="templates.html">Voir les templates</a>
+        <section class="error-card reveal">
+          <div class="error-badge">Erreur 404</div>
+          <h1>Page introuvable</h1>
+          <p>
+            La page que vous cherchez n’existe pas ou a été déplacée. Vous pouvez
+            revenir à l’accueil ou repartir depuis la galerie des templates.
+          </p>
+          <div class="error-actions">
+            <a href="index.html" class="btn btn--primary">Retour à l’accueil</a>
+            <a href="templates.html" class="btn btn--secondary">Voir les templates</a>
           </div>
-        </article>
+        </section>
       </div>
     </main>
+    <script src="js/darkmode.js"></script>
+    <script src="js/copy.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
