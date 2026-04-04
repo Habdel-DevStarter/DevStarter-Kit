@@ -137,10 +137,15 @@
       }
       .navbar-editorial-intro {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
         margin: 0 0 var(--space-6);
+      }
+      .navbar-editorial-intro > div:first-child {
+        min-width: 0;
+        flex: 1 1 320px;
       }
       .navbar-editorial-intro h2 {
         font-size: clamp(1.4rem, 2vw, 2rem);
@@ -153,6 +158,8 @@
         max-width: 60ch;
       }
       .navbar-editorial-intro__badge {
+        flex: 0 1 auto;
+        max-width: 100%;
         background: rgba(108, 99, 255, 0.08);
         color: #574cff;
       }
@@ -540,9 +547,58 @@
           flex-direction: column;
           align-items: flex-start;
         }
+        .navbar-collection-heading__meta {
+          white-space: normal;
+        }
         .navbar-showcase__mini .nb-preview {
           transform: scale(0.84);
           margin-bottom: -8px;
+        }
+        .p-nav-simple,
+        .p-nav-centered,
+        .p-nav-cta,
+        .p-nav-dashboard,
+        .p-nav-glass {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .p-nav-simple,
+        .p-nav-centered,
+        .p-nav-dashboard,
+        .p-nav-glass {
+          gap: 10px;
+        }
+        .p-nav-simple .links,
+        .p-nav-centered .side,
+        .p-nav-cta .menu,
+        .p-nav-glass .menu {
+          flex-wrap: wrap;
+          min-width: 0;
+        }
+        .p-nav-simple .links a,
+        .p-nav-centered .side a,
+        .p-nav-cta .menu a,
+        .p-nav-glass .menu a {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .p-nav-centered .logo,
+        .p-nav-cta .btn-cta {
+          white-space: normal;
+        }
+        .p-nav-dashboard .left,
+        .p-nav-dashboard .right {
+          min-width: 0;
+        }
+        .p-nav-dashboard .search {
+          width: 100%;
+          min-width: 0;
+        }
+        .p-nav-dashboard .user {
+          min-width: 0;
+        }
+        .p-nav-dashboard .uname {
+          display: none;
         }
       }
     </style>

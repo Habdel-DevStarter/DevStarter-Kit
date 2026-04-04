@@ -142,7 +142,9 @@ input, textarea, select {
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 /* --- Sections --- */

@@ -145,10 +145,15 @@
       }
       .cards-editorial-intro {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
         margin: 0 0 var(--space-6);
+      }
+      .cards-editorial-intro > div:first-child {
+        min-width: 0;
+        flex: 1 1 320px;
       }
       .cards-editorial-intro h2 {
         font-size: clamp(1.4rem, 2vw, 2rem);
@@ -161,6 +166,8 @@
         max-width: 60ch;
       }
       .cards-editorial-intro__badge {
+        flex: 0 1 auto;
+        max-width: 100%;
         background: rgba(108, 99, 255, 0.08);
         color: #574cff;
       }
@@ -288,6 +295,9 @@
           flex-direction: column;
           align-items: flex-start;
         }
+        .cards-collection-heading__meta {
+          white-space: normal;
+        }
         .cards-showcase__mini .product-card,
         .cards-showcase__mini .profile-card,
         .cards-showcase__mini .blog-card,
@@ -295,6 +305,36 @@
         .cards-showcase__mini .dash-card {
           transform: scale(0.74);
           margin-right: -28px;
+        }
+        .product-card,
+        .profile-card,
+        .pricing-card,
+        .blog-card,
+        .testi-card,
+        .feature-card,
+        .service-card,
+        .team-card,
+        .dash-card {
+          width: min(100%, 220px);
+        }
+        .stats-c {
+          width: min(100%, 200px);
+        }
+        .newsletter-card,
+        .event-card {
+          width: min(100%, 240px);
+        }
+        .profile-card__stats,
+        .product-card__row,
+        .blog-card__meta,
+        .dash-card__header {
+          min-width: 0;
+          flex-wrap: wrap;
+        }
+        .pricing-card__badge {
+          max-width: calc(100% - 24px);
+          white-space: normal;
+          text-align: center;
         }
       }
 

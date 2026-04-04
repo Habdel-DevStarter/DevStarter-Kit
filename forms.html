@@ -371,6 +371,7 @@
       }
       .forms-editorial-intro {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
@@ -391,6 +392,10 @@
           );
         box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       }
+      .forms-editorial-intro > div:first-child {
+        min-width: 0;
+        flex: 1 1 320px;
+      }
       .forms-editorial-intro h2 {
         margin: 0 0 0.65rem;
         font-size: clamp(1.5rem, 2.4vw, 2rem);
@@ -403,6 +408,10 @@
         line-height: 1.75;
       }
       .forms-editorial-intro__badge {
+        flex: 0 1 auto;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
         background: rgba(15, 23, 42, 0.06);
         color: var(--text);
       }
@@ -567,6 +576,13 @@
         .forms-editorial-intro,
         .forms-collection-heading {
           padding: 1.1rem;
+        }
+        .forms-editorial-intro {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .forms-editorial-intro__badge {
+          align-self: flex-start;
         }
       }
     </style>
