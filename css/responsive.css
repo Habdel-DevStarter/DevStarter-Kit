@@ -19,6 +19,7 @@
     padding: var(--space-3) 0;
   }
   .site-nav__menu { display: none; }
+  .site-nav__actions > .btn { display: none; }
   .hamburger      { display: flex; }
 
   .site-footer__grid {
