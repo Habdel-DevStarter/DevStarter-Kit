@@ -34,6 +34,7 @@
         border-radius: var(--radius-lg);
         padding: var(--space-5);
         max-height: calc(100vh - 120px);
+        min-width: 0;
         overflow-y: auto;
       }
       .docs-sidebar::-webkit-scrollbar {
@@ -63,6 +64,8 @@
         text-decoration: none;
         transition: all var(--transition-fast);
         font-weight: 500;
+        min-width: 0;
+        overflow-wrap: anywhere;
       }
       .docs-nav-link:hover {
         color: var(--primary);
@@ -212,6 +215,7 @@
         line-height: 1.75;
         color: #cdd6f4;
         margin: 0;
+        -webkit-overflow-scrolling: touch;
       }
       /* Coloration syntaxique basique */
       .docs-code .kw {
@@ -240,12 +244,19 @@
       /* Table de référence */
       .ref-table {
         width: 100%;
+        display: block;
         border-collapse: collapse;
         border: 1px solid var(--border);
         border-radius: var(--radius-md);
-        overflow: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         font-size: var(--text-sm);
         margin: var(--space-4) 0;
+      }
+      .ref-table thead,
+      .ref-table tbody,
+      .ref-table tr {
+        width: 100%;
       }
       .ref-table thead th {
         background: rgba(108, 99, 255, 0.07);
@@ -287,6 +298,8 @@
         font-size: var(--text-sm);
         color: #cdd6f4;
         line-height: 1.8;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
       .file-tree .dir {
         color: #89dceb;
@@ -383,7 +396,46 @@
           display: none;
         }
         .docs-nav-link {
-          white-space: nowrap;
+          white-space: normal;
+        }
+      }
+      @media (max-width: 640px) {
+        .docs-sidebar {
+          padding: var(--space-4);
+        }
+        .docs-sidebar-inner {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        .docs-section__header,
+        .callout,
+        .inline-step {
+          align-items: flex-start;
+        }
+        .docs-section__header {
+          gap: var(--space-2);
+        }
+        .docs-section__icon {
+          width: 40px;
+          height: 40px;
+        }
+        .docs-section__header h2 {
+          font-size: var(--text-xl);
+        }
+        .docs-code pre,
+        .file-tree {
+          font-size: 0.8125rem;
+        }
+      }
+      @media (max-width: 360px) {
+        .docs-sidebar,
+        .docs-code pre,
+        .file-tree,
+        .inline-step {
+          padding: var(--space-3);
+        }
+        .docs-section__header h2 {
+          font-size: var(--text-lg);
         }
       }
     </style>

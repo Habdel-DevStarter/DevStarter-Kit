@@ -290,6 +290,12 @@
           padding: 22px;
           border-radius: 24px;
         }
+        .cards-showcase__lead h2 {
+          line-height: 1.05;
+        }
+        .cards-showcase__lead p {
+          font-size: 0.95rem;
+        }
         .cards-editorial-intro,
         .cards-collection-heading {
           flex-direction: column;
@@ -305,6 +311,9 @@
         .cards-showcase__mini .dash-card {
           transform: scale(0.74);
           margin-right: -28px;
+        }
+        .cards-showcase__mini {
+          gap: 4px;
         }
         .product-card,
         .profile-card,
@@ -324,6 +333,9 @@
         .event-card {
           width: min(100%, 240px);
         }
+        .cards-collection-heading {
+          margin-bottom: 18px;
+        }
         .profile-card__stats,
         .product-card__row,
         .blog-card__meta,
@@ -335,6 +347,37 @@
           max-width: calc(100% - 24px);
           white-space: normal;
           text-align: center;
+        }
+      }
+      @media (max-width: 360px) {
+        .cards-showcase {
+          padding: 18px;
+          border-radius: 20px;
+        }
+        .cards-showcase__lead h2 {
+          font-size: 1.7rem;
+        }
+        .cards-showcase__mini .product-card,
+        .cards-showcase__mini .profile-card,
+        .cards-showcase__mini .blog-card,
+        .cards-showcase__mini .stats-c,
+        .cards-showcase__mini .dash-card {
+          transform: scale(0.68);
+          margin-right: -38px;
+        }
+        .product-card,
+        .profile-card,
+        .pricing-card,
+        .blog-card,
+        .testi-card,
+        .feature-card,
+        .service-card,
+        .team-card,
+        .dash-card,
+        .newsletter-card,
+        .event-card,
+        .stats-c {
+          width: 100%;
         }
       }
 

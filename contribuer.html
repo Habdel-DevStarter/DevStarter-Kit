@@ -137,10 +137,12 @@
 
       /* Standards table */
       .standards-table {
+        display: block;
         width: 100%;
         border-collapse: collapse;
         border-radius: var(--radius-md);
-        overflow: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         border: 1px solid var(--border);
       }
       .standards-table th {
